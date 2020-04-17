@@ -6,15 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020 | Hexo</title>
+  <title>堆 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2020/index.html">
+  <meta name="description" content="堆（Heap）堆 — 特殊树结构：- 二叉堆（Binary Heap）:满足特殊性质的二叉树">
+<meta property="og:type" content="article">
+<meta property="og:title" content="堆">
+<meta property="og:url" content="http://yoursite.com/2020/04/17/%E5%A0%86/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="堆（Heap）堆 — 特殊树结构：- 二叉堆（Binary Heap）:满足特殊性质的二叉树">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/images/dui1.png">
+<meta property="og:image" content="http://yoursite.com/images/dui2.png">
+<meta property="og:image" content="http://yoursite.com/images/dui3.png">
+<meta property="article:published_time" content="2020-04-17T05:17:01.000Z">
+<meta property="article:modified_time" content="2020-04-17T05:20:41.949Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/images/dui1.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,75 +158,85 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-堆" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/17/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/" class="archive-article-date">
-  	<time datetime="2020-04-17T05:21:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-17</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/17/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/">优先队列</a>
+    <h1 class="article-title" itemprop="name">
+      堆
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/数据结构//" class="article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/17/%E5%A0%86/" class="archive-article-date">
+        
+        <a href="/2020/04/17/%E5%A0%86/" class="archive-article-date">
   	<time datetime="2020-04-17T05:17:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-17</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/17/%E5%A0%86/">堆</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="堆（Heap）"><a href="#堆（Heap）" class="headerlink" title="堆（Heap）"></a>堆（Heap）</h1><h2 id="堆-—-特殊树结构："><a href="#堆-—-特殊树结构：" class="headerlink" title="堆 — 特殊树结构："></a>堆 — 特殊树结构：</h2><h4 id="二叉堆（Binary-Heap）-满足特殊性质的二叉树"><a href="#二叉堆（Binary-Heap）-满足特殊性质的二叉树" class="headerlink" title="- 二叉堆（Binary Heap）:满足特殊性质的二叉树"></a>- 二叉堆（Binary Heap）:满足特殊性质的二叉树</h4><a id="more"></a>
+<h4 id="二叉堆是一棵完全二叉树"><a href="#二叉堆是一棵完全二叉树" class="headerlink" title="- 二叉堆是一棵完全二叉树"></a>- 二叉堆是一棵完全二叉树</h4><h4 id="完全二叉树：把元素顺序排列成树的形状，一层一层放完，总是右下角缺失"><a href="#完全二叉树：把元素顺序排列成树的形状，一层一层放完，总是右下角缺失" class="headerlink" title="- 完全二叉树：把元素顺序排列成树的形状，一层一层放完，总是右下角缺失"></a>- 完全二叉树：把元素顺序排列成树的形状，一层一层放完，总是右下角缺失</h4><h4 id="最大堆-堆中某个节点的值，总是不大于其父节点的值（同理可定义最小堆）"><a href="#最大堆-堆中某个节点的值，总是不大于其父节点的值（同理可定义最小堆）" class="headerlink" title="- 最大堆:堆中某个节点的值，总是不大于其父节点的值（同理可定义最小堆）"></a>- 最大堆:堆中某个节点的值，总是不大于其父节点的值（同理可定义最小堆）</h4><h4 id="二叉堆-完全二叉树："><a href="#二叉堆-完全二叉树：" class="headerlink" title="- 二叉堆/完全二叉树："></a>- 二叉堆/完全二叉树：</h4><img src="/images/dui1.png">
+### 堆的实现：
+##### 用数组存储二叉堆的索引关系图：
+<img src="/images/dui2.png">
+<img src="/images/dui3.png">
+##### 在 Array 中添加新方法 swap() :
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//    交换 i 和 j 的位置</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(i &lt; <span class="number">0</span> || i &gt;= size || j &lt; <span class="number">0</span> || j &gt;=size)</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"index is illegal"</span>);</span><br><span class="line">        E t = data[i];</span><br><span class="line">        data[i] = data[j];</span><br><span class="line">        data[j] = t;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+##### 上浮操作（siftUp）：
+##### - 操作元素与自己的父亲节点元素比较，如果大就与其交换位置
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">siftUp</span><span class="params">(<span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(k &gt; <span class="number">0</span> &amp;&amp; data.get(parent(k)).compareTo(data.get(k)) &lt; <span class="number">0</span>)&#123;   <span class="comment">//比较 k 值和 k 的父亲节点的值</span></span><br><span class="line">        data.swap(k,parent(k));                <span class="comment">// k 值大即与它的父亲节点交换位置</span></span><br><span class="line">        k = parent(k);                         <span class="comment">//k 赋新值继续比较，直到上浮完成</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+##### 向堆中添加元素：
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//    向堆中添加元素</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(E e)</span></span>&#123;</span><br><span class="line">        data.addLest(e);                     <span class="comment">//先向Array的末尾添加元素</span></span><br><span class="line">        siftUp(data.getSize() - <span class="number">1</span>);          <span class="comment">//完成元新添加的元素上浮过程，以保持堆的性质</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+##### 查看堆中最大元素：
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//    查看队堆中最大元素</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> E <span class="title">findMax</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(data.getSize() == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"can not find Max when heap is empty"</span>);</span><br><span class="line">        <span class="keyword">return</span> data.get(<span class="number">0</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+##### 下沉操作（siftDown）：
+##### - 操作元素与自己的左右子树比较，并与其中较大子树元素交换位置
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">siftDown</span><span class="params">(<span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(leftChild(k) &lt; data.getSize())&#123;</span><br><span class="line">        <span class="keyword">int</span> j = leftChild(k);</span><br><span class="line">        <span class="keyword">if</span>(j+<span class="number">1</span> &lt; data.getSize() &amp;&amp; data.get(j+<span class="number">1</span>).compareTo(data.get(j)) &gt; <span class="number">0</span>)</span><br><span class="line">            j = rightChild(k);</span><br><span class="line">        <span class="comment">//data[j] 是 leftChild 和 rightChild 中的最大值</span></span><br><span class="line">        <span class="keyword">if</span>(data.get(k).compareTo(data.get(j)) &gt;= <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        data.swap(k,j);</span><br><span class="line">        k = j;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+##### 取出堆中最大元素：
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//    取出堆中最大元素</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> E <span class="title">extrsctMax</span><span class="params">()</span></span>&#123;</span><br><span class="line">        E ret = findMax();</span><br><span class="line">        data.swap(<span class="number">0</span>,data.getSize()-<span class="number">1</span>);</span><br><span class="line">        data.removeLest();</span><br><span class="line">        siftDown(<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+##### 取出最大元素并替换 replace() ：
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//    取出堆中最大元素，并替换成元素e</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> E <span class="title">replace</span><span class="params">(E e)</span></span>&#123;</span><br><span class="line">        E ret = findMax();</span><br><span class="line">        data.set(<span class="number">0</span>,e);</span><br><span class="line">        siftDown(<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+##### 将任意数组整理成堆的形状 Heapify() ：
+##### - 从最后一个非叶子节点开始遍历，进行一次siftDown()
+###### 在Array中添加新的构造函数：
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">Array</span><span class="params">(E[] arr)</span></span>&#123;</span><br><span class="line">        data = (E[]) <span class="keyword">new</span> Object[arr.length];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; arr.length;i ++)&#123;</span><br><span class="line">            data[i] = arr[i];</span><br><span class="line">        &#125;</span><br><span class="line">        size = arr.length;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+###### 在MaxHeap中添加构造函数：
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">MaxHeap</span><span class="params">(E[] arr)</span></span>&#123;                 <span class="comment">//以构造函数的方式实现Heapify，以便接受用户直接传来的数组</span></span><br><span class="line">        data = <span class="keyword">new</span> Array&lt;&gt;(arr);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = parent(arr.length-<span class="number">1</span>);i &gt;= <span class="number">0</span>;i--)  <span class="comment">//从最后一个非叶子节点开始遍历</span></span><br><span class="line">            siftDown(i);                                    <span class="comment">//每个节点进行一次下沉操作</span></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+#### - 将 n 个元素插入一个空堆，算法复杂度是 O(nlogn)
+#### - Heapify()的算法复杂度为 O(n)
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -231,245 +249,113 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/17/%E5%A0%86/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/12/%E6%98%A0%E5%B0%84/" class="archive-article-date">
-  	<time datetime="2020-04-12T06:02:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-12</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/04/17/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          优先队列
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/04/12/%E6%98%A0%E5%B0%84/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">映射</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/12/%E6%98%A0%E5%B0%84/">映射</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/数据结构//" class="article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/12/%E9%9B%86%E5%90%88/" class="archive-article-date">
-  	<time datetime="2020-04-12T05:57:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-12</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/12/%E9%9B%86%E5%90%88/">集合</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/数据结构//" class="article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/11/%E9%9B%86%E5%90%88%E5%92%8C%E6%98%A0%E5%B0%84%E7%9A%84%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90/" class="archive-article-date">
-  	<time datetime="2020-04-11T03:45:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/11/%E9%9B%86%E5%90%88%E5%92%8C%E6%98%A0%E5%B0%84%E7%9A%84%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90/">集合和映射的复杂度分析</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/数据结构//" class="article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/10/%E9%93%BE%E8%A1%A8%E4%B8%8E%E9%80%92%E5%BD%92/" class="archive-article-date">
-  	<time datetime="2020-04-10T06:46:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/10/%E9%93%BE%E8%A1%A8%E4%B8%8E%E9%80%92%E5%BD%92/">链表与递归</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/数据结构//" class="article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/08/%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2%E6%A0%91/" class="archive-article-date">
-  	<time datetime="2020-04-08T01:33:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/08/%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2%E6%A0%91/">二分搜索树（Binary Search Tree）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/数据结构//" class="article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/05/%E7%BA%BF%E6%80%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E9%93%BE%E8%A1%A8/" class="archive-article-date">
-  	<time datetime="2020-04-05T01:21:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/05/%E7%BA%BF%E6%80%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E9%93%BE%E8%A1%A8/">线性数据结构——链表</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/数据结构//" class="article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -492,8 +378,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
