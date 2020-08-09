@@ -55,7 +55,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/source/img/bo.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">John Doe</a></h1>
@@ -113,7 +113,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/source/img/bo.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">John Doe</h1>
@@ -330,6 +330,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Java连接数据库报错："><span class="toc-number">1.</span> <span class="toc-text">Java连接数据库报错：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#No-suitable-driver-found-for-jdbc-mysql-localhost-3306-test"><span class="toc-number">1.1.</span> <span class="toc-text">No suitable driver found for jdbc:mysql:&#x2F;&#x2F;localhost:3306&#x2F;test</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#原因分析："><span class="toc-number">1.2.</span> <span class="toc-text">原因分析：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-连接URL格式有问题"><span class="toc-number">1.2.1.</span> <span class="toc-text">1.连接URL格式有问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#“-Connection-conn-DriverManager-getConnection-“"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">“ Connection conn&#x3D;DriverManager.getConnection　“　</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#“jdbc-mysql-localhost-3306-XX”-”root”-”XXXX”"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">(“jdbc:mysql:&#x2F;&#x2F;localhost:3306&#x2F;XX”,”root”,”XXXX”)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-驱动字符串出错"><span class="toc-number">1.2.2.</span> <span class="toc-text">2.驱动字符串出错</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#“org-gjt-mm-mysql-Driver”-——-gt-“com-mysql-jdbc-Driver”"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">“org.gjt.mm.mysql.Driver” ——&gt;  “com.mysql.jdbc.Driver”</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#—-org-gjt-mm-mysql-Driver-是当时最好的MySQL-JDBC，但不是MySQL公司的，然后MySQL将MM的JDBC驱动收为官方的JDBC驱动，所以将驱动的package也改了，但保留了org-gjt-mm-mysql-Driver这个路径的引用，也就是使用新版JDBC驱动时还可以通过这个来引用，打开下载的新版JDBC驱动的jar文件可以看到，有一个文件目录是org-gjt-mm-mysql，就是为了兼容而设的。"><span class="toc-number">1.2.2.1.1.</span> <span class="toc-text">— org.gjt.mm.mysql.Driver 是当时最好的MySQL JDBC，但不是MySQL公司的，然后MySQL将MM的JDBC驱动收为官方的JDBC驱动，所以将驱动的package也改了，但保留了org.gjt.mm.mysql.Driver这个路径的引用，也就是使用新版JDBC驱动时还可以通过这个来引用，打开下载的新版JDBC驱动的jar文件可以看到，有一个文件目录是org.gjt.mm.mysql，就是为了兼容而设的。</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#org-git-mm-mysql-Driver-只是简单的继承了-com-mysql-jdbc-driver，并没有实现其他逻辑"><span class="toc-number">1.2.2.1.2.</span> <span class="toc-text">- org.git.mm.mysql.Driver 只是简单的继承了 com.mysql.jdbc.driver，并没有实现其他逻辑</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#解决方法：用mysql自己的的驱动程序-——-将org-gjt-mm-mysql-Driver换成com-mysql-jdbc-driver即可。"><span class="toc-number">1.2.2.2.</span> <span class="toc-text">解决方法：用mysql自己的的驱动程序 —— 将org.gjt.mm.mysql.Driver换成com.mysql.jdbc.driver即可。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-CLASSPATH中没有加入合适的mysql-jdbc驱动（保持版本一致）"><span class="toc-number">1.2.3.</span> <span class="toc-text">3.CLASSPATH中没有加入合适的mysql_jdbc驱动（保持版本一致）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#java-驱动程序下载：https-downloads-mysql-com-archives-c-j"><span class="toc-number">1.2.3.1.</span> <span class="toc-text">* java 驱动程序下载：https:&#x2F;&#x2F;downloads.mysql.com&#x2F;archives&#x2F;c-j&#x2F;</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-将数据库驱动jar包加入到java运行环境（JDK安装目录）的外部jar包中（如图：）"><span class="toc-number">1.2.4.</span> <span class="toc-text">4.将数据库驱动jar包加入到java运行环境（JDK安装目录）的外部jar包中（如图：）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#以上问题逐个排除，总能盘倒它-——-gt-gt-gt-gt"><span class="toc-number">1.2.5.</span> <span class="toc-text">以上问题逐个排除，总能盘倒它 ——&gt;&gt;&gt;&gt;</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -371,7 +384,7 @@
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
-		toc_hide_index: true,
+		toc_hide_index: false,
 		root: "/",
 		innerArchive: true,
 		showTags: false

@@ -47,7 +47,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/source/img/bo.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">John Doe</a></h1>
@@ -105,7 +105,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/source/img/bo.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">John Doe</h1>
@@ -332,6 +332,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#映射（Map）"><span class="toc-number">1.</span> <span class="toc-text">映射（Map）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#映射（Map）-dict-字典-："><span class="toc-number">1.1.</span> <span class="toc-text">映射（Map）\ (dict-字典)：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#·-定义：用来存储（键-值）数据对的数据结构"><span class="toc-number">1.1.0.1.</span> <span class="toc-text">·  定义：用来存储（键\值）数据对的数据结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#·-可根据键（key），快速寻找到值（value）"><span class="toc-number">1.1.0.2.</span> <span class="toc-text">·  可根据键（key），快速寻找到值（value）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#·-可使用链表-二分搜索树便捷实现"><span class="toc-number">1.1.0.3.</span> <span class="toc-text">·  可使用链表\二分搜索树便捷实现</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#·-典型应用：字典（单词-释义）、用户统计（id-信息）"><span class="toc-number">1.1.0.4.</span> <span class="toc-text">·  典型应用：字典（单词-释义）、用户统计（id-信息）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#·-有序映射：其中的键具有顺序性（基于搜索树实现）"><span class="toc-number">1.1.0.5.</span> <span class="toc-text">·  有序映射：其中的键具有顺序性（基于搜索树实现）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#·-无序映射：其中的键没有顺序性（基于哈希表实现）"><span class="toc-number">1.1.0.6.</span> <span class="toc-text">·  无序映射：其中的键没有顺序性（基于哈希表实现）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#映射的实现-主要方法-："><span class="toc-number">1.1.1.</span> <span class="toc-text">映射的实现(主要方法)：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#映射接口："><span class="toc-number">1.1.1.0.1.</span> <span class="toc-text">映射接口：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#基于链表实现映射接口："><span class="toc-number">1.1.1.1.</span> <span class="toc-text">基于链表实现映射接口：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#内部Node类设计："><span class="toc-number">1.1.1.1.1.</span> <span class="toc-text">内部Node类设计：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#添加辅助功能函数，便于其他方法调用："><span class="toc-number">1.1.1.1.2.</span> <span class="toc-text">添加辅助功能函数，便于其他方法调用：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#查："><span class="toc-number">1.1.1.1.3.</span> <span class="toc-text">查：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#增："><span class="toc-number">1.1.1.1.4.</span> <span class="toc-text">增：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#改："><span class="toc-number">1.1.1.1.5.</span> <span class="toc-text">改：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#删："><span class="toc-number">1.1.1.1.6.</span> <span class="toc-text">删：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#基于二分搜索树实现映射接口："><span class="toc-number">1.1.1.2.</span> <span class="toc-text">基于二分搜索树实现映射接口：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#内部Node类设计：-1"><span class="toc-number">1.1.1.2.1.</span> <span class="toc-text">内部Node类设计：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#增：-1"><span class="toc-number">1.1.1.2.2.</span> <span class="toc-text">增：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#添加辅助函数，便于实现其他方法："><span class="toc-number">1.1.1.2.3.</span> <span class="toc-text">添加辅助函数，便于实现其他方法：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#查：-1"><span class="toc-number">1.1.1.2.4.</span> <span class="toc-text">查：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#改：-1"><span class="toc-number">1.1.1.2.5.</span> <span class="toc-text">改：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#辅助完成删除操作："><span class="toc-number">1.1.1.2.6.</span> <span class="toc-text">辅助完成删除操作：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#删：-1"><span class="toc-number">1.1.1.2.7.</span> <span class="toc-text">删：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#注：映射中如果只考虑-key（即视所有value-都为0），就可把映射包装成集合。"><span class="toc-number">1.1.1.3.</span> <span class="toc-text">注：映射中如果只考虑 key（即视所有value 都为0），就可把映射包装成集合。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Leetcode中关于映射的问题解决："><span class="toc-number">1.1.2.</span> <span class="toc-text">Leetcode中关于映射的问题解决：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#计算两个数组的交集："><span class="toc-number">1.1.2.1.</span> <span class="toc-text">计算两个数组的交集：</span></a></li></ol></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -373,7 +386,7 @@
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
-		toc_hide_index: true,
+		toc_hide_index: false,
 		root: "/",
 		innerArchive: true,
 		showTags: false

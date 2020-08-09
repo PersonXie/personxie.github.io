@@ -47,7 +47,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/source/img/bo.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">John Doe</a></h1>
@@ -105,7 +105,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/source/img/bo.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">John Doe</h1>
@@ -337,6 +337,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#优先队列（PriorityQueue）"><span class="toc-number">1.</span> <span class="toc-text">优先队列（PriorityQueue）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#普通队列：先进先出，后进后出"><span class="toc-number">1.0.0.1.</span> <span class="toc-text">- 普通队列：先进先出，后进后出</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#优先队列：出队顺序与入队顺序无关，由优先级决定"><span class="toc-number">1.0.0.2.</span> <span class="toc-text">- 优先队列：出队顺序与入队顺序无关，由优先级决定</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#优势：可以动态的根据优先级来确定出队元素，不受队中元素增减的影响"><span class="toc-number">1.0.0.3.</span> <span class="toc-text">- 优势：可以动态的根据优先级来确定出队元素，不受队中元素增减的影响</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#优先队列不同底层实现的复杂度比较："><span class="toc-number">1.0.0.4.</span> <span class="toc-text">-优先队列不同底层实现的复杂度比较：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基于二叉堆（MaxHeap）实现优先队列："><span class="toc-number">1.0.1.</span> <span class="toc-text">基于二叉堆（MaxHeap）实现优先队列：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#队列接口："><span class="toc-number">1.0.1.1.</span> <span class="toc-text">队列接口：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#覆写队列接口："><span class="toc-number">1.0.1.2.</span> <span class="toc-text">覆写队列接口：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#优先队列的经典问题"><span class="toc-number">1.0.2.</span> <span class="toc-text">优先队列的经典问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#问题：求给定数组中出现频率前K高的元素（Leetcode）"><span class="toc-number">1.0.2.1.</span> <span class="toc-text">问题：求给定数组中出现频率前K高的元素（Leetcode）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#基于自定义封装的最大堆解决："><span class="toc-number">1.0.2.1.1.</span> <span class="toc-text">基于自定义封装的最大堆解决：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#基于Java类库的堆（最小堆）解决："><span class="toc-number">1.0.2.1.2.</span> <span class="toc-text">基于Java类库的堆（最小堆）解决：</span></a></li></ol></li></ol></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -378,7 +391,7 @@
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
-		toc_hide_index: true,
+		toc_hide_index: false,
 		root: "/",
 		innerArchive: true,
 		showTags: false

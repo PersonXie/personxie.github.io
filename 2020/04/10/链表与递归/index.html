@@ -51,7 +51,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/source/img/bo.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">John Doe</a></h1>
@@ -109,7 +109,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/source/img/bo.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">John Doe</h1>
@@ -328,6 +328,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#链表与递归"><span class="toc-number">1.</span> <span class="toc-text">链表与递归</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#递归的思想"><span class="toc-number">1.0.1.</span> <span class="toc-text">递归的思想</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#·-如以下数组的求和"><span class="toc-number">1.0.1.0.1.</span> <span class="toc-text">·  如以下数组的求和</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#·-所有的问题都可以通过递归思想分解为两步："><span class="toc-number">1.0.1.0.2.</span> <span class="toc-text">·  所有的问题都可以通过递归思想分解为两步：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#·-递归函数本身就是一个函数，用来完成一个功能"><span class="toc-number">1.0.1.0.3.</span> <span class="toc-text">·  递归函数本身就是一个函数，用来完成一个功能</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#·-链表具有天然的递归性"><span class="toc-number">1.0.1.0.4.</span> <span class="toc-text">·  链表具有天然的递归性</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#·-近乎和链表相关的所有操作，都可以用递归形式完成"><span class="toc-number">1.0.1.0.5.</span> <span class="toc-text">·  近乎和链表相关的所有操作，都可以用递归形式完成</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#·-递归函数的调用，本质就是函数调用，只不过调用的函数是自己而已"><span class="toc-number">1.0.1.0.6.</span> <span class="toc-text">·  递归函数的调用，本质就是函数调用，只不过调用的函数是自己而已</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#·-eg1-求数组arr的元素和："><span class="toc-number">1.0.1.0.7.</span> <span class="toc-text">·  eg1:求数组arr的元素和：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#·-eg2：删除链表中指元素-val"><span class="toc-number">1.0.1.0.8.</span> <span class="toc-text">·  eg2：删除链表中指元素 val</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#eg2-递归分解图示："><span class="toc-number">1.0.1.0.8.1.</span> <span class="toc-text">eg2 递归分解图示：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#·-递归程序调用的是系统栈"><span class="toc-number">1.0.1.1.</span> <span class="toc-text">·  递归程序调用的是系统栈</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#·-递归调用是有代价的：函数调用-系统栈空间"><span class="toc-number">1.0.1.2.</span> <span class="toc-text">·  递归调用是有代价的：函数调用  +  系统栈空间</span></a></li></ol></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -369,7 +382,7 @@
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
-		toc_hide_index: true,
+		toc_hide_index: false,
 		root: "/",
 		innerArchive: true,
 		showTags: false

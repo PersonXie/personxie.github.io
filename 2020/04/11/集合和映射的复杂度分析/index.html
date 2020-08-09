@@ -52,7 +52,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/source/img/bo.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">John Doe</a></h1>
@@ -110,7 +110,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/source/img/bo.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">John Doe</h1>
@@ -323,6 +323,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#集合和映射"><span class="toc-number">1.</span> <span class="toc-text">集合和映射</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#集合和映射的关系"><span class="toc-number">1.1.</span> <span class="toc-text">集合和映射的关系:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#"><span class="toc-number">1.1.1.</span> <span class="toc-text">**</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#集合两种底层实现的复杂度比较（基于链表和二分搜索树）"><span class="toc-number">1.2.</span> <span class="toc-text">集合两种底层实现的复杂度比较（基于链表和二分搜索树）:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#-1"><span class="toc-number">1.2.1.</span> <span class="toc-text">**</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#映射两种底层实现的复杂度比较（基于链表和二分搜索树）"><span class="toc-number">1.3.</span> <span class="toc-text">映射两种底层实现的复杂度比较（基于链表和二分搜索树）:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#-2"><span class="toc-number">1.3.1.</span> <span class="toc-text">**</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#O-n-和O-logn"><span class="toc-number">1.4.</span> <span class="toc-text">O(n)和O(logn):</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#-3"><span class="toc-number">1.4.1.</span> <span class="toc-text">**</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#总体比较，树实现比链表实现的性能更优！"><span class="toc-number">1.4.2.</span> <span class="toc-text">总体比较，树实现比链表实现的性能更优！</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注：二分搜索树可能退化成链表（例如以1、2、3、4、5、6……填充的树），对应的复杂度就从-O-logn-变成了-O-n-，所以上述集合和映射的实现具有最差情况下的复杂度。"><span class="toc-number">1.4.3.</span> <span class="toc-text">注：二分搜索树可能退化成链表（例如以1、2、3、4、5、6……填充的树），对应的复杂度就从 O(logn) 变成了 O(n)，所以上述集合和映射的实现具有最差情况下的复杂度。</span></a></li></ol></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -364,7 +377,7 @@
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
-		toc_hide_index: true,
+		toc_hide_index: false,
 		root: "/",
 		innerArchive: true,
 		showTags: false
