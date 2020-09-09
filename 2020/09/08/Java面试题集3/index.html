@@ -16,7 +16,7 @@
 <meta property="og:description" content="面试题集3">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-09-08T04:04:13.000Z">
-<meta property="article:modified_time" content="2020-09-08T04:37:47.975Z">
+<meta property="article:modified_time" content="2020-09-09T03:23:31.518Z">
 <meta property="article:author" content="StT">
 <meta property="article:tag" content="面试">
 <meta name="twitter:card" content="summary">
@@ -195,7 +195,44 @@
 <h5 id="第二范式："><a href="#第二范式：" class="headerlink" title="第二范式："></a>第二范式：</h5><p>要求数据库表中每个行必须可以被唯一的区分。为实现区分通常需要为表加上一个列，以存储各个实例的唯一标识。主键！</p>
 <h5 id="第三范式："><a href="#第三范式：" class="headerlink" title="第三范式："></a>第三范式：</h5><p>要求数据库表中不包含已在其它表中已包含的非主关键字信息。外键！</p>
 <h5 id="反三范式："><a href="#反三范式：" class="headerlink" title="反三范式："></a>反三范式：</h5><p>有时候为了效率，可以设置重复或者可以推导出的字段。如 订单（总价）和订单项（单价）。</p>
-<h3 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h3>
+<h3 id="3-事务的四个基本特征"><a href="#3-事务的四个基本特征" class="headerlink" title="3.事务的四个基本特征"></a>3.事务的四个基本特征</h3><p>事务是并发控制的单位，是用户定义的一个操作系列。这些操作要么都做，要么都不做，是一个不可分割的工作单位。</p>
+<p>如转账：A账户扣钱成功、B账户加钱成功，才算转账成功。</p>
+<h6 id="事务必须满足四大特征：原子性、一致性、隔离性、持久性-持续性"><a href="#事务必须满足四大特征：原子性、一致性、隔离性、持久性-持续性" class="headerlink" title="事务必须满足四大特征：原子性、一致性、隔离性、持久性/持续性"></a>事务必须满足四大特征：原子性、一致性、隔离性、持久性/持续性</h6><h5 id="原子性："><a href="#原子性：" class="headerlink" title="原子性："></a>原子性：</h5><p>表示事务操作内不可分割，要么都成功，要么都失败</p>
+<h5 id="一致性："><a href="#一致性：" class="headerlink" title="一致性："></a>一致性：</h5><p>要么都成功，要么都失败，后面的失败了要对前面的操作进行回滚</p>
+<h5 id="隔离性："><a href="#隔离性：" class="headerlink" title="隔离性："></a>隔离性：</h5><p>一个事务开始后，不能受其它事务干扰</p>
+<h5 id="持久性-持续性："><a href="#持久性-持续性：" class="headerlink" title="持久性/持续性："></a>持久性/持续性：</h5><p>表示事务开始了，就不能终止</p>
+<h3 id="4-mysql数据库的默认的最大连接数"><a href="#4-mysql数据库的默认的最大连接数" class="headerlink" title="4.mysql数据库的默认的最大连接数"></a>4.mysql数据库的默认的最大连接数</h3><p>特定服务器上面的数据库只能支持一定数目同时连接，我们一般都会设置最大连接数为 100.</p>
+<h3 id="5-说一下mysql的分页及Oracle的分页"><a href="#5-说一下mysql的分页及Oracle的分页" class="headerlink" title="5. 说一下mysql的分页及Oracle的分页"></a>5. 说一下mysql的分页及Oracle的分页</h3><p>存在很多数据时，不能完全显示数据，需要进行分段显示。</p>
+<p>Mysql是使用关键字limit进行分页的。limit offset，size表示从多少索引取多少位；</p>
+<p>Oracle的分页稍微复杂一点，要使用三层嵌套查询。工作中有需要，可以从原来的项目拷贝或网上查询。</p>
+<h3 id="6-简述数据库的触发器的使用场景？"><a href="#6-简述数据库的触发器的使用场景？" class="headerlink" title="6.简述数据库的触发器的使用场景？"></a>6.简述数据库的触发器的使用场景？</h3><p>触发器，需要有触发条件，当条件满足以后自动完成某操作。</p>
+<p>使用场景较多。如某人发一篇日志，便会自动通知好友，就是在增加日志时做一个后触发，再向通知表中写入条目。触发器效率很高。</p>
+<p>用关键字<code>create trigger</code>创建触发器，再加入触发条件 ，然后遍历表中行内容，搜索触发条件……</p>
+<h3 id="7-简述数据库的存储过程使用场景？"><a href="#7-简述数据库的存储过程使用场景？" class="headerlink" title="7. 简述数据库的存储过程使用场景？"></a>7. 简述数据库的存储过程使用场景？</h3><h5 id="数据库存储过程具有如下优点："><a href="#数据库存储过程具有如下优点：" class="headerlink" title="数据库存储过程具有如下优点："></a>数据库存储过程具有如下优点：</h5><p>1&gt;.存储过程只在创建时进行编译，之后每次执行存储过程都不需要重新编译，而一般SQL语句每执行一次就编译一次，因此使用存储过程可大大提高数据库执行速度。</p>
+<p>2&gt;.通常，复杂的业务逻辑需要多条SQL语句，这些语句从客户机发送到服务器会产生大量网络传输，如果放在一个存储过程中，可以降低网络负载。</p>
+<p>3&gt;.存储过程创建一次便可以重复使用，从而可以减少数据库开发人员的工作量。</p>
+<p>4&gt;.安全性高。存储过程可以屏蔽对底层数据库对象的直接访问，使用EXECUTE权限调用存储过程，无需拥有访问底层数据库对象的显式权限。</p>
+<h5 id="定义存储过程："><a href="#定义存储过程：" class="headerlink" title="定义存储过程："></a>定义存储过程：</h5><p>用关键字<code>create procedure + 表 + 列数据</code>进行创建，用<code>begin\end;</code>进行分割。</p>
+<h3 id="8-用JDBC如何调用存储过程？"><a href="#8-用JDBC如何调用存储过程？" class="headerlink" title="8.用JDBC如何调用存储过程？"></a>8.用JDBC如何调用存储过程？</h3><h6 id="贾琏欲执事！"><a href="#贾琏欲执事！" class="headerlink" title="贾琏欲执事！"></a>贾琏欲执事！</h6><h5 id="1-gt-加载驱动"><a href="#1-gt-加载驱动" class="headerlink" title="1&gt;.加载驱动"></a>1&gt;.加载驱动</h5><p>com.mysql.jdbc.Driver;</p>
+<p>oracle.jdbc.driver.OracleDriver</p>
+<h5 id="2-gt-获取链接"><a href="#2-gt-获取链接" class="headerlink" title="2&gt;.获取链接"></a>2&gt;.获取链接</h5><p>DriverManager.getConnection(url,username,password)</p>
+<h5 id="3-gt-设置参数"><a href="#3-gt-设置参数" class="headerlink" title="3&gt;.设置参数"></a>3&gt;.设置参数</h5><p>Statement PreparedStatement</p>
+<p>cstmt.setXXX(index,value);</p>
+<h5 id="4-gt-执行"><a href="#4-gt-执行" class="headerlink" title="4&gt;.执行"></a>4&gt;.执行</h5><p>executeQuery</p>
+<p>executeUpdate</p>
+<h5 id="5-gt-释放连接"><a href="#5-gt-释放连接" class="headerlink" title="5&gt;.释放连接"></a>5&gt;.释放连接</h5><p>释放连接要从小到大，必须放到 finnaly</p>
+<h3 id="9-简述你对jdbc的理解"><a href="#9-简述你对jdbc的理解" class="headerlink" title="9.简述你对jdbc的理解"></a>9.简述你对jdbc的理解</h3><p> Java database connection Java数据库连接。而数据库管理系统（mysql、oracle等）有很多，每个数据库管理系统支持的命令是不一样的。</p>
+<p> Java 只定义接口，让数据库厂商自己实现接口，对于我们开发者而言，只需要导入对应厂商开发的实现即可，然后以接口方式进行调用。（mysql + mysql驱动（实现） + jdbc ） ！</p>
+<h3 id="10-写一个简单的jdbc程序"><a href="#10-写一个简单的jdbc程序" class="headerlink" title="10.写一个简单的jdbc程序"></a>10.写一个简单的jdbc程序</h3><h5 id="加载驱动程序："><a href="#加载驱动程序：" class="headerlink" title="加载驱动程序："></a>加载驱动程序：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JiazaiQUDONG</span> </span>&#123;</span><br><span class="line">    <span class="comment">//定义mysql的数据库驱动程序</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DBDRIVER = <span class="string">"org.gjt.mm.mysql.Driver"</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">            Class.forName(DBDRIVER);                       <span class="comment">//加载驱动程序</span></span><br><span class="line">        &#125;<span class="keyword">catch</span> (ClassNotFoundException e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="连接数据库："><a href="#连接数据库：" class="headerlink" title="连接数据库："></a>连接数据库：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.sql.Connection;</span><br><span class="line"><span class="keyword">import</span> java.sql.DriverManager;</span><br><span class="line"><span class="keyword">import</span> java.sql.SQLException;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LianjieKu</span> </span>&#123;</span><br><span class="line">    <span class="comment">//定义MySQL的数据库的驱动程序</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DBDRIVER = <span class="string">"com.mysql.jdbc.Driver"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//定义MySQL数据库的连接地址</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DBURL = <span class="string">"jdbc:mysql://localhost:3306/firsttest"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//MySQL数据库的连接用户名</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DBUSER = <span class="string">"root"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//MySQL数据库的连接密码</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DBPASS = <span class="string">"root"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Connection conn = <span class="keyword">null</span>;                         <span class="comment">//数据库连接</span></span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">            Class.forName(DBDRIVER);                    <span class="comment">//加载驱动程序</span></span><br><span class="line">        &#125;<span class="keyword">catch</span> (ClassNotFoundException e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">            <span class="comment">//连接MySQL数据库时，要写上连接的用户名和密码</span></span><br><span class="line">            conn = DriverManager.getConnection(<span class="string">"jdbc:mysql://localhost:3306/firsttest"</span>,<span class="string">"root"</span>,<span class="string">"root"</span>);</span><br><span class="line">        &#125;<span class="keyword">catch</span> (SQLException e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(conn);</span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">            conn.close();                           <span class="comment">//数据库关闭</span></span><br><span class="line">        &#125;<span class="keyword">catch</span> (SQLException e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="11-JDBC中的PreparedStatement相比Statement的好处"><a href="#11-JDBC中的PreparedStatement相比Statement的好处" class="headerlink" title="11.JDBC中的PreparedStatement相比Statement的好处"></a>11.JDBC中的PreparedStatement相比Statement的好处</h3><h6 id="大多数我们都使用PreparedStatement代替Statement。"><a href="#大多数我们都使用PreparedStatement代替Statement。" class="headerlink" title="大多数我们都使用PreparedStatement代替Statement。"></a>大多数我们都使用PreparedStatement代替Statement。</h6><p>1&gt;.PreparedStatement是预编译的，比Statement速度快。</p>
+<p>2&gt;.代码的可读性和可维护性强。</p>
+<p>3&gt;.安全性。PreparedStatement可以放置SQL注入攻击，而Statement却不能。</p>
+<h3 id="12-数据库连接池的作用"><a href="#12-数据库连接池的作用" class="headerlink" title="12.数据库连接池的作用"></a>12.数据库连接池的作用</h3><p>1&gt;.限定数据库的个数，不会导致由于数据库连接过多而使系统运行缓慢或崩溃。</p>
+<p>2&gt;.数据库连接不需要每次都去创建或销毁，节约了资源。</p>
+<p>3&gt;.数据库连接不需要每次都去创建，响应时间更快。</p>
+
       
 
       
@@ -308,6 +345,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/09/09/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%864/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Java面试题集4
+        
+      </div>
+    </a>
   
   
     <a href="/2020/09/07/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%862/" id="article-nav-older" class="article-nav-link-wrap">
