@@ -6,15 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>Java面试题集5 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="面试题集5">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java面试题集5">
+<meta property="og:url" content="http://yoursite.com/2020/09/11/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%865/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="面试题集5">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/images/tom.png">
+<meta property="article:published_time" content="2020-09-11T01:52:54.000Z">
+<meta property="article:modified_time" content="2020-09-11T03:21:11.806Z">
 <meta property="article:author" content="StT">
+<meta property="article:tag" content="面试">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/images/tom.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -160,16 +167,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Java面试题集5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Java面试题集5" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/11/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%865/">Java面试题集5</a>
+    <h1 class="article-title" itemprop="name">
+      Java面试题集5
     </h1>
   
 
@@ -182,12 +187,49 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="面试题集5"><a href="#面试题集5" class="headerlink" title="面试题集5"></a>面试题集5</h1>
-        
-          <a class="article-more-a" href="/2020/09/11/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%865/#more">more >></a>
-        
+        <h1 id="面试题集5"><a href="#面试题集5" class="headerlink" title="面试题集5"></a>面试题集5</h1><a id="more"></a>
+
+<h3 id="1-SpringMVC的执行流程？"><a href="#1-SpringMVC的执行流程？" class="headerlink" title="1.SpringMVC的执行流程？"></a>1.SpringMVC的执行流程？</h3><h6 id="核心控制器捕获请求、查找handler、执行handler、选择ViewResolver、通过ViewResolver渲染视图并返回"><a href="#核心控制器捕获请求、查找handler、执行handler、选择ViewResolver、通过ViewResolver渲染视图并返回" class="headerlink" title="核心控制器捕获请求、查找handler、执行handler、选择ViewResolver、通过ViewResolver渲染视图并返回"></a>核心控制器捕获请求、查找handler、执行handler、选择ViewResolver、通过ViewResolver渲染视图并返回</h6><p>1&gt;.用户向服务器发送请求，请求被Spring前端控制 DispatcherServlet（核心控制器） 捕获；</p>
+<p>2&gt;.DispatcherServlet 对请求 URL 进行解析，得到请求资源标识符（URL），然后根据该 URL ，调用HandlerMapping 获得该Handler配置的所有相关对象（包括 Handler 对象以及Handler对象对应的拦截器），最后以 HandlerExecutionChain 对象的形式返回；</p>
+<p>3&gt;.DispatcherServlet 根据获得的Handler，选择一个合适的 HandlerAdapter，提取Request中的模型数据，填充Handler入参，开始执行Handler（Controller），Handler执行完成后，向DispatcherServlet返回一个ModelAndView对象执行；</p>
+<p>4&gt;.DispatcherServlet 根据返回的 ModelAndView，选择一个适合的 ViewResolver（必须是已经注册到 Spring 容器中的ViewResolver）；</p>
+<p>5&gt;.通过ViewResolver结合 Model 和View，来渲染视图，DispatcherServlet 将渲染结果返回给客户端。</p>
+<img src="/images/tom.png">
+
+<h3 id="2-讲讲-struts2-和-SpringMVC-有什么不同？"><a href="#2-讲讲-struts2-和-SpringMVC-有什么不同？" class="headerlink" title="2.讲讲 struts2 和 SpringMVC 有什么不同？"></a>2.讲讲 struts2 和 SpringMVC 有什么不同？</h3><h6 id=""><a href="#" class="headerlink" title=""></a></h6>
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zhifubao.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -207,16 +249,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/09/11/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%865/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/09/11/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%865/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/09/09/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%864/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java面试题集4</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -236,696 +337,14 @@
 
 
 
-
-  
-    <article id="post-Java面试题集4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/09/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%864/">Java面试题集4</a>
-    </h1>
-  
-
-        
-        <a href="/2020/09/09/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%864/" class="archive-article-date">
-  	<time datetime="2020-09-09T03:24:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="面试题集4"><a href="#面试题集4" class="headerlink" title="面试题集4"></a>面试题集4</h1>
-        
-          <a class="article-more-a" href="/2020/09/09/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%864/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">面试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/09/09/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%864/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java面试题集3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/08/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%863/">Java面试题集3</a>
-    </h1>
-  
-
-        
-        <a href="/2020/09/08/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%863/" class="archive-article-date">
-  	<time datetime="2020-09-08T04:04:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="面试题集3"><a href="#面试题集3" class="headerlink" title="面试题集3"></a>面试题集3</h1>
-        
-          <a class="article-more-a" href="/2020/09/08/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%863/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">面试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/09/08/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%863/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java面试题集2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/07/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%862/">Java面试题集2</a>
-    </h1>
-  
-
-        
-        <a href="/2020/09/07/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%862/" class="archive-article-date">
-  	<time datetime="2020-09-07T04:10:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-07</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="面试题集2"><a href="#面试题集2" class="headerlink" title="面试题集2"></a>面试题集2</h1>
-        
-          <a class="article-more-a" href="/2020/09/07/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%862/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">面试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/09/07/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%862/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java面试题集1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/04/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%861/">Java面试题集1</a>
-    </h1>
-  
-
-        
-        <a href="/2020/09/04/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%861/" class="archive-article-date">
-  	<time datetime="2020-09-04T04:07:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="面试题集1"><a href="#面试题集1" class="headerlink" title="面试题集1"></a>面试题集1</h1>
-        
-          <a class="article-more-a" href="/2020/09/04/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%861/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">面试</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/09/04/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%861/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java项目初解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/14/Java%E9%A1%B9%E7%9B%AE%E5%88%9D%E8%A7%A3/">Java项目初解</a>
-    </h1>
-  
-
-        
-        <a href="/2020/08/14/Java%E9%A1%B9%E7%9B%AE%E5%88%9D%E8%A7%A3/" class="archive-article-date">
-  	<time datetime="2020-08-14T14:20:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="项目初解"><a href="#项目初解" class="headerlink" title="项目初解"></a>项目初解</h1><h2 id="OA管理系统"><a href="#OA管理系统" class="headerlink" title="OA管理系统"></a>OA管理系统</h2>
-        
-          <a class="article-more-a" href="/2020/08/14/Java%E9%A1%B9%E7%9B%AE%E5%88%9D%E8%A7%A3/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/14/Java%E9%A1%B9%E7%9B%AE%E5%88%9D%E8%A7%A3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Spring-MVC初解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/14/Spring-MVC%E5%88%9D%E8%A7%A3/">Spring MVC初解</a>
-    </h1>
-  
-
-        
-        <a href="/2020/08/14/Spring-MVC%E5%88%9D%E8%A7%A3/" class="archive-article-date">
-  	<time datetime="2020-08-14T14:19:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="SpringMVC"><a href="#SpringMVC" class="headerlink" title="SpringMVC"></a>SpringMVC</h1><h3 id="简介："><a href="#简介：" class="headerlink" title="简介："></a>简介：</h3><p>是Spring针对Web项目提供的一套解决方案，主要针对控制层和视图层进行优化，与业务层、数据层关系不大。</p>
-        
-          <a class="article-more-a" href="/2020/08/14/Spring-MVC%E5%88%9D%E8%A7%A3/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/14/Spring-MVC%E5%88%9D%E8%A7%A3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Spring初解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/14/Spring%E5%88%9D%E8%A7%A3/">Spring初解</a>
-    </h1>
-  
-
-        
-        <a href="/2020/08/14/Spring%E5%88%9D%E8%A7%A3/" class="archive-article-date">
-  	<time datetime="2020-08-14T14:17:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h1><h3 id="简介："><a href="#简介：" class="headerlink" title="简介："></a>简介：</h3><p>Spring是Java SE(web)/EE(java) 分层应用项目全栈式(full-stack，每一层都有解决方案)的轻量级（jar包少且小）开源（公开源代码）框架。</p>
-        
-          <a class="article-more-a" href="/2020/08/14/Spring%E5%88%9D%E8%A7%A3/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/14/Spring%E5%88%9D%E8%A7%A3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Mybatis初解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/09/Mybatis%E5%88%9D%E8%A7%A3/">Mybatis 初解</a>
-    </h1>
-  
-
-        
-        <a href="/2020/08/09/Mybatis%E5%88%9D%E8%A7%A3/" class="archive-article-date">
-  	<time datetime="2020-08-09T02:08:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Mybatis"><a href="#Mybatis" class="headerlink" title="Mybatis"></a>Mybatis</h1><h3 id="简介："><a href="#简介：" class="headerlink" title="简介："></a>简介：</h3><p>MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过程以及高级映射。</p>
-        
-          <a class="article-more-a" href="/2020/08/09/Mybatis%E5%88%9D%E8%A7%A3/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/09/Mybatis%E5%88%9D%E8%A7%A3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Maven-框架" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/08/01/Maven-%E6%A1%86%E6%9E%B6/">Maven 初解</a>
-    </h1>
-  
-
-        
-        <a href="/2020/08/01/Maven-%E6%A1%86%E6%9E%B6/" class="archive-article-date">
-  	<time datetime="2020-08-01T08:01:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h1><h3 id="定义"><a href="#定义" class="headerlink" title="定义:"></a>定义:</h3><p>项目对象模型(POM)，可简单理解为仓库，可通过一小段描述信息来管理项目的构建（通过描述信息自动导入jar包及所有依赖包）。Maven除了以程序构建能力为特色之外，还提供高级项目管理工具。</p>
-        
-          <a class="article-more-a" href="/2020/08/01/Maven-%E6%A1%86%E6%9E%B6/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/08/01/Maven-%E6%A1%86%E6%9E%B6/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -948,8 +367,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

@@ -16,8 +16,9 @@
 <meta property="og:description" content="面试题集2">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/images/mvcsixiang.png">
+<meta property="og:image" content="http://yoursite.com/images/mvcsixiang2.png">
 <meta property="article:published_time" content="2020-09-07T04:10:26.000Z">
-<meta property="article:modified_time" content="2020-09-08T04:09:22.485Z">
+<meta property="article:modified_time" content="2020-09-10T08:26:36.058Z">
 <meta property="article:author" content="StT">
 <meta property="article:tag" content="面试">
 <meta name="twitter:card" content="summary">
@@ -244,6 +245,11 @@
 <h5 id="Model-模型："><a href="#Model-模型：" class="headerlink" title="Model-模型："></a>Model-模型：</h5><p>表示企业数据和业务规则（可以说就是后端接口，用于业务处理）。在MVC的三个部件中，模型拥有最多的处理任务。被模型返回的数据是中立的，就是说模型与数据格式无关，这样一个模型能为多个视图提供数据。由于应用于模型的代码只需写一次就可以被多个视图重用，所以减少了代码的重复性。 </p>
 <h5 id="View-视图："><a href="#View-视图：" class="headerlink" title="View-视图："></a>View-视图：</h5><p>是用户看到并与之交互的界面（它可以包括一些可以显示数据信息的页面，或者展示形式。例如jsp，html，asp，php）。</p>
 <h5 id="Controller-控制器："><a href="#Controller-控制器：" class="headerlink" title="Controller-控制器："></a>Controller-控制器：</h5><p>接受用户的输入并调用模型和视图去完成用户的需求（接受客户发送的请求，根据请求调用所对应的接口，然后模型业务处理后返回的数据，由控制器决定调用那个View展示）。所以当单击Web页面中的超链接和发送HTML表单时，控制器本身不输出任何东西和做任何处理。它只是接收请求并决定调用哪个模型构件去处理请求，然后用确定用哪个视图来显示模型处理返回的数据。</p>
+<h6 id="最简单、最经典的就是-Jsp-view-Servlet-controller-JavaBean-model"><a href="#最简单、最经典的就是-Jsp-view-Servlet-controller-JavaBean-model" class="headerlink" title="最简单、最经典的就是 Jsp(view) + Servlet(controller) + JavaBean(model)"></a>最简单、最经典的就是 Jsp(view) + Servlet(controller) + JavaBean(model)</h6><img src="/images/mvcsixiang2.png">
+
+<p>1&gt;.当控制器收到来自用户的请求</p>
+<p>2&gt;.控制器调用 JavaBean 完成业务</p>
+<p>3&gt;.完成业务后通过控制器跳转 JSP 页面的方式给用户反馈信息</p>
 
       
 
