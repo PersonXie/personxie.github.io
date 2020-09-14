@@ -17,7 +17,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/images/tom.png">
 <meta property="article:published_time" content="2020-09-11T01:52:54.000Z">
-<meta property="article:modified_time" content="2020-09-11T03:21:11.806Z">
+<meta property="article:modified_time" content="2020-09-13T03:48:01.108Z">
 <meta property="article:author" content="StT">
 <meta property="article:tag" content="面试">
 <meta name="twitter:card" content="summary">
@@ -196,7 +196,61 @@
 <p>5&gt;.通过ViewResolver结合 Model 和View，来渲染视图，DispatcherServlet 将渲染结果返回给客户端。</p>
 <img src="/images/tom.png">
 
-<h3 id="2-讲讲-struts2-和-SpringMVC-有什么不同？"><a href="#2-讲讲-struts2-和-SpringMVC-有什么不同？" class="headerlink" title="2.讲讲 struts2 和 SpringMVC 有什么不同？"></a>2.讲讲 struts2 和 SpringMVC 有什么不同？</h3><h6 id=""><a href="#" class="headerlink" title=""></a></h6>
+<h3 id="2-讲讲-struts2-和-SpringMVC-有什么不同？"><a href="#2-讲讲-struts2-和-SpringMVC-有什么不同？" class="headerlink" title="2.讲讲 struts2 和 SpringMVC 有什么不同？"></a>2.讲讲 struts2 和 SpringMVC 有什么不同？</h3><p>1&gt;.核心控制器不同（前端控制器、预处理控制器）；</p>
+<p>2&gt;.控制器实例：SpringMVC 会比Struts快一些（理论上），SpringMVC 是基于方法设计，而 Struts 是基于对象。</p>
+<p>3&gt;.参数传递：Struts2 中自身提供多种参数接收，其实都是通过（ValueStack）进行传递和赋值，而 SpringMVC是通过方法的参数进行接收。</p>
+<p>4&gt;.Struts新技术点更多，学习成本高；SpringMVC较为简单。</p>
+<p>5&gt;.SpringMVC 处理 AJAX 请求，直接通过返回数据，方法中使用注解 @ResponseBody ，可自动把对象转换为 JSON 数据，而 Struts 通过插件的方式进行处理。</p>
+<h3 id="3-说一下Spring中的两大核心？"><a href="#3-说一下Spring中的两大核心？" class="headerlink" title="3.说一下Spring中的两大核心？"></a>3.说一下Spring中的两大核心？</h3><p>Spring 是 J2EE 应用程序框架，是轻量级的 IOC 和 AOP的容器框架。</p>
+<h5 id="IOC控制反转："><a href="#IOC控制反转：" class="headerlink" title="IOC控制反转："></a>IOC控制反转：</h5><p>原来：我的Service需要调用dao，Service就需要创建dao</p>
+<p>Spring：Spring发现你Service依赖于dao，就帮我注入（又称依赖注入）</p>
+<p>核心原理：就是配置文件 + 反射（工厂也可以）+ 容器（map）</p>
+<h5 id="AOP：面向切面编程"><a href="#AOP：面向切面编程" class="headerlink" title="AOP：面向切面编程"></a>AOP：面向切面编程</h5><p>核心原理：使用动态代理的设计模式在执行方法前后或出现异常后做相关逻辑；</p>
+<p>主要用来做：</p>
+<p>1&gt;.事务处理：执行方法前开启事务，执行完成后关闭事务，出现异常后回滚事务</p>
+<p>2&gt;.权限判断：在执行方法前，判断是否具有权限</p>
+<p>3&gt;.日志：在执行前及进行日志</p>
+<p>……</p>
+<h3 id="4-Spring的事务传播特性"><a href="#4-Spring的事务传播特性" class="headerlink" title="4.Spring的事务传播特性"></a>4.Spring的事务传播特性</h3><p>多个事务存在的处理策略：</p>
+<p>Required：需要，如果存在一个事务，则支持当前事务，如果没有事务则开启</p>
+<p>Supports：支持，如果存在一个事务，支持当前事务，如果没有事务，则非事务的执行</p>
+<p>Mandatory：必要的，如果已经存在一个事务，支持当前事务，如果没有一个活动的事务，则抛出异常</p>
+<p>required_new：总是开启一个新的事务，如果一个事务已经存在，则将这个存在的事务挂起</p>
+<p>Not_support：总是非事务的执行，并挂起任何存在的事务</p>
+<p>Never：总是非事务的执行，如果存在活动事务，则抛出异常</p>
+<p>Nested：嵌套的，如果有就嵌套，没有进开启事务</p>
+<h3 id="5-什么是-ORM？"><a href="#5-什么是-ORM？" class="headerlink" title="5.什么是 ORM？"></a>5.什么是 ORM？</h3><p>为了解决面向对象与关系数据库存在的互不匹配现象的框架；</p>
+<p>目前常用的典型框架：Hibernate、mybatis</p>
+<h3 id="6-Hibernate-与-mybatis-的区别"><a href="#6-Hibernate-与-mybatis-的区别" class="headerlink" title="6.Hibernate 与 mybatis 的区别"></a>6.Hibernate 与 mybatis 的区别</h3><h5 id="相同点："><a href="#相同点：" class="headerlink" title="相同点："></a>相同点：</h5><p>都是Java中的orm框架，屏蔽jdbc API的底层访问细节，使我们不用与jdbc API打交道，就可以完成数据库的持久化操作</p>
+<p>mybatis：将sql语句与Java代码进行分离，提供了将结果集自动封装成为实体对象和对象集合的功能；</p>
+<p>Hibernate：全自动的orm映射工具，可以自动生成sql语句，执行并返回Java结果。</p>
+<h5 id="不同点："><a href="#不同点：" class="headerlink" title="不同点："></a>不同点：</h5><p>1&gt;.Hibernate要比mybatis功能负责和强大很多，因其可以自动生成sql语句。</p>
+<p>2&gt;.mybatis需要我们在xml配置文件中写sql语句，Hibernate我们无法直接控制该语句，就无法写特定的高效率的sql。对于特别复杂的sql查询，Hibernate很难适应，这时候用mybatis就是不错的选择。</p>
+<p>3&gt;.mybatis要比Hibernate简单的多，mybatis是面向sql的，不用考虑对象间一些复杂的映射关系。</p>
+<h3 id="7-有没有使用过Linux？都用来做什么？"><a href="#7-有没有使用过Linux？都用来做什么？" class="headerlink" title="7.有没有使用过Linux？都用来做什么？"></a>7.有没有使用过Linux？都用来做什么？</h3><p>Linux是一个长时间运行比较稳定的操作系统，所以一般会用来作为服务器（web、db、app等）；</p>
+<p>Linux本身具有 C 的编译环境，我们的一些软件是没有软件包（redis、nginx）的，需要在 Linux 的 C 编译环境编译得到软件包。</p>
+<h3 id="8-说一下-Linux-的常用命令"><a href="#8-说一下-Linux-的常用命令" class="headerlink" title="8.说一下 Linux 的常用命令"></a>8.说一下 Linux 的常用命令</h3><h5 id="常用系统命令："><a href="#常用系统命令：" class="headerlink" title="常用系统命令："></a>常用系统命令：</h5><p>pwd 获取当前路径</p>
+<p>cd 跳转到目录</p>
+<p>su-u 切换到管理员</p>
+<p>Ls ls 列举目录</p>
+<h5 id="文件操作："><a href="#文件操作：" class="headerlink" title="文件操作："></a>文件操作：</h5><p>tail 查看文件</p>
+<p>Rm-rf 删除文件</p>
+<p>mkdir 创建文件夹</p>
+<p>rm-r 删除文件夹</p>
+<h3 id="9-你是使用什么来连接远程的Linux服务器的？"><a href="#9-你是使用什么来连接远程的Linux服务器的？" class="headerlink" title="9.你是使用什么来连接远程的Linux服务器的？"></a>9.你是使用什么来连接远程的Linux服务器的？</h3><p>需要依赖于Linux服务器安装 ssh 服务器，一般这个端口是22</p>
+<p>需要依赖于Linux服务器安装 sftp 服务器，一般这个端口是25</p>
+<p>使用 xshell、putty等ssh 客户端连接Linux服务器，有点儿像 windows下面的远程连接，但是 Linux通过ssh连接上以后没有图形界面，全是命令行。使用xftp、winscp等sftp客户端来上传和下载文件（修改配置文件）。</p>
+<h3 id="10-有没有做过数据库优化方面的事情"><a href="#10-有没有做过数据库优化方面的事情" class="headerlink" title="10.有没有做过数据库优化方面的事情"></a>10.有没有做过数据库优化方面的事情</h3><h6 id="做过mysql数据库的优化"><a href="#做过mysql数据库的优化" class="headerlink" title="做过mysql数据库的优化"></a>做过mysql数据库的优化</h6><p>1&gt;.创建索引：创建合适的索引，我们就可以在索引中查询，查询到以后直接找对应的记录；</p>
+<p>2&gt;.分表：当一张表的数据比较多或者一张表的某些字段的值比较多且很少使用时，采用水平分表和垂直分表来优化；</p>
+<p>3&gt;.读写分离：当一台服务器不能满足需求时，采用读写分离的方式进行集群；</p>
+<p>4&gt;.缓存：使用redis来进行缓存</p>
+<h3 id="11-查找慢查询并定位慢查询？"><a href="#11-查找慢查询并定位慢查询？" class="headerlink" title="11.查找慢查询并定位慢查询？"></a>11.查找慢查询并定位慢查询？</h3><p>在项目转测试之前，启动mysql数据库时开启慢查询，并且把执行慢的语句写到日志中，在运行一定时间后，通过查看日志找到慢查询语句。</p>
+<p>使用explain慢查询语句，来详细分析语句的问题。</p>
+<h3 id="12-选择合适的存储引擎"><a href="#12-选择合适的存储引擎" class="headerlink" title="12.选择合适的存储引擎"></a>12.选择合适的存储引擎</h3><p>在开发中，我们经常使用的存储引擎 myISAM、INNODB、memory。</p>
+<h5 id="myISAM"><a href="#myISAM" class="headerlink" title="myISAM:"></a>myISAM:</h5><p>如果表对事务要求不高，同时是以查询和添加为主的，我们考虑使用 myISAM 存储引擎，比如 bbs 中的发帖表，回复表；</p>
+<h5 id="INNODB"><a href="#INNODB" class="headerlink" title="INNODB:"></a>INNODB:</h5><p>对事务要求高，保存的数据都是重要数据，建议使用INNODB，比如订单表、账号表；</p>
+<h5 id="memory："><a href="#memory：" class="headerlink" title="memory："></a>memory：</h5><p>数据变化频繁，不需要入库，同时又频繁的查询和修改，便考虑使用memory，速度极快。</p>
+
       
 
       
@@ -309,6 +363,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/09/13/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%866/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Java面试题集6
+        
+      </div>
+    </a>
   
   
     <a href="/2020/09/09/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%864/" id="article-nav-older" class="article-nav-link-wrap">
