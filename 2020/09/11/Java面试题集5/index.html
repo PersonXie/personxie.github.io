@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Java面试题集5 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="面试题集5">
+  <meta name="description" content="题集5">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java面试题集5">
 <meta property="og:url" content="http://yoursite.com/2020/09/11/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%865/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="面试题集5">
+<meta property="og:description" content="题集5">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/images/tom.png">
 <meta property="article:published_time" content="2020-09-11T01:52:54.000Z">
-<meta property="article:modified_time" content="2020-09-13T03:48:01.108Z">
+<meta property="article:modified_time" content="2020-09-14T09:06:52.883Z">
 <meta property="article:author" content="StT">
 <meta property="article:tag" content="面试">
 <meta name="twitter:card" content="summary">
@@ -187,7 +187,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="面试题集5"><a href="#面试题集5" class="headerlink" title="面试题集5"></a>面试题集5</h1><a id="more"></a>
+        <h1 id="题集5"><a href="#题集5" class="headerlink" title="题集5"></a>题集5</h1><a id="more"></a>
 
 <h3 id="1-SpringMVC的执行流程？"><a href="#1-SpringMVC的执行流程？" class="headerlink" title="1.SpringMVC的执行流程？"></a>1.SpringMVC的执行流程？</h3><h6 id="核心控制器捕获请求、查找handler、执行handler、选择ViewResolver、通过ViewResolver渲染视图并返回"><a href="#核心控制器捕获请求、查找handler、执行handler、选择ViewResolver、通过ViewResolver渲染视图并返回" class="headerlink" title="核心控制器捕获请求、查找handler、执行handler、选择ViewResolver、通过ViewResolver渲染视图并返回"></a>核心控制器捕获请求、查找handler、执行handler、选择ViewResolver、通过ViewResolver渲染视图并返回</h6><p>1&gt;.用户向服务器发送请求，请求被Spring前端控制 DispatcherServlet（核心控制器） 捕获；</p>
 <p>2&gt;.DispatcherServlet 对请求 URL 进行解析，得到请求资源标识符（URL），然后根据该 URL ，调用HandlerMapping 获得该Handler配置的所有相关对象（包括 Handler 对象以及Handler对象对应的拦截器），最后以 HandlerExecutionChain 对象的形式返回；</p>

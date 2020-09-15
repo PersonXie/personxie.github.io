@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Java面试题集6 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="面试题集6">
+  <meta name="description" content="题集6">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java面试题集6">
 <meta property="og:url" content="http://yoursite.com/2020/09/13/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%866/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="面试题集6">
+<meta property="og:description" content="题集6">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-09-13T03:49:21.000Z">
-<meta property="article:modified_time" content="2020-09-13T03:51:44.377Z">
+<meta property="article:modified_time" content="2020-09-14T03:43:41.896Z">
 <meta property="article:author" content="StT">
 <meta property="article:tag" content="面试">
 <meta name="twitter:card" content="summary">
@@ -185,9 +185,45 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="面试题集6"><a href="#面试题集6" class="headerlink" title="面试题集6"></a>面试题集6</h1><a id="more"></a>
+        <h1 id="题集6"><a href="#题集6" class="headerlink" title="题集6"></a>题集6</h1><a id="more"></a>
 
-<h3 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h3>
+<h3 id="1-数据库优化之创建合适的索引？"><a href="#1-数据库优化之创建合适的索引？" class="headerlink" title="1.数据库优化之创建合适的索引？"></a>1.数据库优化之创建合适的索引？</h3><h6 id="索引（Index）是帮助DBMS高效获取数据的数据结构。"><a href="#索引（Index）是帮助DBMS高效获取数据的数据结构。" class="headerlink" title="索引（Index）是帮助DBMS高效获取数据的数据结构。"></a>索引（Index）是帮助DBMS高效获取数据的数据结构。</h6><h5 id="普通索引："><a href="#普通索引：" class="headerlink" title="普通索引："></a>普通索引：</h5><p>允许重复的值出现；</p>
+<h5 id="唯一索引："><a href="#唯一索引：" class="headerlink" title="唯一索引："></a>唯一索引：</h5><p>除了不能有重复的记录外，其它和普通索引一样（如用户名、身份证号等）；</p>
+<h5 id="主键索引："><a href="#主键索引：" class="headerlink" title="主键索引："></a>主键索引：</h5><p>是随着设定主键而设定的，就是把某个列设为主键的时候，数据库就会给该列创建索引，唯一且没有 null 值；</p>
+<h5 id="全文索引："><a href="#全文索引：" class="headerlink" title="全文索引："></a>全文索引：</h5><p>用来对表中的文本域（char、varchar、text）进行索引，全文索引针对Myfsam。</p>
+<h3 id="2-索引使用的小技巧？"><a href="#2-索引使用的小技巧？" class="headerlink" title="2.索引使用的小技巧？"></a>2.索引使用的小技巧？</h3><h5 id="索引弊端："><a href="#索引弊端：" class="headerlink" title="索引弊端："></a>索引弊端：</h5><p>1&gt;.占用磁盘空间</p>
+<p>2&gt;.对 dml（插入、修改、删除）操作有影响，变慢</p>
+<h5 id="使用场景："><a href="#使用场景：" class="headerlink" title="使用场景："></a>使用场景：</h5><p>1&gt;.肯定在 where 场景经常使用，如果不做查询就没有意义</p>
+<p>2&gt;.该字段的内容不是唯一的几个值（sex）</p>
+<p>3&gt;.字段内容不会频繁变化</p>
+<h5 id="具体技巧："><a href="#具体技巧：" class="headerlink" title="具体技巧："></a>具体技巧：</h5><p>1&gt;.对于创建的多列索引（复合索引），不是使用的第一部分就不会使用索引；</p>
+<p>2&gt;.对于使用 like 的查询，查询如果是‘%aaa’不会使用索引而‘aaa%’会使用到索引；</p>
+<p>3&gt;.如果条件中有 or，有条件没有使用索引，即使其中有条件带索引也不会使用。换言之就是要求使用的所有字段，都必须单独使用时才能使用索引；</p>
+<p>4&gt;.如果列类型是字符串，那一定要在条件中将数据使用引号引用起来，否则不使用索引；</p>
+<p>5&gt;.如果mysql估计使用全表扫描要比使用索引快，则不使用索引。</p>
+<h3 id="3-数据库优化之分表？"><a href="#3-数据库优化之分表？" class="headerlink" title="3.数据库优化之分表？"></a>3.数据库优化之分表？</h3><p>分表分为水平（按行）分表和垂直（按列）分表；</p>
+<p>根据经验，mysql 表数据一般达到百万级别，查询效率会很低，容易造成表锁，甚至堆积很多链接，直接挂掉；水平分表能够很大程度减少这些压力；</p>
+<p>如果一张表中某个字段值非常多（长文本、二进制等），而且只有在很少的情况下会被查询，这时候就可以把字段单独放到一个表，通过外键关联起来（如考试详情，一般我们只关注分数，不关注详情），即垂直分表。</p>
+<h5 id="水平分表策略："><a href="#水平分表策略：" class="headerlink" title="水平分表策略："></a>水平分表策略：</h5><p>1&gt;.按时间分表：</p>
+<p>有一定局限性，当数据有较强的时效性，如微博发送记录、微信消息记录等，这种数据很少有用户会查询几个月前的数据，就可以按月分表；</p>
+<p>2&gt;.按区间范围分表：</p>
+<p>一般在有严格的自增 id 需求上，如按照user_id水平分表；</p>
+<p>3&gt;.hash分表</p>
+<p>通过一个原始目标的ID或者名称经由一定的 hash 算法计算出数据存储表的表名，然后访问相应的表。</p>
+<h3 id="4-数据库优化之读写分离"><a href="#4-数据库优化之读写分离" class="headerlink" title="4.数据库优化之读写分离"></a>4.数据库优化之读写分离</h3><p>一台数据库支持的最大并发连接数是有限的，如果用户并发访问太多，一台服务器满足不了需求时就可以集群处理，mysql 的集群处理技术最常用的就是读写分离。</p>
+<h5 id="主从同步："><a href="#主从同步：" class="headerlink" title="主从同步："></a>主从同步：</h5><p>数据库最终会把数据持久化到磁盘，如果集群必须确保每个数据库服务器的数据是一致的。能改变数据库数据的操作都由主数据库去写，其它的数据库从主数据库上同步数据；</p>
+<h5 id="读写分离："><a href="#读写分离：" class="headerlink" title="读写分离："></a>读写分离：</h5><p>使用负载均衡来实现写的操作都交给主数据库，读的操作都交给从服务器。</p>
+<h3 id="5-数据库优化之缓存"><a href="#5-数据库优化之缓存" class="headerlink" title="5.数据库优化之缓存"></a>5.数据库优化之缓存</h3><p>在持久层（dao）和数据库之间添加一个缓存层，如果用户访问的数据已经缓存起来，在用户访问时直接从缓存中获取，不用访问数据库。而缓存是在操作内存级，访问速度快；</p>
+<p>所以缓存可以减少数据库服务器压力，减少访问时间。</p>
+<h5 id="Java中常用的缓存："><a href="#Java中常用的缓存：" class="headerlink" title="Java中常用的缓存："></a>Java中常用的缓存：</h5><p>1&gt;.hibernate 的二级缓存，该缓存不能完成分布式缓存；</p>
+<p>2&gt;.可以使用 redis 来作为中央缓存，对缓存数据进行集群处理。</p>
+<h3 id="6-Redis是什么？"><a href="#6-Redis是什么？" class="headerlink" title="6.Redis是什么？"></a>6.Redis是什么？</h3><p>是一个key-value的 nosql数据库，先存到内存中，会根据一定的策略持久化到磁盘，即使断电也不会丢失数据，支持的数据类型比较多；</p>
+<p>主要用来做缓存数据库的数据和 web 集群时当作中央缓存存放seesion。</p>
+<h5 id="使用场景：-1"><a href="#使用场景：-1" class="headerlink" title="使用场景："></a>使用场景：</h5><p>1&gt;.解决库存溢出问题</p>
+<p>2&gt;.web集群时作为 session 缓存服务器</p>
+<h3 id="7-Java访问Redis"><a href="#7-Java访问Redis" class="headerlink" title="7.Java访问Redis"></a>7.Java访问Redis</h3><p>1&gt;.使用jedis java客户端来访问redis服务器，有点类似于通过 jdbc 访问mysql一样；</p>
+<p>2&gt;.如果使用spring进行集群，可以使用spring data来访问redis，spring data只是对jedis的二次封装。</p>
+
       
 
       
