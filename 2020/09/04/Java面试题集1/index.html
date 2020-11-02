@@ -15,13 +15,11 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="题集1">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/images/mianshi.png">
 <meta property="article:published_time" content="2020-09-04T04:07:30.000Z">
-<meta property="article:modified_time" content="2020-09-14T09:05:53.157Z">
+<meta property="article:modified_time" content="2020-11-02T05:34:24.869Z">
 <meta property="article:author" content="StT">
 <meta property="article:tag" content="面试">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/images/mianshi.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -189,9 +187,7 @@
       
         <h1 id="题集1"><a href="#题集1" class="headerlink" title="题集1"></a>题集1</h1><a id="more"></a>
 
-<h3 id="面试流程："><a href="#面试流程：" class="headerlink" title="面试流程："></a>面试流程：</h3><img src="/images/mianshi.png">
-
-<h3 id="1-Java的跨平台原理："><a href="#1-Java的跨平台原理：" class="headerlink" title="1.Java的跨平台原理："></a>1.Java的跨平台原理：</h3><p>Java通过不同系统、不同版本、不同位数的Java虚拟机（jvm），来屏蔽不同的系统指令集差异而对外提供统一的接口（Java API），对于我们普通的Java开发者而言，只需要按照接口开发即可。如果我们系统需要部署到不同的环境时，只需要在系统上安装对应版本的虚拟机即可。</p>
+<h3 id="面试流程："><a href="#面试流程：" class="headerlink" title="面试流程："></a>面试流程：</h3><h6 id="1-gt-简单的自我介绍"><a href="#1-gt-简单的自我介绍" class="headerlink" title="1&gt;.简单的自我介绍"></a>1&gt;.简单的自我介绍</h6><h6 id="2-gt-简单介绍简历项目，技术框架、具体用途、个人负责"><a href="#2-gt-简单介绍简历项目，技术框架、具体用途、个人负责" class="headerlink" title="2&gt;.简单介绍简历项目，技术框架、具体用途、个人负责"></a>2&gt;.简单介绍简历项目，技术框架、具体用途、个人负责</h6><h6 id="3-gt-问Java的专业技能"><a href="#3-gt-问Java的专业技能" class="headerlink" title="3&gt;.问Java的专业技能"></a>3&gt;.问Java的专业技能</h6><h6 id="4-gt-提问公司环境和相关问题"><a href="#4-gt-提问公司环境和相关问题" class="headerlink" title="4&gt;.提问公司环境和相关问题"></a>4&gt;.提问公司环境和相关问题</h6><h6 id="5-gt-自己最擅长什么，个人总结和校园经历"><a href="#5-gt-自己最擅长什么，个人总结和校园经历" class="headerlink" title="5&gt;.自己最擅长什么，个人总结和校园经历"></a>5&gt;.自己最擅长什么，个人总结和校园经历</h6><h3 id="1-Java的跨平台原理："><a href="#1-Java的跨平台原理：" class="headerlink" title="1.Java的跨平台原理："></a>1.Java的跨平台原理：</h3><p>Java通过不同系统、不同版本、不同位数的Java虚拟机（jvm），来屏蔽不同的系统指令集差异而对外提供统一的接口（Java API），对于我们普通的Java开发者而言，只需要按照接口开发即可。如果我们系统需要部署到不同的环境时，只需要在系统上安装对应版本的虚拟机即可。</p>
 <h3 id="2-搭建Java开发环境的步骤"><a href="#2-搭建Java开发环境的步骤" class="headerlink" title="2.搭建Java开发环境的步骤"></a>2.搭建Java开发环境的步骤</h3><h6 id="所需：适用于我们开发环境的jdk、对应开发环境eclipse、web服务器（tomcat）"><a href="#所需：适用于我们开发环境的jdk、对应开发环境eclipse、web服务器（tomcat）" class="headerlink" title="所需：适用于我们开发环境的jdk、对应开发环境eclipse、web服务器（tomcat）"></a>所需：适用于我们开发环境的jdk、对应开发环境eclipse、web服务器（tomcat）</h6><p>（1）下载对应组件<br>（2）安装：</p>
 <p>jdk：正常安装且配置JAVA_HOME,后面的eclipse和tomcat会依赖于此变量</p>
 <p>Eclipse：正常解压，设置workspace的默认编码</p>
@@ -228,13 +224,22 @@
 <p>HashMap是线程不安全的，效率较高，而HashTable是线程安全的，效率较低。</p>
 <h5 id="如何做到线程安全又效率高？"><a href="#如何做到线程安全又效率高？" class="headerlink" title="如何做到线程安全又效率高？"></a>如何做到线程安全又效率高？</h5><p>ConcurrentHashMap：通过把Map分为N个Segment（类似HashTable），可以提供相同的线程安全，但是效率提升N倍，默认提升16倍。</p>
 <h3 id="11-实现一个拷贝文件的工具类使用字节流还是字符流？"><a href="#11-实现一个拷贝文件的工具类使用字节流还是字符流？" class="headerlink" title="11.实现一个拷贝文件的工具类使用字节流还是字符流？"></a>11.实现一个拷贝文件的工具类使用字节流还是字符流？</h3><p>我们拷贝的文件不确定是只包含字符流，有可能有字节流（图片、声音、图像等），为考虑到通用性，要使用字节流。</p>
-<h3 id="12-讲一下线程的几种实现方式？"><a href="#12-讲一下线程的几种实现方式？" class="headerlink" title="12.讲一下线程的几种实现方式？"></a>12.讲一下线程的几种实现方式？</h3><p>通过继承Thread类实现一个线程；</p>
+<h3 id="12-讲一下线程的几种实现方式？以及线程和进程的联系"><a href="#12-讲一下线程的几种实现方式？以及线程和进程的联系" class="headerlink" title="12.讲一下线程的几种实现方式？以及线程和进程的联系"></a>12.讲一下线程的几种实现方式？以及线程和进程的联系</h3><p>通过继承Thread类实现一个线程；</p>
 <p>通过Runnable接口实现一个线程。</p>
 <p>继承扩展性不强，Java总支持单继承，如果一个类继承Thread就不能继承其他的类了。</p>
 <h5 id="如何启动线程？"><a href="#如何启动线程？" class="headerlink" title="如何启动线程？"></a>如何启动线程？</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Thread thread = <span class="keyword">new</span> Thread;</span><br><span class="line"><span class="comment">//继承了Thread的对象/实现了Runnable的对象</span></span><br><span class="line">thread.setName(<span class="string">"线程名称"</span>);<span class="comment">//设置一个线程名称</span></span><br><span class="line">thread.start();</span><br></pre></td></tr></table></figure>
 <p>启动线程使用start方法，而启动了以后执行的是run方法。</p>
 <h5 id="怎么区分线程？在一个系统中有很多线程，每个线程都会打印日志，如何区分是哪个线程打印的？"><a href="#怎么区分线程？在一个系统中有很多线程，每个线程都会打印日志，如何区分是哪个线程打印的？" class="headerlink" title="怎么区分线程？在一个系统中有很多线程，每个线程都会打印日志，如何区分是哪个线程打印的？"></a>怎么区分线程？在一个系统中有很多线程，每个线程都会打印日志，如何区分是哪个线程打印的？</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">thread.setName(<span class="string">"线程名称"</span>);<span class="comment">//设置一个线程名称</span></span><br></pre></td></tr></table></figure>
 <p>这是一种规范，在创建线程完成后，都需要设置名称。</p>
+<h5 id="以及线程和进程的联系："><a href="#以及线程和进程的联系：" class="headerlink" title="以及线程和进程的联系："></a>以及线程和进程的联系：</h5><h6 id="共同点："><a href="#共同点：" class="headerlink" title="共同点："></a>共同点：</h6><p>功能上都是用于实现多任务并发程序设计的技术手段，线程的状态包括就绪、执行与阻塞，与进程类似。</p>
+<h6 id="区别："><a href="#区别：" class="headerlink" title="区别："></a>区别：</h6><p>根本区别：进程是操作系统资源分配的基本单位，而线程是任务调度和执行的基本单位；</p>
+<p>一个线程只能属于一个进程，而一个进程可以有多个线程，但至少有一个线程，线程在进程下行进（一节车厢只属于一辆火车，而一辆火车可以有多个车厢，至少有一节车厢，单纯的车厢无法运行）；</p>
+<p>不同进程间数据很难共享（一辆火车上的乘客很难换到另外一辆火车，比如站点换乘），同一进程下不同线程间数据容易共享（A车厢换到B车厢很容易）</p>
+<p>进程要比线程消耗更多的计算机资源（采用多列火车相比多个车厢更耗资源）</p>
+<p>进程间不会相互影响，一个线程挂掉将导致整个进程挂掉（一列火车不会影响到另外一列火车，但是如果一列火车上中间的一节车厢着火了，将影响到所有车厢）</p>
+<p>进程可以拓展到多机，线程最多适合多核（不同火车可以开在多个轨道上，同一火车的车厢不能在行进的不同的轨道上）</p>
+<p>内存安全：进程使用的内存地址可以上锁，即一个线程使用某些共享内存时，其他线程必须等它结束，才能使用这一块内存。（比如火车上的洗手间）－”互斥锁”</p>
+<p>信号量：进程使用的内存地址可以限定使用量（比如火车上的餐厅，最多只允许多少人进入，如果满了需要在门口等，等有人出来了才能进去）－“信号量”</p>
 
       
 

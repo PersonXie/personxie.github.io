@@ -8,19 +8,19 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Java项目初解 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="项目初解OA管理系统">
+  <meta name="description" content="项目初解">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java项目初解">
 <meta property="og:url" content="http://yoursite.com/2020/08/14/Java%E9%A1%B9%E7%9B%AE%E5%88%9D%E8%A7%A3/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="项目初解OA管理系统">
+<meta property="og:description" content="项目初解">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://yoursite.com/images/oa.png">
 <meta property="og:image" content="http://yoursite.com/images/ds.png">
 <meta property="og:image" content="http://yoursite.com/images/tom.png">
 <meta property="og:image" content="http://yoursite.com/images/mvcsixiang.png">
 <meta property="article:published_time" content="2020-08-14T14:20:13.000Z">
-<meta property="article:modified_time" content="2020-09-08T04:12:48.344Z">
+<meta property="article:modified_time" content="2020-11-02T05:02:39.604Z">
 <meta property="article:author" content="StT">
 <meta property="article:tag" content="框架">
 <meta name="twitter:card" content="summary">
@@ -190,12 +190,24 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="项目初解"><a href="#项目初解" class="headerlink" title="项目初解"></a>项目初解</h1><h2 id="OA管理系统"><a href="#OA管理系统" class="headerlink" title="OA管理系统"></a>OA管理系统</h2><a id="more"></a>
+        <h1 id="项目初解"><a href="#项目初解" class="headerlink" title="项目初解"></a>项目初解</h1><a id="more"></a>
 
-<h4 id="数据层（dao）：实现底层的增删改查"><a href="#数据层（dao）：实现底层的增删改查" class="headerlink" title="数据层（dao）：实现底层的增删改查"></a>数据层（dao）：实现底层的增删改查</h4><h4 id="业务层（service）：实现注册登录"><a href="#业务层（service）：实现注册登录" class="headerlink" title="业务层（service）：实现注册登录"></a>业务层（service）：实现注册登录</h4><h4 id="视图层（jsp-view）：界面展示"><a href="#视图层（jsp-view）：界面展示" class="headerlink" title="视图层（jsp/view）：界面展示"></a>视图层（jsp/view）：界面展示</h4><h4 id="控制层（servlet）："><a href="#控制层（servlet）：" class="headerlink" title="控制层（servlet）："></a>控制层（servlet）：</h4><h4 id="pojo：表属性，get和set方法"><a href="#pojo：表属性，get和set方法" class="headerlink" title="pojo：表属性，get和set方法"></a>pojo：表属性，get和set方法</h4><h4 id="前端框架就是-js-文件"><a href="#前端框架就是-js-文件" class="headerlink" title="前端框架就是 js 文件"></a>前端框架就是 js 文件</h4><h4 id="Java框架就是-jar-包-配置文件（-xml）"><a href="#Java框架就是-jar-包-配置文件（-xml）" class="headerlink" title="Java框架就是 jar 包 + 配置文件（.xml）"></a>Java框架就是 jar 包 + 配置文件（.xml）</h4><h4 id="前后端交互通过-json"><a href="#前后端交互通过-json" class="headerlink" title="前后端交互通过 json"></a>前后端交互通过 json</h4><h4 id="前端访问数据通过-Ajax"><a href="#前端访问数据通过-Ajax" class="headerlink" title="前端访问数据通过 Ajax"></a>前端访问数据通过 Ajax</h4><img src="/images/oa.png">
+<h4 id="前端框架就是-js-文件"><a href="#前端框架就是-js-文件" class="headerlink" title="前端框架就是 js 文件"></a>前端框架就是 js 文件</h4><h4 id="Java框架就是-jar-包-配置文件（-xml）"><a href="#Java框架就是-jar-包-配置文件（-xml）" class="headerlink" title="Java框架就是 jar 包 + 配置文件（.xml）"></a>Java框架就是 jar 包 + 配置文件（.xml）</h4><h4 id="前后端交互通过-json"><a href="#前后端交互通过-json" class="headerlink" title="前后端交互通过 json"></a>前后端交互通过 json</h4><h4 id="前端访问数据通过-Ajax"><a href="#前端访问数据通过-Ajax" class="headerlink" title="前端访问数据通过 Ajax"></a>前端访问数据通过 Ajax</h4><img src="/images/oa.png">
 
 <h2 id="商城秒杀系统（SSM）"><a href="#商城秒杀系统（SSM）" class="headerlink" title="商城秒杀系统（SSM）:"></a>商城秒杀系统（SSM）:</h2><h4 id="订单的基本信息表：某人在某时间下了订单，总价、收货地址"><a href="#订单的基本信息表：某人在某时间下了订单，总价、收货地址" class="headerlink" title="订单的基本信息表：某人在某时间下了订单，总价、收货地址"></a>订单的基本信息表：某人在某时间下了订单，总价、收货地址</h4><h4 id="订单详情表：商品、单价、"><a href="#订单详情表：商品、单价、" class="headerlink" title="订单详情表：商品、单价、"></a>订单详情表：商品、单价、</h4><img src="/images/ds.png">
 
+<h2 id="xml："><a href="#xml：" class="headerlink" title="xml："></a>xml：</h2><p>XML 应用于 Web 开发的许多方面，常用于简化数据的存储和共享，也可用于交换数据、把数据从 HTML 分离。XML 有非常简单的 语法规则。带有正确语法的 XML 是”形式良好”的。有效的 XML 是针对 DTD 进行验证的。</p>
+<p>XML 文档本身是树状结构，是从”根”和”叶子”的分支结构开始的。文档中的元素形成了一棵文档树，这棵树从根部开始，并扩展到树的最底端，所有的元素都可以有子元素。XML 文档必须包含根元素，该元素是所有其他元素的父元素。XML 命名空间提供了一种避免元素命名冲突的方法。XML 的声明文件，如下所示：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span></span><br></pre></td></tr></table></figure>
+<p>以上实例包含 XML 版本（UTF-8 也是 HTML5, CSS, JavaScript, PHP, 和 SQL 的默认编码。</p>
+<p>DOM（Document Object Model）定义了一个访问 XML 的标准方式。XSLT 用于把 XML 转换为其他格式，比如 HTML。XMLHttpRequest 对象提供了一个网页加载后与服务器进行通信的方式。</p>
+<p>HTML 被设计用来显示数据。如果需要在 HTML 文档中显示动态数据，那数据改变时会花费大量的时间来编辑 HTML。但是通过 XML，数据能够存储在独立的 XML 文件中。这样就可以使用 HTML/CSS 进行显示和布局，并确保修改底层数据不再需要对 HTML 进行任何的改变。</p>
+<p>XML 数据以纯文本格式进行存储，因此提供了一种独立于软件和硬件的数据存储方法。这使得 XML 在不损失数据的情况下，更容易扩展或升级到新的操作系统、新的应用程序或新的浏览器。所有现代的浏览器有一个内建的 XML 解析器，可读取和操作 XML。</p>
+<h2 id="配置文件-xml："><a href="#配置文件-xml：" class="headerlink" title="配置文件.xml："></a>配置文件.xml：</h2><h4 id="Spring-xml"><a href="#Spring-xml" class="headerlink" title="Spring.xml:"></a>Spring.xml:</h4><p>主要配置和业务逻辑有关的。如数据源，事务控制等；配置和Mybatis的整合；配置扫描器；开启注解事务，配置事务增强，如何切入等</p>
+<h4 id="SpringMVC-xml"><a href="#SpringMVC-xml" class="headerlink" title="SpringMVC.xml:"></a>SpringMVC.xml:</h4><p>网站跳转逻辑的控制配置；配置视图解析器；标准配置等，将SpringMVC不能处理的请求交给tomcat，JSR303校验等。</p>
+<h4 id="Mybatis。xml"><a href="#Mybatis。xml" class="headerlink" title="Mybatis。xml:"></a>Mybatis。xml:</h4><p>主要用于生成pojo类、Mapper接口、xml文件等。数据库连接，指定JavaBean的生成位置，table标签指定每个表的生成策略</p>
+<h4 id="pom-xml"><a href="#pom-xml" class="headerlink" title="pom.xml:"></a>pom.xml:</h4><p>Maven项目的配置文件，引入项目中依赖的jar包引入分页插件、springMVC、spring、返回json字符串、数据校验、spring-jdbc、spring-test单元测试、spring面向切面编程、Mybatis整合、Spring的适配包、数据库连接池、驱动等</p>
+<h4 id="web-xml"><a href="#web-xml" class="headerlink" title="web.xml:"></a>web.xml:</h4><p>启动Spring的容器,springmvc的前端控制器拦截所有请求,字符编码过滤器，一定要放在所有过滤器之前,使用Rest风格的URI，将页面普通的post请求转为指定的delete或者put请求</p>
 <h2 id="系统启动过程："><a href="#系统启动过程：" class="headerlink" title="系统启动过程："></a>系统启动过程：</h2><h3 id="tomcat启动："><a href="#tomcat启动：" class="headerlink" title="tomcat启动："></a>tomcat启动：</h3><p>1.加载web.xml</p>
 <p>2.ContextLoaderListener这个监听器负责去加载Spring 的配置文件。准备好业务层/数据层的bean对象</p>
 <p>3.前端总控制器DispatcherServlet开始创建并加载SpringMVC配置文件。其他组件handlerMapping、handlerAdapter、viewResolver也准备好</p>
