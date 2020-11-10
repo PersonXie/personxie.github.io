@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>复习提纲3 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/page/4/index.html">
+  <meta name="description" content="3-数据库">
+<meta property="og:type" content="article">
+<meta property="og:title" content="复习提纲3">
+<meta property="og:url" content="http://yoursite.com/2020/09/08/%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B23/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="3-数据库">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-09-08T04:04:13.000Z">
+<meta property="article:modified_time" content="2020-11-09T10:49:38.256Z">
 <meta property="article:author" content="StT">
+<meta property="article:tag" content="总结">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -160,63 +165,297 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-复习提纲3" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/05/%E7%BA%BF%E6%80%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E9%93%BE%E8%A1%A8/" class="archive-article-date">
-  	<time datetime="2020-04-05T01:21:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-05</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/05/%E7%BA%BF%E6%80%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E2%80%94%E2%80%94%E9%93%BE%E8%A1%A8/">线性数据结构——链表</a>
+    <h1 class="article-title" itemprop="name">
+      复习提纲3
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/09/08/%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B23/" class="archive-article-date">
+  	<time datetime="2020-09-08T04:04:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="3-数据库"><a href="#3-数据库" class="headerlink" title="3-数据库"></a>3-数据库</h1><a id="more"></a>
+
+<h3 id="1-数据库分类及常用数据库"><a href="#1-数据库分类及常用数据库" class="headerlink" title="1.数据库分类及常用数据库"></a>1.数据库分类及常用数据库</h3><h6 id="数据库分为-关系型数据库-和-非关系型数据库"><a href="#数据库分为-关系型数据库-和-非关系型数据库" class="headerlink" title="数据库分为 关系型数据库 和 非关系型数据库"></a>数据库分为 关系型数据库 和 非关系型数据库</h6><h5 id="关系型："><a href="#关系型：" class="headerlink" title="关系型："></a>关系型：</h5><p>mysql、oracle、sqlserver</p>
+<h5 id="非关系型："><a href="#非关系型：" class="headerlink" title="非关系型："></a>非关系型：</h5><p>redis、mogodb、hadoop等</p>
+<h3 id="2-简单介绍一下关系型数据库三范式"><a href="#2-简单介绍一下关系型数据库三范式" class="headerlink" title="2.简单介绍一下关系型数据库三范式"></a>2.简单介绍一下关系型数据库三范式</h3><p>范式就是规范，是关系型数据库在设计表时，要遵循的三个规范</p>
+<p>满足第二范式的前提是满足第一范式，满足第三范式的前提是满足第二范式</p>
+<h5 id="第一范式："><a href="#第一范式：" class="headerlink" title="第一范式："></a>第一范式：</h5><p>数据库表的每一列都是不可分割的基本数据项，同一列中不能有多个值，即实体中的某个属性不能有多个值或者不能有重复的属性。列数据的不可分割！</p>
+<h5 id="第二范式："><a href="#第二范式：" class="headerlink" title="第二范式："></a>第二范式：</h5><p>要求数据库表中每个行必须可以被唯一的区分。为实现区分通常需要为表加上一个列，以存储各个实例的唯一标识。主键！</p>
+<h5 id="第三范式："><a href="#第三范式：" class="headerlink" title="第三范式："></a>第三范式：</h5><p>要求数据库表中不包含已在其它表中已包含的非主关键字信息。外键！</p>
+<h5 id="反三范式："><a href="#反三范式：" class="headerlink" title="反三范式："></a>反三范式：</h5><p>有时候为了效率，可以设置重复或者可以推导出的字段。如 订单（总价）和订单项（单价）。</p>
+<h3 id="3-事务的四个基本特征"><a href="#3-事务的四个基本特征" class="headerlink" title="3.事务的四个基本特征"></a>3.事务的四个基本特征</h3><p>事务是并发控制的单位，是用户定义的一个操作系列。这些操作要么都做，要么都不做，是一个不可分割的工作单位。</p>
+<p>如转账：A账户扣钱成功、B账户加钱成功，才算转账成功。</p>
+<h6 id="事务必须满足四大特征：原子性、一致性、隔离性、持久性-持续性"><a href="#事务必须满足四大特征：原子性、一致性、隔离性、持久性-持续性" class="headerlink" title="事务必须满足四大特征：原子性、一致性、隔离性、持久性/持续性"></a>事务必须满足四大特征：原子性、一致性、隔离性、持久性/持续性</h6><h5 id="原子性："><a href="#原子性：" class="headerlink" title="原子性："></a>原子性：</h5><p>表示事务操作内不可分割，要么都成功，要么都失败</p>
+<h5 id="一致性："><a href="#一致性：" class="headerlink" title="一致性："></a>一致性：</h5><p>要么都成功，要么都失败，后面的失败了要对前面的操作进行回滚</p>
+<h5 id="隔离性："><a href="#隔离性：" class="headerlink" title="隔离性："></a>隔离性：</h5><p>一个事务开始后，不能受其它事务干扰</p>
+<h5 id="持久性-持续性："><a href="#持久性-持续性：" class="headerlink" title="持久性/持续性："></a>持久性/持续性：</h5><p>表示事务开始了，就不能终止</p>
+<h3 id="4-mysql数据库的默认的最大连接数"><a href="#4-mysql数据库的默认的最大连接数" class="headerlink" title="4.mysql数据库的默认的最大连接数"></a>4.mysql数据库的默认的最大连接数</h3><p>特定服务器上面的数据库只能支持一定数目同时连接，我们一般都会设置最大连接数为 100.</p>
+<h3 id="5-简述mysql的分页及Oracle的分页"><a href="#5-简述mysql的分页及Oracle的分页" class="headerlink" title="5. 简述mysql的分页及Oracle的分页"></a>5. 简述mysql的分页及Oracle的分页</h3><p>存在很多数据时，不能完全显示数据，需要进行分段显示。</p>
+<p>Mysql是使用关键字limit进行分页的。limit offset，size表示从多少索引取多少位；</p>
+<p>Oracle的分页稍微复杂一点，要使用三层嵌套查询。工作中有需要，可以从原来的项目拷贝或网上查询。</p>
+<h3 id="6-简述数据库触发器的使用场景？"><a href="#6-简述数据库触发器的使用场景？" class="headerlink" title="6.简述数据库触发器的使用场景？"></a>6.简述数据库触发器的使用场景？</h3><p>触发器，需要有触发条件，当条件满足以后自动完成某操作。</p>
+<p>使用场景较多。如某人发一篇日志，便会自动通知好友，就是在增加日志时做一个后触发，再向通知表中写入条目。触发器效率很高。</p>
+<p>用关键字<code>create trigger</code>创建触发器，再加入触发条件 ，然后遍历表中行内容，搜索触发条件……</p>
+<h3 id="7-简述数据库的存储过程使用场景？"><a href="#7-简述数据库的存储过程使用场景？" class="headerlink" title="7. 简述数据库的存储过程使用场景？"></a>7. 简述数据库的存储过程使用场景？</h3><h5 id="数据库存储过程具有如下优点："><a href="#数据库存储过程具有如下优点：" class="headerlink" title="数据库存储过程具有如下优点："></a>数据库存储过程具有如下优点：</h5><p>1&gt;.存储过程只在创建时进行编译，之后每次执行存储过程都不需要重新编译，而一般SQL语句每执行一次就编译一次，因此使用存储过程可大大提高数据库执行速度。</p>
+<p>2&gt;.通常，复杂的业务逻辑需要多条SQL语句，这些语句从客户机发送到服务器会产生大量网络传输，如果放在一个存储过程中，可以降低网络负载。</p>
+<p>3&gt;.存储过程创建一次便可以重复使用，从而可以减少数据库开发人员的工作量。</p>
+<p>4&gt;.安全性高。存储过程可以屏蔽对底层数据库对象的直接访问，使用EXECUTE权限调用存储过程，无需拥有访问底层数据库对象的显式权限。</p>
+<h5 id="定义存储过程："><a href="#定义存储过程：" class="headerlink" title="定义存储过程："></a>定义存储过程：</h5><p>用关键字<code>create procedure + 表 + 列数据</code>进行创建，用<code>begin\end;</code>进行分割。</p>
+<h3 id="8-用JDBC如何调用存储过程？"><a href="#8-用JDBC如何调用存储过程？" class="headerlink" title="8.用JDBC如何调用存储过程？"></a>8.用JDBC如何调用存储过程？</h3><h6 id="贾琏欲执事！"><a href="#贾琏欲执事！" class="headerlink" title="贾琏欲执事！"></a>贾琏欲执事！</h6><h5 id="1-gt-加载驱动"><a href="#1-gt-加载驱动" class="headerlink" title="1&gt;.加载驱动"></a>1&gt;.加载驱动</h5><p>com.mysql.jdbc.Driver;</p>
+<p>oracle.jdbc.driver.OracleDriver</p>
+<h5 id="2-gt-获取链接"><a href="#2-gt-获取链接" class="headerlink" title="2&gt;.获取链接"></a>2&gt;.获取链接</h5><p>DriverManager.getConnection(url,username,password)</p>
+<h5 id="3-gt-设置参数"><a href="#3-gt-设置参数" class="headerlink" title="3&gt;.设置参数"></a>3&gt;.设置参数</h5><p>Statement PreparedStatement</p>
+<p>cstmt.setXXX(index,value);</p>
+<h5 id="4-gt-执行"><a href="#4-gt-执行" class="headerlink" title="4&gt;.执行"></a>4&gt;.执行</h5><p>executeQuery</p>
+<p>executeUpdate</p>
+<h5 id="5-gt-释放连接"><a href="#5-gt-释放连接" class="headerlink" title="5&gt;.释放连接"></a>5&gt;.释放连接</h5><p>释放连接要从小到大，必须放到 finnaly</p>
+<h3 id="9-简述你对jdbc的理解"><a href="#9-简述你对jdbc的理解" class="headerlink" title="9.简述你对jdbc的理解"></a>9.简述你对jdbc的理解</h3><p> Java database connection Java数据库连接。而数据库管理系统（mysql、oracle等）有很多，每个数据库管理系统支持的命令是不一样的。</p>
+<p> Java 只定义接口，让数据库厂商自己实现接口，对于我们开发者而言，只需要导入对应厂商开发的实现即可，然后以接口方式进行调用。（mysql + mysql驱动（实现） + jdbc ） ！</p>
+<h3 id="10-数据库连接池的作用"><a href="#10-数据库连接池的作用" class="headerlink" title="10.数据库连接池的作用"></a>10.数据库连接池的作用</h3><p>1&gt;.限定数据库的个数，不会导致由于数据库连接过多而使系统运行缓慢或崩溃。</p>
+<p>2&gt;.数据库连接不需要每次都去创建或销毁，节约了资源。</p>
+<p>3&gt;.数据库连接不需要每次都去创建，响应时间更快。</p>
+<h3 id="11-JDBC中的PreparedStatement相比Statement的好处"><a href="#11-JDBC中的PreparedStatement相比Statement的好处" class="headerlink" title="11.JDBC中的PreparedStatement相比Statement的好处"></a>11.JDBC中的PreparedStatement相比Statement的好处</h3><h6 id="大多数我们都使用PreparedStatement代替Statement。"><a href="#大多数我们都使用PreparedStatement代替Statement。" class="headerlink" title="大多数我们都使用PreparedStatement代替Statement。"></a>大多数我们都使用PreparedStatement代替Statement。</h6><p>1&gt;.PreparedStatement是预编译的，比Statement速度快。</p>
+<p>2&gt;.代码的可读性和可维护性强。</p>
+<p>3&gt;.安全性。PreparedStatement可以放置SQL注入攻击，而Statement却不能。</p>
+<h2 id="数据库之优化"><a href="#数据库之优化" class="headerlink" title="数据库之优化"></a>数据库之优化</h2><h3 id="1-数据库优化之创建合适的索引？"><a href="#1-数据库优化之创建合适的索引？" class="headerlink" title="1.数据库优化之创建合适的索引？"></a>1.数据库优化之创建合适的索引？</h3><h6 id="索引（Index）是帮助DBMS高效获取数据的数据结构。"><a href="#索引（Index）是帮助DBMS高效获取数据的数据结构。" class="headerlink" title="索引（Index）是帮助DBMS高效获取数据的数据结构。"></a>索引（Index）是帮助DBMS高效获取数据的数据结构。</h6><h5 id="普通索引："><a href="#普通索引：" class="headerlink" title="普通索引："></a>普通索引：</h5><p>允许重复的值出现；</p>
+<h5 id="唯一索引："><a href="#唯一索引：" class="headerlink" title="唯一索引："></a>唯一索引：</h5><p>除了不能有重复的记录外，其它和普通索引一样（如用户名、身份证号等）；</p>
+<h5 id="主键索引："><a href="#主键索引：" class="headerlink" title="主键索引："></a>主键索引：</h5><p>是随着设定主键而设定的，就是把某个列设为主键的时候，数据库就会给该列创建索引，唯一且没有 null 值；</p>
+<h5 id="全文索引："><a href="#全文索引：" class="headerlink" title="全文索引："></a>全文索引：</h5><p>用来对表中的文本域（char、varchar、text）进行索引，全文索引针对Myfsam。</p>
+<h3 id="2-选择合适的存储引擎"><a href="#2-选择合适的存储引擎" class="headerlink" title="2.选择合适的存储引擎"></a>2.选择合适的存储引擎</h3><p>在开发中，我们经常使用的存储引擎 myISAM、INNODB、memory。</p>
+<h5 id="myISAM"><a href="#myISAM" class="headerlink" title="myISAM:"></a>myISAM:</h5><p>如果表对事务要求不高，同时是以查询和添加为主的，我们考虑使用 myISAM 存储引擎，比如 bbs 中的发帖表，回复表；</p>
+<h5 id="INNODB"><a href="#INNODB" class="headerlink" title="INNODB:"></a>INNODB:</h5><p>对事务要求高，保存的数据都是重要数据，建议使用INNODB，比如订单表、账号表；</p>
+<h5 id="memory："><a href="#memory：" class="headerlink" title="memory："></a>memory：</h5><p>数据变化频繁，不需要入库，同时又频繁的查询和修改，便考虑使用memory，速度极快。</p>
+<h3 id="3-数据库优化之分表？"><a href="#3-数据库优化之分表？" class="headerlink" title="3.数据库优化之分表？"></a>3.数据库优化之分表？</h3><p>分表分为水平（按行）分表和垂直（按列）分表；</p>
+<p>根据经验，mysql 表数据一般达到百万级别，查询效率会很低，容易造成表锁，甚至堆积很多链接，直接挂掉；水平分表能够很大程度减少这些压力；</p>
+<p>如果一张表中某个字段值非常多（长文本、二进制等），而且只有在很少的情况下会被查询，这时候就可以把字段单独放到一个表，通过外键关联起来（如考试详情，一般我们只关注分数，不关注详情），即垂直分表。</p>
+<h5 id="水平分表策略："><a href="#水平分表策略：" class="headerlink" title="水平分表策略："></a>水平分表策略：</h5><p>1&gt;.按时间分表：</p>
+<p>有一定局限性，当数据有较强的时效性，如微博发送记录、微信消息记录等，这种数据很少有用户会查询几个月前的数据，就可以按月分表；</p>
+<p>2&gt;.按区间范围分表：</p>
+<p>一般在有严格的自增 id 需求上，如按照user_id水平分表；</p>
+<p>3&gt;.hash分表</p>
+<p>通过一个原始目标的ID或者名称经由一定的 hash 算法计算出数据存储表的表名，然后访问相应的表。</p>
+<h3 id="4-优化之读写分离"><a href="#4-优化之读写分离" class="headerlink" title="4.优化之读写分离"></a>4.优化之读写分离</h3><p>一台数据库支持的最大并发连接数是有限的，如果用户并发访问太多，一台服务器满足不了需求时就可以集群处理，mysql 的集群处理技术最常用的就是读写分离。</p>
+<h5 id="主从同步："><a href="#主从同步：" class="headerlink" title="主从同步："></a>主从同步：</h5><p>数据库最终会把数据持久化到磁盘，如果集群必须确保每个数据库服务器的数据是一致的。能改变数据库数据的操作都由主数据库去写，其它的数据库从主数据库上同步数据；</p>
+<h5 id="读写分离："><a href="#读写分离：" class="headerlink" title="读写分离："></a>读写分离：</h5><p>使用负载均衡来实现写的操作都交给主数据库，读的操作都交给从服务器。</p>
+<h3 id="5-数据库优化之缓存"><a href="#5-数据库优化之缓存" class="headerlink" title="5.数据库优化之缓存"></a>5.数据库优化之缓存</h3><p>在持久层（dao）和数据库之间添加一个缓存层，如果用户访问的数据已经缓存起来，在用户访问时直接从缓存中获取，不用访问数据库。而缓存是在操作内存级，访问速度快；</p>
+<p>所以缓存可以减少数据库服务器压力，减少访问时间。</p>
+<h5 id="Java中常用的缓存："><a href="#Java中常用的缓存：" class="headerlink" title="Java中常用的缓存："></a>Java中常用的缓存：</h5><p>1&gt;.hibernate 的二级缓存，该缓存不能完成分布式缓存；</p>
+<p>2&gt;.可以使用 redis 来作为中央缓存，对缓存数据进行集群处理。</p>
+<h2 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h2><h3 id="1-什么是Redis"><a href="#1-什么是Redis" class="headerlink" title="1.什么是Redis"></a>1.什么是Redis</h3><p>Redis 是一个基于内存的高性能key-value数据库，是使用c语言开发的；</p>
+<p>redis 是单线程，利用队列技术将并发访问变为串行访问，消除了传统数据库串行控制的开销；</p>
+<p>常用5种数据类型 ： string，list，set，sorted set，hash<br>Redis对象有5种类型，无论是哪种类型，Redis都不会直接存储，而是通过redisObject对象进行存储;</p>
+<p>Reids支持的语言 ：java、C、C#、C++、php、Node.js、Go等；</p>
+<p>Redis 持久化方案 ：Rdb 和 Aof</p>
+<p>Redis服务器默认开启RDB，关闭AOF；要开启AOF，需要在配置文件中配置：<br>appendonly yes</p>
+<h3 id="2-Redis相比memcached有哪些优势："><a href="#2-Redis相比memcached有哪些优势：" class="headerlink" title="2.Redis相比memcached有哪些优势："></a>2.Redis相比memcached有哪些优势：</h3><p>memcached所有的值均是简单的字符串，redis作为其替代者，支持更为丰富的数据类型；</p>
+<p>redis的速度比memcached快很多；</p>
+<p>redis可以持久化其数据；</p>
+<h3 id="3-Redis的并发竞争问题如何解决"><a href="#3-Redis的并发竞争问题如何解决" class="headerlink" title="3.Redis的并发竞争问题如何解决?"></a>3.Redis的并发竞争问题如何解决?</h3><p>单进程单线程模式，采用队列模式将并发访问变为串行访问。Redis本身没有锁的概念，Redis对于多个客户端连接并不存在竞争，利用setnx实现锁。</p>
+<h3 id="4"><a href="#4" class="headerlink" title="4."></a>4.</h3><p>Redis前端启动命令 ： ./redis-server</p>
+<p>Redis info查看命令：info memory</p>
+<p>判断key是否存在 : exists key +key名字</p>
+<p>删除key : del key1 key2 …</p>
+<h3 id="5-为什么需要持久化？"><a href="#5-为什么需要持久化？" class="headerlink" title="5.为什么需要持久化？"></a>5.为什么需要持久化？</h3><p>由于Redis是一种内存型数据库，即服务器在运行时，系统为其分配了一部分内存存储数据，一旦服务器挂了，或者突然宕机了，那么数据库里面的数据将会丢失，为了使服务器即使突然关机也能保存数据，必须通过持久化的方式将数据从内存保存到磁盘中。</p>
+<h3 id="6-RDB和AOF的优缺点"><a href="#6-RDB和AOF的优缺点" class="headerlink" title="6.RDB和AOF的优缺点"></a>6.RDB和AOF的优缺点</h3><p>RDB持久化:<br>优点：RDB文件紧凑，体积小，网络传输快，适合全量复制；恢复速度比AOF快很多。当然，与AOF相比，RDB最重要的优点之一是对性能的影响相对较小。<br>缺点：RDB文件的致命缺点在于其数据快照的持久化方式决定了必然做不到实时持久化，而在数据越来越重要的今天，数据的大量丢失很多时候是无法接受的，因此AOF持久化成为主流。此外，RDB文件需要满足特定格式，兼容性差（如老版本的Redis不兼容新版本的RDB文件）。<br>AOF持久化:<br>与RDB持久化相对应，AOF的优点在于支持秒级持久化、兼容性好，缺点是文件大、恢复速度慢、对性能影响大。</p>
+<h3 id="7-持久化策略选择"><a href="#7-持久化策略选择" class="headerlink" title="7.持久化策略选择"></a>7.持久化策略选择</h3><p>（1）如果Redis中的数据完全丢弃也没有关系（如Redis完全用作DB层数据的cache），那么无论是单机，还是主从架构，都可以不进行任何持久化。<br>（2）在单机环境下（对于个人开发者，这种情况可能比较常见），如果可以接受十几分钟或更多的数据丢失，选择RDB对Redis的性能更加有利；如果只能接受秒级别的数据丢失，应该选择AOF。<br>（3）但在多数情况下，我们都会配置主从环境，slave的存在既可以实现数据的热备，也可以进行读写分离分担Redis读请求，以及在master宕掉后继续提供服务。</p>
+<h3 id="8-Redis-的主从复制"><a href="#8-Redis-的主从复制" class="headerlink" title="8.Redis 的主从复制"></a>8.Redis 的主从复制</h3><p>持久化保证了即使redis服务重启也不会丢失数据，因为redis服务重启后会将硬盘上持久化的数据恢复到内存中，但是当redis服务器的硬盘损坏了可能会导致数据丢失，如果通过redis的主从复制机制就可以避免这种单点故障，</p>
+<h3 id="9-Redis是单线程的，但Redis为什么这么快？"><a href="#9-Redis是单线程的，但Redis为什么这么快？" class="headerlink" title="9.Redis是单线程的，但Redis为什么这么快？"></a>9.Redis是单线程的，但Redis为什么这么快？</h3><p>1、完全基于内存，绝大部分请求是纯粹的内存操作，非常快速。数据存在内存中，类似于HashMap，HashMap的优势就是查找和操作的时间复杂度都是O(1)；<br>2、数据结构简单，对数据操作也简单，Redis中的数据结构是专门进行设计的；<br>3、采用单线程，避免了不必要的上下文切换和竞争条件，也不存在多进程或者多线程导致的切换而消耗 CPU，不用去考虑各种锁的问题，不存在加锁释放锁操作，没有因为可能出现死锁而导致的性能消耗；<br>4、使用多路I/O复用模型，非阻塞IO；这里“多路”指的是多个网络连接，“复用”指的是复用同一个线程<br>5、使用底层模型不同，它们之间底层实现方式以及与客户端之间通信的应用协议不一样，Redis直接自己构建了VM 机制 ，因为一般的系统调用系统函数的话，会浪费一定的时间去移动和请求；</p>
+<h3 id="10-Reids6种淘汰策略："><a href="#10-Reids6种淘汰策略：" class="headerlink" title="10.Reids6种淘汰策略："></a>10.Reids6种淘汰策略：</h3><p>noeviction: 不删除策略, 达到最大内存限制时, 如果需要更多内存, 直接返回错误信息。大多数写命令都会导致占用更多的内存(有极少数会例外。<br>allkeys-lru: 所有key通用; 优先删除最近最少使用(less recently used ,LRU) 的 key。<br>volatile-lru: 只限于设置了 expire 的部分; 优先删除最近最少使用(less recently used ,LRU) 的 key。<br>allkeys-random: 所有key通用; 随机删除一部分 key。<br>volatile-random: 只限于设置了 expire 的部分; 随机删除一部分 key。<br>volatile-ttl: 只限于设置了 expire 的部分; 优先删除剩余时间(time to live,TTL) 短的key。</p>
+<h3 id="11-Java访问Redis"><a href="#11-Java访问Redis" class="headerlink" title="11.Java访问Redis"></a>11.Java访问Redis</h3><p>1&gt;.使用jedis java客户端来访问redis服务器，有点类似于通过 jdbc 访问mysql一样；</p>
+<p>2&gt;.如果使用spring进行集群，可以使用spring data来访问redis，spring data只是对jedis的二次封装。</p>
+<h3 id="12-redis通讯协议"><a href="#12-redis通讯协议" class="headerlink" title="12.redis通讯协议"></a>12.redis通讯协议</h3><p>RESP 是redis客户端和服务端之前使用的一种通讯协议；<br>RESP 的特点：实现简单、快速解析、可读性好</p>
+<h3 id="13-Redis内存模型"><a href="#13-Redis内存模型" class="headerlink" title="13.Redis内存模型"></a>13.Redis内存模型</h3><p>used_memory ：<br>Redis分配器分配的内存总量（单位是字节），包括使用的虚拟内存（即swap）；<br>used_memory_rss ：<br>Redis进程占据操作系统的内存（单位是字节），与top及ps命令看到的值是一致的；除了分配器分配的内存之外，used_memory_rss还包括进程运行本身需要的内存、内存碎片等，但是不包括虚拟内存。<br>mem_fragmentation_ratio ：<br>内存碎片比率，该值是used_memory_rss / used_memory的比值。<br>mem_allocator ：<br>Redis使用的内存分配器，在编译时指定；可以是 libc 、jemalloc或者tcmalloc，默认是jemalloc；截图中使用的便是默认的jemalloc。</p>
+<h3 id="14-Redis内存划分"><a href="#14-Redis内存划分" class="headerlink" title="14.Redis内存划分"></a>14.Redis内存划分</h3><p>数据：<br>作为数据库，数据是最主要的部分；这部分占用的内存会统计在used_memory中。<br>进程本身运行需要的内存：<br>Redis主进程本身运行肯定需要占用内存，如代码、常量池等等；这部分内存大约几兆，在大多数生产环境中与Redis数据占用的内存相比可以忽略。这部分内存不是由jemalloc分配，因此不会统计在used_memory中。<br>缓冲内存：<br>缓冲内存包括客户端缓冲区、复制积压缓冲区、AOF缓冲区等；其中，客户端缓冲存储客户端连接的输入输出缓冲；复制积压缓冲用于部分复制功能；AOF缓冲区用于在进行AOF重写时，保存最近的写入命令。在了解相应功能之前，不需要知道这些缓冲的细节；这部分内存由jemalloc分配，因此会统计在used_memory中。<br>内存碎片：<br>内存碎片是Redis在分配、回收物理内存过程中产生的。例如，如果对数据的更改频繁，而且数据之间的大小相差很大，可能导致redis释放的空间在物理内存中并没有释放，但redis又无法有效利用，这就形成了内存碎片。内存碎片不会统计在used_memory中。</p>
+<h3 id="15-Redis常用管理命令"><a href="#15-Redis常用管理命令" class="headerlink" title="15.Redis常用管理命令"></a>15.Redis常用管理命令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># dbsize 返回当前数据库 key 的数量。</span><br><span class="line"># info 返回当前 redis 服务器状态和一些统计信息。</span><br><span class="line"># monitor 实时监听并返回redis服务器接收到的所有请求信息。</span><br><span class="line"># shutdown 把数据同步保存到磁盘上，并关闭redis服务。</span><br><span class="line"># config get parameter 获取一个 redis 配置参数信息。（个别参数可能无法获取）</span><br><span class="line"># config set parameter value 设置一个 redis 配置参数信息。（个别参数可能无法获取）</span><br><span class="line"># config resetstat 重置 info 命令的统计信息。（重置包括：keyspace 命中数、</span><br><span class="line"># keyspace 错误数、 处理命令数，接收连接数、过期 key 数）</span><br><span class="line"># debug object key 获取一个 key 的调试信息。</span><br><span class="line"># debug segfault 制造一次服务器当机。</span><br><span class="line"># flushdb 删除当前数据库中所有 key,此方法不会失败。小心慎用</span><br><span class="line"># flushall 删除全部数据库中所有 key，此方法不会失败。小心慎用</span><br></pre></td></tr></table></figure>
+
+<h3 id="16-布隆过滤器"><a href="#16-布隆过滤器" class="headerlink" title="16.布隆过滤器"></a>16.布隆过滤器</h3><p>bloomfilter就类似于一个hash set，用于快速判某个元素是否存在于集合中，其典型的应用场景就是快速判断一个key是否存在于某容器，不存在就直接返回。布隆过滤器的关键就在于hash算法和容器大小。</p>
+<h3 id="17-缓存雪崩问题"><a href="#17-缓存雪崩问题" class="headerlink" title="17.缓存雪崩问题"></a>17.缓存雪崩问题</h3><p>存在同一时间内大量键过期（失效），接着来的一大波请求瞬间都落在了数据库中导致连接异常。<br>解决方案：<br>1、也是像解决缓存穿透一样加锁排队。<br>2、建立备份缓存，缓存A和缓存B，A设置超时时间，B不设值超时时间，先从A读缓存，A没有读B，并且更新A缓存和B缓存;</p>
+<h3 id="18-Redis分布式"><a href="#18-Redis分布式" class="headerlink" title="18.Redis分布式"></a>18.Redis分布式</h3><p>redis支持主从的模式。原则：Master会将数据同步到slave，而slave不会将数据同步到master。Slave启动时会连接master来同步数据。<br>这是一个典型的分布式读写分离模型。我们可以利用master来插入数据，slave提供检索服务。这样可以有效减少单个机器的并发访问数量</p>
+<h3 id="19-读写分离模型"><a href="#19-读写分离模型" class="headerlink" title="19.读写分离模型"></a>19.读写分离模型</h3><p>通过增加Slave DB的数量，读的性能可以线性增长。为了避免Master DB的单点故障，集群一般都会采用两台Master DB做双机热备，所以整个集群的读和写的可用性都非常高。读写分离架构的缺陷在于，不管是Master还是Slave，每个节点都必须保存完整的数据，如果在数据量很大的情况下，集群的扩展能力还是受限于单个节点的存储能力，而且对于Write-intensive类型的应用，读写分离架构并不适合。</p>
+<h3 id="20-数据分片模型"><a href="#20-数据分片模型" class="headerlink" title="20.数据分片模型"></a>20.数据分片模型</h3><p>为了解决读写分离模型的缺陷，可以将数据分片模型应用进来。<br>可以将每个节点看成都是独立的master，然后通过业务实现数据分片。<br>结合上面两种模型，可以将每个master设计成由一个master和多个slave组成的模型。</p>
+<h3 id="21-Redis分布式锁实现"><a href="#21-Redis分布式锁实现" class="headerlink" title="21.Redis分布式锁实现"></a>21.Redis分布式锁实现</h3><p>先拿setnx来争抢锁，抢到之后，再用expire给锁加一个过期时间防止锁忘记了释放。<br>如果在setnx之后执行expire之前进程意外crash或者要重启维护了，那会怎么样？<br>set指令有非常复杂的参数，这个应该是可以同时把setnx和expire合成一条指令来用的！</p>
+<h3 id="22-Redis-管道-Pipeline"><a href="#22-Redis-管道-Pipeline" class="headerlink" title="22.Redis 管道 Pipeline"></a>22.Redis 管道 Pipeline</h3><p>在某些场景下我们在一次操作中可能需要执行多个命令，而如果我们只是一个命令一个命令去执行则会浪费很多网络消耗时间，如果将命令一次性传输到 Redis中去再执行，则会减少很多开销时间。但是需要注意的是 pipeline中的命令并不是原子性执行的，也就是说管道中的命令到达 Redis服务器的时候可能会被其他的命令穿插</p>
+<h3 id="23-手写一个-LRU-算法："><a href="#23-手写一个-LRU-算法：" class="headerlink" title="23.手写一个 LRU 算法："></a>23.手写一个 LRU 算法：</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">class LRUCache&lt;K, V&gt; extends LinkedHashMap&lt;K, V&gt; &#123;</span><br><span class="line">    private final int CACHE_SIZE;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 传递进来最多能缓存多少数据</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * @param cacheSize 缓存大小</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    public LRUCache(int cacheSize) &#123;</span><br><span class="line">        // true 表示让 linkedHashMap 按照访问顺序来进行排序，最近访问的放在头部，最老访问的放在尾部。</span><br><span class="line">        super((int) Math.ceil(cacheSize / 0.75) + 1, 0.75f, true);</span><br><span class="line">        CACHE_SIZE = cacheSize;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected boolean removeEldestEntry(Map.Entry&lt;K, V&gt; eldest) &#123;</span><br><span class="line">        // 当 map中的数据量大于指定的缓存个数的时候，就自动删除最老的数据。</span><br><span class="line">        return size() &gt; CACHE_SIZE;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="24-Redis常见的几种缓存策略"><a href="#24-Redis常见的几种缓存策略" class="headerlink" title="24.Redis常见的几种缓存策略"></a>24.Redis常见的几种缓存策略</h3><p>Cache-Aside<br>Read-Through<br>Write-Through<br>Write-Behind</p>
+<h3 id="25-Redis-中设置过期时间主要通过以下四种方式"><a href="#25-Redis-中设置过期时间主要通过以下四种方式" class="headerlink" title="25.Redis 中设置过期时间主要通过以下四种方式"></a>25.Redis 中设置过期时间主要通过以下四种方式</h3><p>expire key seconds：设置 key 在 n 秒后过期；<br>pexpire key milliseconds：设置 key 在 n 毫秒后过期；<br>expireat key timestamp：设置 key 在某个时间戳（精确到秒）之后过期；<br>pexpireat key millisecondsTimestamp：设置 key 在某个时间戳（精确到毫秒）之后过期；</p>
+<h3 id="26-Reids三种不同删除策略"><a href="#26-Reids三种不同删除策略" class="headerlink" title="26.Reids三种不同删除策略"></a>26.Reids三种不同删除策略</h3><h5 id="定时删除："><a href="#定时删除：" class="headerlink" title="定时删除："></a>定时删除：</h5><p>在设置键的过期时间的同时，创建一个定时任务，当键达到过期时间时，立即执行对键的删除操作</p>
+<h5 id="惰性删除："><a href="#惰性删除：" class="headerlink" title="惰性删除："></a>惰性删除：</h5><p>放任键过期不管，但在每次从键空间获取键时，都检查取得的键是否过期，如果过期的话，就删除该键，如果没有过期，就返回该键</p>
+<h5 id="定期删除："><a href="#定期删除：" class="headerlink" title="定期删除："></a>定期删除：</h5><p>每隔一点时间，程序就对数据库进行一次检查，删除里面的过期键，至于要删除多少过期键，以及要检查多少个数据库，则由算法决定。</p>
+<h5 id="定时删除"><a href="#定时删除" class="headerlink" title="定时删除"></a>定时删除</h5><p>优点：对内存友好，定时删除策略可以保证过期键会尽可能快地被删除，并释放国期间所占用的内存</p>
+<p>缺点：对cpu时间不友好，在过期键比较多时，删除任务会占用很大一部分cpu时间，在内存不紧张但cpu时间紧张的情况下，将cpu时间用在删除和当前任务无关的过期键上，影响服务器的响应时间和吞吐量</p>
+<h5 id="定期删除"><a href="#定期删除" class="headerlink" title="定期删除"></a>定期删除</h5><p>由于定时删除会占用太多cpu时间，影响服务器的响应时间和吞吐量以及惰性删除浪费太多内存，有内存泄露的危险，所以出现一种整合和折中这两种策略的定期删除策略。<br>定期删除策略每隔一段时间执行一次删除过期键操作，并通过限制删除操作执行的时长和频率来减少删除操作对CPU时间的影响。<br>定时删除策略有效地减少了因为过期键带来的内存浪费。</p>
+<h5 id="惰性删除"><a href="#惰性删除" class="headerlink" title="惰性删除"></a>惰性删除</h5><p>优点：<br>对cpu时间友好，在每次从键空间获取键时进行过期键检查并是否删除，删除目标也仅限当前处理的键，这个策略不会在其他无关的删除任务上花费任何cpu时间。<br>缺点：<br>对内存不友好，过期键过期也可能不会被删除，导致所占的内存也不会释放。甚至可能会出现内存泄露的现象，当存在很多过期键，而这些过期键又没有被访问到，这会可能导致它们会一直保存在内存中，造成内存泄露。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zhifubao.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/09/08/%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B23/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2020/09/09/%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B24/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          复习提纲4
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2020/09/07/%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B22/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">复习提纲2</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/page/3/">&amp;laquo; Prev</a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><a class="page-number" href="/archives/page/3/">3</a><span class="page-number current">4</span>
-    </nav>
+  
+
+  
+
   
 
 
@@ -240,8 +479,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
@@ -327,6 +566,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">总结</a>
               </li>
             
             <div class="clearfix"></div>

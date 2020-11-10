@@ -6,23 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Java面试题集2 | Hexo</title>
+  <title>复习提纲4 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题集2">
+  <meta name="description" content="4-前端">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java面试题集2">
-<meta property="og:url" content="http://yoursite.com/2020/09/07/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%862/index.html">
+<meta property="og:title" content="复习提纲4">
+<meta property="og:url" content="http://yoursite.com/2020/09/09/%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B24/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="题集2">
+<meta property="og:description" content="4-前端">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/images/mvcsixiang.png">
-<meta property="og:image" content="http://yoursite.com/images/mvcsixiang2.png">
-<meta property="article:published_time" content="2020-09-07T04:10:26.000Z">
-<meta property="article:modified_time" content="2020-11-02T05:47:37.854Z">
+<meta property="article:published_time" content="2020-09-09T03:24:53.000Z">
+<meta property="article:modified_time" content="2020-11-09T10:57:37.768Z">
 <meta property="article:author" content="StT">
-<meta property="article:tag" content="面试">
+<meta property="article:tag" content="总结">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/images/mvcsixiang.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -168,111 +165,69 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Java面试题集2" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-复习提纲4" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Java面试题集2
+      复习提纲4
     </h1>
   
 
         
-        <a href="/2020/09/07/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%862/" class="archive-article-date">
-  	<time datetime="2020-09-07T04:10:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-07</time>
+        <a href="/2020/09/09/%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B24/" class="archive-article-date">
+  	<time datetime="2020-09-09T03:24:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-09</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="题集2"><a href="#题集2" class="headerlink" title="题集2"></a>题集2</h1><a id="more"></a>
+        <h1 id="4-前端"><a href="#4-前端" class="headerlink" title="4-前端"></a>4-前端</h1><a id="more"></a>
 
-<h3 id="1-有没有使用过线程并发库？简单了解过！"><a href="#1-有没有使用过线程并发库？简单了解过！" class="headerlink" title="1.有没有使用过线程并发库？简单了解过！"></a>1.有没有使用过线程并发库？简单了解过！</h3><p>Java通过Executors提供四种线程池，分别是：</p>
-<h6 id="newCachedThreadPool"><a href="#newCachedThreadPool" class="headerlink" title="newCachedThreadPool:"></a>newCachedThreadPool:</h6><p>创建一个可缓存线程池，如果线程池长度超过处理需要，可灵活回收空闲线程；若无可回收，则新建线程。</p>
-<h6 id="newFixedThreadPool"><a href="#newFixedThreadPool" class="headerlink" title="newFixedThreadPool:"></a>newFixedThreadPool:</h6><p>创建一个定长线程池，可控制线程最大并发数，超出的线程会在队列中等待。</p>
-<h6 id="newScheduledThreadPool"><a href="#newScheduledThreadPool" class="headerlink" title="newScheduledThreadPool:"></a>newScheduledThreadPool:</h6><p>创建一个定长线程池，支持定时及周期性任务执行。</p>
-<h6 id="newSingleThreadExecutor"><a href="#newSingleThreadExecutor" class="headerlink" title="newSingleThreadExecutor:"></a>newSingleThreadExecutor:</h6><p>创建一个单线程化的线程池，它只会用唯一的工作线程来执行任务，保证所有任务按照指定顺序（FIFO,UFO,优先级）执行。</p>
-<h5 id="线程池的作用："><a href="#线程池的作用：" class="headerlink" title="线程池的作用："></a>线程池的作用：</h5><p>1&gt;.限定线程的个数，不会由于县线程过多导致系统运行缓慢或崩溃；</p>
-<p>2&gt;.线程池不需要每次都去创建或销毁，节约了资源；</p>
-<p>3&gt;.线程池不需要每次都创建，响应时间更快</p>
-<h3 id="2-讲一下什么是设计模式？"><a href="#2-讲一下什么是设计模式？" class="headerlink" title="2.讲一下什么是设计模式？"></a>2.讲一下什么是设计模式？</h3><p>经过开发人员无数次实践总结，设计过程中可以反复使用、可以解决特定问题的设计方法。</p>
-<h5 id="常用的设计模式有哪些？"><a href="#常用的设计模式有哪些？" class="headerlink" title="常用的设计模式有哪些？"></a>常用的设计模式有哪些？</h5><h6 id="单例模式（饱汉模式、饥汉模式）："><a href="#单例模式（饱汉模式、饥汉模式）：" class="headerlink" title="单例模式（饱汉模式、饥汉模式）："></a>单例模式（饱汉模式、饥汉模式）：</h6><p>1&gt;.构造方法私有化，让除了自己类中能创建外其他地方都不能创建</p>
-<p>2&gt;.在自己的类中创建一个单实例（饱汉模式是一出来就创建单实例，而饥汉模式是需要的时候才创建）</p>
-<p>3&gt;.提供一个方法获取该实例对象（创建时需要进行方法同步）</p>
-<h6 id="工厂模式："><a href="#工厂模式：" class="headerlink" title="工厂模式："></a>工厂模式：</h6><p>对象的创建交给一个工厂来做。如Spring IOC就使用了工厂模式。</p>
-<h6 id="代理模式："><a href="#代理模式：" class="headerlink" title="代理模式："></a>代理模式：</h6><p>Spring AOP就使用了动态代理。</p>
-<h3 id="3-讲一下http-get-和-post请求的区别？"><a href="#3-讲一下http-get-和-post请求的区别？" class="headerlink" title="3.讲一下http get 和 post请求的区别？"></a>3.讲一下http get 和 post请求的区别？</h3><h6 id="GET和POST请求都是http的请求方式，用户通过不同的http请求方式完成对资源（url）的操作。GET-POST-PUT-DELETE分别对应着资源的查，改，增，删四个操作，具体来讲GET一般用于获取-查询资源信息，而POST一般用于更新资源信息。"><a href="#GET和POST请求都是http的请求方式，用户通过不同的http请求方式完成对资源（url）的操作。GET-POST-PUT-DELETE分别对应着资源的查，改，增，删四个操作，具体来讲GET一般用于获取-查询资源信息，而POST一般用于更新资源信息。" class="headerlink" title="GET和POST请求都是http的请求方式，用户通过不同的http请求方式完成对资源（url）的操作。GET,POST,PUT,DELETE分别对应着资源的查，改，增，删四个操作，具体来讲GET一般用于获取/查询资源信息，而POST一般用于更新资源信息。"></a>GET和POST请求都是http的请求方式，用户通过不同的http请求方式完成对资源（url）的操作。GET,POST,PUT,DELETE分别对应着资源的查，改，增，删四个操作，具体来讲GET一般用于获取/查询资源信息，而POST一般用于更新资源信息。</h6><h5 id="1-gt-Get请求提交的数据会在地址栏显示出来，而post请求不会在地址栏显示出来"><a href="#1-gt-Get请求提交的数据会在地址栏显示出来，而post请求不会在地址栏显示出来" class="headerlink" title="1&gt;.Get请求提交的数据会在地址栏显示出来，而post请求不会在地址栏显示出来"></a>1&gt;.Get请求提交的数据会在地址栏显示出来，而post请求不会在地址栏显示出来</h5><p>Get提交，请求的数据会附在URL之后（就是把数据放在HTTP协议头中）；POST请求，把提交的数据放在HTTP的包体中。</p>
-<h5 id="2-gt-传输数据的大小"><a href="#2-gt-传输数据的大小" class="headerlink" title="2&gt;.传输数据的大小"></a>2&gt;.传输数据的大小</h5><p>http Get请求由于浏览器对地址长度的限制而导致传输的数据有限制，Post则不会。</p>
-<h5 id="3-gt-安全性，Post的安全性要比Get的安全性高"><a href="#3-gt-安全性，Post的安全性要比Get的安全性高" class="headerlink" title="3&gt;.安全性，Post的安全性要比Get的安全性高"></a>3&gt;.安全性，Post的安全性要比Get的安全性高</h5><p>由于数据会是在地址中呈现，所以可以通过历史记录找到密码等关键信息。</p>
-<h3 id="4-说一下对servlet的理解-或者servlet是什么？"><a href="#4-说一下对servlet的理解-或者servlet是什么？" class="headerlink" title="4.说一下对servlet的理解/或者servlet是什么？"></a>4.说一下对servlet的理解/或者servlet是什么？</h3><p>Servlet（Server Applet），全称Java Servlet，是用Java编写的服务器端程序。而这些Servlet都要实现Servlet这个接口。</p>
-<p>其主要功能在于交互式的浏览和修改数据，生成动态Web内容。Servlet运行于支持Java的应用服务器中。</p>
-<p>HttpServlet 重写doGet 和doPost方法 / 也可以重写service 方法完成对get 和 post 请求的响应。</p>
-<h3 id="5-简单说一下servlet的生命周期？"><a href="#5-简单说一下servlet的生命周期？" class="headerlink" title="5.简单说一下servlet的生命周期？"></a>5.简单说一下servlet的生命周期？</h3><p>servlet有良好的生存期的定义，包括加载和实例化、初始化、处理请求以及服务结束，这个生存期由Java Servlet接口的init、service和destroy方法表达。</p>
-<p>Servlet启动时，开始加载servlet，生命周期开始；Servlet被服务器实例化后，容器运行其init方法，请求到达时运行其service方法；service方法自动派遣运行与请求对应的 doXXX 方法（doGet、doPost）等；当服务器决定将实例销毁的时候（服务器关闭），调用其destory方法。</p>
-<p>加载Servlet的class—-&gt;实例化Servlet—–&gt;调用Servlet的init完成初始化—–&gt;响应请求（Servlet的service方法）——&gt;Servlet容器关闭时（Servlet的destory方法）</p>
-<h3 id="6-Servlet-API-中-forward-与-redirect-的区别？"><a href="#6-Servlet-API-中-forward-与-redirect-的区别？" class="headerlink" title="6.Servlet API 中 forward() 与 redirect() 的区别？"></a>6.Servlet API 中 forward() 与 redirect() 的区别？</h3><p>1&gt;. forward是服务器端的转向，而redirect是客户端的跳转；</p>
-<p>2&gt;.使用forward浏览器的地址不会发生改变，而redirect会发生改变；</p>
-<p>3&gt;.forward是一次请求中完成，而redirect是重新发起请求；</p>
-<p>4&gt;.forward是在服务器端完成，而不用客户端重新发起请求，效率较高。</p>
-<h3 id="7-JSP和Servlet有哪些相同点和不同点？"><a href="#7-JSP和Servlet有哪些相同点和不同点？" class="headerlink" title="7.JSP和Servlet有哪些相同点和不同点？"></a>7.JSP和Servlet有哪些相同点和不同点？</h3><p>JSP是Servlet技术的扩展，所有的jsp文件都会被翻译为一个继承HttpServlet的类，也就是jsp最终也是一个Servlet，这个Servlet对外提供服务。</p>
-<p>JSP侧重于视图，Servlet主要用于控制逻辑。</p>
-<p>Servlet和JSP最主要的不同点在于，Servlet如果要实现 html 的功能，必须使用Writer 输出对应的 html ，比较麻烦；而JSP的情况是 Java和 Html 可以组合为一个扩展名为 .jsp 的文件，做界面展示比较方便而嵌入逻辑比较复杂。</p>
-<h3 id="8-jsp有哪些内置对象？作用分别是什么？"><a href="#8-jsp有哪些内置对象？作用分别是什么？" class="headerlink" title="8.jsp有哪些内置对象？作用分别是什么？"></a>8.jsp有哪些内置对象？作用分别是什么？</h3><h5 id="九个内置对象："><a href="#九个内置对象：" class="headerlink" title="九个内置对象："></a>九个内置对象：</h5><h6 id="request："><a href="#request：" class="headerlink" title="request："></a>request：</h6><p>用户端请求，此请求会包含来自GET/POST请求的参数</p>
-<h6 id="response："><a href="#response：" class="headerlink" title="response："></a>response：</h6><p>网页传回用户端的回应</p>
-<h6 id="pageContext："><a href="#pageContext：" class="headerlink" title="pageContext："></a>pageContext：</h6><p>网页的属性是在这里管理</p>
-<h6 id="session："><a href="#session：" class="headerlink" title="session："></a>session：</h6><p>与请求有关的会话期</p>
-<h6 id="application："><a href="#application：" class="headerlink" title="application："></a>application：</h6><p>servlet 正在执行的内容</p>
-<h6 id="out："><a href="#out：" class="headerlink" title="out："></a>out：</h6><p>用来传送回应的输出</p>
-<h6 id="config："><a href="#config：" class="headerlink" title="config："></a>config：</h6><p>servlet的构架部件</p>
-<h6 id="page-JSP："><a href="#page-JSP：" class="headerlink" title="page JSP："></a>page JSP：</h6><p>网页本身</p>
-<h6 id="exception："><a href="#exception：" class="headerlink" title="exception："></a>exception：</h6><p>针对错误网页/未捕捉的例外</p>
-<h6 id="四大作用域："><a href="#四大作用域：" class="headerlink" title="四大作用域："></a>四大作用域：</h6><p>pageContext、request、session、application。可以通过 jstl 从四大作用域取值。</p>
-<h6 id="Jsp传值："><a href="#Jsp传值：" class="headerlink" title="Jsp传值："></a>Jsp传值：</h6><p>request、session、application、cookie也能传值。</p>
-<h3 id="9-说一下-session-和-cookie-的区别？"><a href="#9-说一下-session-和-cookie-的区别？" class="headerlink" title="9.说一下 session 和 cookie 的区别？"></a>9.说一下 session 和 cookie 的区别？</h3><h5 id="联系："><a href="#联系：" class="headerlink" title="联系："></a>联系：</h5><p>Session 和 cookie 都是会话（Session）跟踪技术。Cookie通过在客户端记录信息确定用户身份，Session通过在服务器端记录信息确定用户身份。但是Session的实现依赖于Cookie，sessionId（session的唯一标识需要存放在客户端）。</p>
-<h5 id="区别："><a href="#区别：" class="headerlink" title="区别："></a>区别：</h5><p>1&gt;.cookie 数据存放在客户的浏览器上，session 数据存放在服务器上；</p>
-<p>2&gt;.cookie 不是很安全，别人可以分析存放在本地的 COOKIE 并进行 COOKIE 欺骗，考虑到安全应当使用 session。</p>
-<p>3&gt;.session 会在一定时间内保存在服务器上，当访问增多，会比较占用服务器的性能，考虑到减轻服务器性能方面，应当使用COOKIE；</p>
-<p>4&gt;.单个 cookie 保存的数据不能超过4k，很多浏览器都限制一个站点最多保存20个cookie。</p>
-<h5 id="个人建议："><a href="#个人建议：" class="headerlink" title="个人建议："></a>个人建议：</h5><p>将登录信息等重要信息存放为 SESSION;</p>
-<p>其他信息如果需要保留，可以放在 COOKIE 中，如购物车。</p>
-<p>注：购物车最好使用 cookie ，但是 cookie 是可以在客户端禁用的，这时需要使用cookie + 数据库的方式实现，当从 cookie 中不能取出数据时，就从数据库获取。</p>
-<h3 id="10-简述MVC思想"><a href="#10-简述MVC思想" class="headerlink" title="10.简述MVC思想"></a>10.简述MVC思想</h3><p>MVC(Model View Controller)是一种软件设计的框架模式，它采用模型(Model)-视图(View)-控制器(controller)的方法把业务逻辑、数据与界面显示分离用通俗的话来讲，MVC的理念就是把数据处理、数据展示(界面)和程序/用户的交互三者分离开的一种编程模式。</p>
-<img src="/images/mvcsixiang.png">
-
-<h5 id="Model-模型："><a href="#Model-模型：" class="headerlink" title="Model-模型："></a>Model-模型：</h5><p>表示企业数据和业务规则（可以说就是后端接口，用于业务处理）。在MVC的三个部件中，模型拥有最多的处理任务。被模型返回的数据是中立的，就是说模型与数据格式无关，这样一个模型能为多个视图提供数据。由于应用于模型的代码只需写一次就可以被多个视图重用，所以减少了代码的重复性。 </p>
-<h5 id="View-视图："><a href="#View-视图：" class="headerlink" title="View-视图："></a>View-视图：</h5><p>是用户看到并与之交互的界面（它可以包括一些可以显示数据信息的页面，或者展示形式。例如jsp，html，asp，php）。</p>
-<h5 id="Controller-控制器："><a href="#Controller-控制器：" class="headerlink" title="Controller-控制器："></a>Controller-控制器：</h5><p>接受用户的输入并调用模型和视图去完成用户的需求（接受客户发送的请求，根据请求调用所对应的接口，然后模型业务处理后返回的数据，由控制器决定调用那个View展示）。所以当单击Web页面中的超链接和发送HTML表单时，控制器本身不输出任何东西和做任何处理。它只是接收请求并决定调用哪个模型构件去处理请求，然后用确定用哪个视图来显示模型处理返回的数据。</p>
-<h6 id="最简单、最经典的就是-Jsp-view-Servlet-controller-JavaBean-model"><a href="#最简单、最经典的就是-Jsp-view-Servlet-controller-JavaBean-model" class="headerlink" title="最简单、最经典的就是 Jsp(view) + Servlet(controller) + JavaBean(model)"></a>最简单、最经典的就是 Jsp(view) + Servlet(controller) + JavaBean(model)</h6><img src="/images/mvcsixiang2.png">
-
-<p>1&gt;.当控制器收到来自用户的请求</p>
-<p>2&gt;.控制器调用 JavaBean 完成业务</p>
-<p>3&gt;.完成业务后通过控制器跳转 JSP 页面的方式给用户反馈信息</p>
-<h3 id="11-简述HTTP协议"><a href="#11-简述HTTP协议" class="headerlink" title="11.简述HTTP协议"></a>11.简述HTTP协议</h3><p>HTTP协议是超文本传输协议的缩写,是用于从万维网（WWW:World Wide Web ）服务器传输超文本到本地浏览器的传送协议。它基于TCP/IP通信协议来传递数据（如HTML 文件, 图片文件, 查询结果等）。</p>
-<p>HTTP是一个属于应用层的面向对象的协议，由于其简捷、快速的方式，适用于分布式超媒体信息系统。</p>
-<h5 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h5><p>1、简单快速：</p>
-<p>客户向服务器请求服务时，只需传送请求方法和路径。请求方法常用的有GET、HEAD、POST。每种方法规定了客户与服务器联系的类型不同。由于HTTP协议简单，使得HTTP服务器的程序规模小，因而通信速度很快。</p>
-<p>2、灵活：</p>
-<p>HTTP允许传输任意类型的数据对象。正在传输的类型由Content-Type加以标记。</p>
-<p>3.无连接：</p>
-<p>无连接的含义是限制每次连接只处理一个请求。服务器处理完客户的请求，并收到客户的应答后，即断开连接。采用这种方式可以节省传输时间。</p>
-<p>4.无状态：</p>
-<p>HTTP协议是无状态协议。无状态是指协议对于事务处理没有记忆能力。缺少状态意味着如果后续处理需要前面的信息，则它必须重传，这样可能导致每次连接传送的数据量增大。另一方面，在服务器不需要先前信息时它的应答就较快。</p>
-<p>5、支持B/S及C/S模式。</p>
-<h5 id="工作原理-响应步骤："><a href="#工作原理-响应步骤：" class="headerlink" title="工作原理/响应步骤："></a>工作原理/响应步骤：</h5><ol>
-<li><p>客户端连接到Web服务器<br>一个HTTP客户端，通常是浏览器，与Web服务器的HTTP端口（默认为80）建立一个TCP套接字连接。</p>
-</li>
-<li><p>发送HTTP请求<br>通过TCP套接字，客户端向Web服务器发送一个文本的请求报文，一个请求报文由请求行、请求头部、空行和请求数据4部分组成。</p>
-</li>
-<li><p>服务器接受请求并返回HTTP响应<br>Web服务器解析请求，定位请求资源。服务器将资源复本写到TCP套接字，由客户端读取。一个响应由状态行、响应头部、空行和响应数据4部分组成。</p>
-</li>
-<li><p>释放连接TCP连接<br>若connection 模式为close，则服务器主动关闭TCP连接，客户端被动关闭连接，释放TCP连接;若connection 模式为keepalive，则该连接会保持一段时间，在该时间内可以继续接收请求;</p>
-</li>
-<li><p>客户端浏览器解析HTML内容<br>客户端浏览器首先解析状态行，查看表明请求是否成功的状态代码。然后解析每一个响应头，响应头告知以下为若干字节的HTML文档和文档的字符集。客户端浏览器读取响应数据HTML，根据HTML的语法对其进行格式化，并在浏览器窗口中显示。</p>
-</li>
-</ol>
+<h3 id="1-简单说一下html，css，javascript在网页开发中的定位？"><a href="#1-简单说一下html，css，javascript在网页开发中的定位？" class="headerlink" title="1.简单说一下html，css，javascript在网页开发中的定位？"></a>1.简单说一下html，css，javascript在网页开发中的定位？</h3><h5 id="HTML："><a href="#HTML：" class="headerlink" title="HTML："></a>HTML：</h5><p>超文本标记语言，定义网页的结构</p>
+<h5 id="CSS："><a href="#CSS：" class="headerlink" title="CSS："></a>CSS：</h5><p>层叠样式表，用来美化页面</p>
+<h5 id="JavaScript："><a href="#JavaScript：" class="headerlink" title="JavaScript："></a>JavaScript：</h5><p>主要用来验证表单，做动态交互（ajax）</p>
+<h3 id="2-简单介绍Ajax"><a href="#2-简单介绍Ajax" class="headerlink" title="2.简单介绍Ajax"></a>2.简单介绍Ajax</h3><h5 id="什么是Ajax？"><a href="#什么是Ajax？" class="headerlink" title="什么是Ajax？"></a>什么是Ajax？</h5><p>异步的javascript和xml</p>
+<h5 id="作用是什么？"><a href="#作用是什么？" class="headerlink" title="作用是什么？"></a>作用是什么？</h5><p>通过AJAX与服务器进行数据交换，AJAX可以使网页实现布局更新。意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。</p>
+<h5 id="如何实现Ajax？"><a href="#如何实现Ajax？" class="headerlink" title="如何实现Ajax？"></a>如何实现Ajax？</h5><p>XmlHttpRequest对象，使用这个对象可以异步向服务器发送请求，获取响应，完成局部更新。Open、send、responseText/responseXML 局部响应</p>
+<h5 id="使用场景？"><a href="#使用场景？" class="headerlink" title="使用场景？"></a>使用场景？</h5><p>登录失败时不跳转页面，注册时提示用户名是否存在，二级联动等等…</p>
+<h3 id="3-js和jQuery的关系"><a href="#3-js和jQuery的关系" class="headerlink" title="3.js和jQuery的关系"></a>3.js和jQuery的关系</h3><p>jQuery 是一个js 框架，封装了 js 的属性和方法，让用户使用起来更加便利，并且增强了 js 的功能。</p>
+<p>使用原生 js 要处理很多兼容性问题（注册事件等），由 jQuery 封装了底层，就不用处理兼容性问题。</p>
+<p>原生 js 的dom和事件绑定和Ajax 等操作非常麻烦，jQuery 封装以后操作非常方便。</p>
+<h3 id="4-jQuery的常用选择器"><a href="#4-jQuery的常用选择器" class="headerlink" title="4.jQuery的常用选择器"></a>4.jQuery的常用选择器</h3><h5 id="ID选择器："><a href="#ID选择器：" class="headerlink" title="ID选择器："></a>ID选择器：</h5><p>通过ID获取一个元素</p>
+<h5 id="类（Class）选择器："><a href="#类（Class）选择器：" class="headerlink" title="类（Class）选择器："></a>类（Class）选择器：</h5><p>通过类（css）获取元素</p>
+<h5 id="标签选择器："><a href="#标签选择器：" class="headerlink" title="标签选择器："></a>标签选择器：</h5><p>通过标签获取元素</p>
+<h5 id="通用选择器（-）："><a href="#通用选择器（-）：" class="headerlink" title="通用选择器（*）："></a>通用选择器（*）：</h5><p>获取所有的元素</p>
+<h5 id="div-myCls："><a href="#div-myCls：" class="headerlink" title="div.myCls："></a>div.myCls：</h5><p>获取 myCls 这个类的 div</p>
+<h5 id="层次选择器："><a href="#层次选择器：" class="headerlink" title="层次选择器："></a>层次选择器：</h5><p>儿子选择器 &gt; 获取下面的子元素</p>
+<p>后代选择器 空格 获取下面后代，包括儿子、孙子等</p>
+<h5 id="属性选择器："><a href="#属性选择器：" class="headerlink" title="属性选择器："></a>属性选择器：</h5><h3 id="5-jQuery的页面加载事件？"><a href="#5-jQuery的页面加载事件？" class="headerlink" title="5.jQuery的页面加载事件？"></a>5.jQuery的页面加载事件？</h3><p>很多时候我们获取元素时必须等到该元素被加载完成后才能获取。我们可以把 js 代码放到该元素的后面，但这样也会造成 js 在我们的body中存在不好管理，所有页面加载完毕后所有的元素已经加载完毕，一般获取元素做操作都在页面加载完成后进行。</p>
+<h5 id="第一种："><a href="#第一种：" class="headerlink" title="第一种："></a>第一种：</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span></span>&#123;&#125;())；</span><br></pre></td></tr></table></figure>
+<p><code>$(document)</code>把原生的 document 这个dom 对象转换为 jQuery 对象，转换完成后才能调用 ready 方法</p>
+<p>ready(fn) 表示的是页面结构被加载完毕后执行传入函数 fn</p>
+<h5 id="第二种："><a href="#第二种：" class="headerlink" title="第二种："></a>第二种：</h5><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(function[]&#123;&#125;);</span><br></pre></td></tr></table></figure>
+<p>当页面加载完毕后执行里面的函数，这一种相对简单，用的最多。</p>
+<h5 id="与-window-onload-的区别："><a href="#与-window-onload-的区别：" class="headerlink" title="与 window.onload 的区别："></a>与 window.onload 的区别：</h5><p>1&gt;.jQuery 中的页面加载完毕事件，表示的是页面结构被加载完毕。</p>
+<p>2&gt;.window.onload 表示的是页面被加载完毕</p>
+<p>如：<code>&lt;img src=&quot;http://baidu.com/1.jpg&quot;/&gt;onload</code>必须等页面中的图片、声音、图像等远程资源被加载完毕后才调用，而jQuery中只需要页面结构被加载完毕。</p>
+<h3 id="6-jQuery-的-Ajax-和原生-js-实现Ajax有什么关系？"><a href="#6-jQuery-的-Ajax-和原生-js-实现Ajax有什么关系？" class="headerlink" title="6.jQuery 的 Ajax 和原生 js 实现Ajax有什么关系？"></a>6.jQuery 的 Ajax 和原生 js 实现Ajax有什么关系？</h3><p>jQuery 中的 Ajax 也是通过原生的 js 封装的。封装完成后让我们使用起来更加便利，不用考虑底层实现或兼容性等处理。</p>
+<p>如果采用原生js实现Ajax是非常麻烦的，且每次使用场景都一样。就算不使用jQuery我们也要封装 Ajax 对象的方法和属性。有像 jQuery 这些已经封装完成并已经过很多企业实践的框架，可靠且开源，我们直接使用即可。</p>
+<h3 id="7-简单说一下html5？"><a href="#7-简单说一下html5？" class="headerlink" title="7.简单说一下html5？"></a>7.简单说一下html5？</h3><p>Html5是最新版本的 html ，是在原来 html4 的基础上增加了一些标签。</p>
+<p>Html 增加一些像画板、声音、视频、web存储等高级功能。但是 html5 有一个不好的地方，就是太强调语义了，导致开发中选择标签时很迷惑。</p>
+<p>如：在做页面布局时，无论头部、主题、导航等模块都使用div来表示，但是html5的规范，需要使用不同的标签来表示（header footer等）。</p>
+<h5 id="你对现在哪些新技术有了解？"><a href="#你对现在哪些新技术有了解？" class="headerlink" title="你对现在哪些新技术有了解？"></a>你对现在哪些新技术有了解？</h5><p>Html5、css3等</p>
+<h3 id="7-简单说一下css3？"><a href="#7-简单说一下css3？" class="headerlink" title="7.简单说一下css3？"></a>7.简单说一下css3？</h3><p>Css3 是最新版本的css，是对原来css2的功能增强；</p>
+<p>Css3中提供一些原来css2中实现起来比较困难或者不能实现的功能。<br>1&gt;.盒子圆角边框</p>
+<p>2&gt;.盒子和文字的阴影</p>
+<p>3&gt;.渐变</p>
+<p>4&gt;.转换、移动、缩放、旋转等</p>
+<p>5&gt;.过渡、动画都可以使用动画</p>
+<p>6&gt;.可以使用媒体查询实现响应式网站</p>
+<h6 id="css3最大缺点就是要根据不同的浏览器处理兼容性，不过有对应的一些处理兼容性的工具，可以使用。"><a href="#css3最大缺点就是要根据不同的浏览器处理兼容性，不过有对应的一些处理兼容性的工具，可以使用。" class="headerlink" title="css3最大缺点就是要根据不同的浏览器处理兼容性，不过有对应的一些处理兼容性的工具，可以使用。"></a>css3最大缺点就是要根据不同的浏览器处理兼容性，不过有对应的一些处理兼容性的工具，可以使用。</h6><h3 id="8-bootstrap是什么？"><a href="#8-bootstrap是什么？" class="headerlink" title="8.bootstrap是什么？"></a>8.bootstrap是什么？</h3><p>BootStrap 是一个移动设备优先的UI框架。我们可以不用写任何css、js代码就能实现比较漂亮的交互性页面。我们程序员对页面的编写设计是有硬伤的，所以自己写页面时就使用类似的的UI框架。</p>
+<p>平时用的比较多的：<br>1.模态框、2.表单、表单项、3.布局…</p>
 
       
 
@@ -317,7 +272,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">面试</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
         		</li>
       		
 		</ul>
@@ -373,7 +328,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/09/07/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%862/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/09/09/%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B24/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -387,18 +342,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/09/08/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%863/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/09/11/%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B25/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Java面试题集3
+          复习提纲5
         
       </div>
     </a>
   
   
-    <a href="/2020/09/04/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%861/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Java面试题集1</div>
+    <a href="/2020/09/08/%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B23/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">复习提纲3</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -541,6 +496,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">总结</a>
               </li>
             
             <div class="clearfix"></div>

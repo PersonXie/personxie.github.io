@@ -6,20 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Java面试题集3 | Hexo</title>
+  <title>复习提纲2 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题集3">
+  <meta name="description" content="2-Java基础">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java面试题集3">
-<meta property="og:url" content="http://yoursite.com/2020/09/08/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%863/index.html">
+<meta property="og:title" content="复习提纲2">
+<meta property="og:url" content="http://yoursite.com/2020/09/07/%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B22/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="题集3">
+<meta property="og:description" content="2-Java基础">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-09-08T04:04:13.000Z">
-<meta property="article:modified_time" content="2020-09-14T09:05:39.378Z">
+<meta property="og:image" content="http://yoursite.com/images/mvcsixiang.png">
+<meta property="og:image" content="http://yoursite.com/images/mvcsixiang2.png">
+<meta property="article:published_time" content="2020-09-07T04:10:26.000Z">
+<meta property="article:modified_time" content="2020-11-10T01:42:44.908Z">
 <meta property="article:author" content="StT">
-<meta property="article:tag" content="面试">
+<meta property="article:tag" content="总结">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/images/mvcsixiang.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -165,73 +168,123 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Java面试题集3" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-复习提纲2" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Java面试题集3
+      复习提纲2
     </h1>
   
 
         
-        <a href="/2020/09/08/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%863/" class="archive-article-date">
-  	<time datetime="2020-09-08T04:04:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-08</time>
+        <a href="/2020/09/07/%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B22/" class="archive-article-date">
+  	<time datetime="2020-09-07T04:10:26.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-07</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="题集3"><a href="#题集3" class="headerlink" title="题集3"></a>题集3</h1><a id="more"></a>
+        <h1 id="2-Java基础"><a href="#2-Java基础" class="headerlink" title="2-Java基础"></a>2-Java基础</h1><a id="more"></a>
 
-<h3 id="1-数据库分类及常用数据库"><a href="#1-数据库分类及常用数据库" class="headerlink" title="1.数据库分类及常用数据库"></a>1.数据库分类及常用数据库</h3><h6 id="数据库分为-关系型数据库-和-非关系型数据库"><a href="#数据库分为-关系型数据库-和-非关系型数据库" class="headerlink" title="数据库分为 关系型数据库 和 非关系型数据库"></a>数据库分为 关系型数据库 和 非关系型数据库</h6><h5 id="关系型："><a href="#关系型：" class="headerlink" title="关系型："></a>关系型：</h5><p>mysql、oracle、sqlserver</p>
-<h5 id="非关系型："><a href="#非关系型：" class="headerlink" title="非关系型："></a>非关系型：</h5><p>redis、mogodb、hadoop等</p>
-<h3 id="2-简单介绍一下关系型数据库三范式"><a href="#2-简单介绍一下关系型数据库三范式" class="headerlink" title="2.简单介绍一下关系型数据库三范式"></a>2.简单介绍一下关系型数据库三范式</h3><p>范式就是规范，是关系型数据库在设计表时，要遵循的三个规范</p>
-<p>满足第二范式的前提是满足第一范式，满足第三范式的前提是满足第二范式</p>
-<h5 id="第一范式："><a href="#第一范式：" class="headerlink" title="第一范式："></a>第一范式：</h5><p>数据库表的每一列都是不可分割的基本数据项，同一列中不能有多个值，即实体中的某个属性不能有多个值或者不能有重复的属性。列数据的不可分割！</p>
-<h5 id="第二范式："><a href="#第二范式：" class="headerlink" title="第二范式："></a>第二范式：</h5><p>要求数据库表中每个行必须可以被唯一的区分。为实现区分通常需要为表加上一个列，以存储各个实例的唯一标识。主键！</p>
-<h5 id="第三范式："><a href="#第三范式：" class="headerlink" title="第三范式："></a>第三范式：</h5><p>要求数据库表中不包含已在其它表中已包含的非主关键字信息。外键！</p>
-<h5 id="反三范式："><a href="#反三范式：" class="headerlink" title="反三范式："></a>反三范式：</h5><p>有时候为了效率，可以设置重复或者可以推导出的字段。如 订单（总价）和订单项（单价）。</p>
-<h3 id="3-事务的四个基本特征"><a href="#3-事务的四个基本特征" class="headerlink" title="3.事务的四个基本特征"></a>3.事务的四个基本特征</h3><p>事务是并发控制的单位，是用户定义的一个操作系列。这些操作要么都做，要么都不做，是一个不可分割的工作单位。</p>
-<p>如转账：A账户扣钱成功、B账户加钱成功，才算转账成功。</p>
-<h6 id="事务必须满足四大特征：原子性、一致性、隔离性、持久性-持续性"><a href="#事务必须满足四大特征：原子性、一致性、隔离性、持久性-持续性" class="headerlink" title="事务必须满足四大特征：原子性、一致性、隔离性、持久性/持续性"></a>事务必须满足四大特征：原子性、一致性、隔离性、持久性/持续性</h6><h5 id="原子性："><a href="#原子性：" class="headerlink" title="原子性："></a>原子性：</h5><p>表示事务操作内不可分割，要么都成功，要么都失败</p>
-<h5 id="一致性："><a href="#一致性：" class="headerlink" title="一致性："></a>一致性：</h5><p>要么都成功，要么都失败，后面的失败了要对前面的操作进行回滚</p>
-<h5 id="隔离性："><a href="#隔离性：" class="headerlink" title="隔离性："></a>隔离性：</h5><p>一个事务开始后，不能受其它事务干扰</p>
-<h5 id="持久性-持续性："><a href="#持久性-持续性：" class="headerlink" title="持久性/持续性："></a>持久性/持续性：</h5><p>表示事务开始了，就不能终止</p>
-<h3 id="4-mysql数据库的默认的最大连接数"><a href="#4-mysql数据库的默认的最大连接数" class="headerlink" title="4.mysql数据库的默认的最大连接数"></a>4.mysql数据库的默认的最大连接数</h3><p>特定服务器上面的数据库只能支持一定数目同时连接，我们一般都会设置最大连接数为 100.</p>
-<h3 id="5-说一下mysql的分页及Oracle的分页"><a href="#5-说一下mysql的分页及Oracle的分页" class="headerlink" title="5. 说一下mysql的分页及Oracle的分页"></a>5. 说一下mysql的分页及Oracle的分页</h3><p>存在很多数据时，不能完全显示数据，需要进行分段显示。</p>
-<p>Mysql是使用关键字limit进行分页的。limit offset，size表示从多少索引取多少位；</p>
-<p>Oracle的分页稍微复杂一点，要使用三层嵌套查询。工作中有需要，可以从原来的项目拷贝或网上查询。</p>
-<h3 id="6-简述数据库的触发器的使用场景？"><a href="#6-简述数据库的触发器的使用场景？" class="headerlink" title="6.简述数据库的触发器的使用场景？"></a>6.简述数据库的触发器的使用场景？</h3><p>触发器，需要有触发条件，当条件满足以后自动完成某操作。</p>
-<p>使用场景较多。如某人发一篇日志，便会自动通知好友，就是在增加日志时做一个后触发，再向通知表中写入条目。触发器效率很高。</p>
-<p>用关键字<code>create trigger</code>创建触发器，再加入触发条件 ，然后遍历表中行内容，搜索触发条件……</p>
-<h3 id="7-简述数据库的存储过程使用场景？"><a href="#7-简述数据库的存储过程使用场景？" class="headerlink" title="7. 简述数据库的存储过程使用场景？"></a>7. 简述数据库的存储过程使用场景？</h3><h5 id="数据库存储过程具有如下优点："><a href="#数据库存储过程具有如下优点：" class="headerlink" title="数据库存储过程具有如下优点："></a>数据库存储过程具有如下优点：</h5><p>1&gt;.存储过程只在创建时进行编译，之后每次执行存储过程都不需要重新编译，而一般SQL语句每执行一次就编译一次，因此使用存储过程可大大提高数据库执行速度。</p>
-<p>2&gt;.通常，复杂的业务逻辑需要多条SQL语句，这些语句从客户机发送到服务器会产生大量网络传输，如果放在一个存储过程中，可以降低网络负载。</p>
-<p>3&gt;.存储过程创建一次便可以重复使用，从而可以减少数据库开发人员的工作量。</p>
-<p>4&gt;.安全性高。存储过程可以屏蔽对底层数据库对象的直接访问，使用EXECUTE权限调用存储过程，无需拥有访问底层数据库对象的显式权限。</p>
-<h5 id="定义存储过程："><a href="#定义存储过程：" class="headerlink" title="定义存储过程："></a>定义存储过程：</h5><p>用关键字<code>create procedure + 表 + 列数据</code>进行创建，用<code>begin\end;</code>进行分割。</p>
-<h3 id="8-用JDBC如何调用存储过程？"><a href="#8-用JDBC如何调用存储过程？" class="headerlink" title="8.用JDBC如何调用存储过程？"></a>8.用JDBC如何调用存储过程？</h3><h6 id="贾琏欲执事！"><a href="#贾琏欲执事！" class="headerlink" title="贾琏欲执事！"></a>贾琏欲执事！</h6><h5 id="1-gt-加载驱动"><a href="#1-gt-加载驱动" class="headerlink" title="1&gt;.加载驱动"></a>1&gt;.加载驱动</h5><p>com.mysql.jdbc.Driver;</p>
-<p>oracle.jdbc.driver.OracleDriver</p>
-<h5 id="2-gt-获取链接"><a href="#2-gt-获取链接" class="headerlink" title="2&gt;.获取链接"></a>2&gt;.获取链接</h5><p>DriverManager.getConnection(url,username,password)</p>
-<h5 id="3-gt-设置参数"><a href="#3-gt-设置参数" class="headerlink" title="3&gt;.设置参数"></a>3&gt;.设置参数</h5><p>Statement PreparedStatement</p>
-<p>cstmt.setXXX(index,value);</p>
-<h5 id="4-gt-执行"><a href="#4-gt-执行" class="headerlink" title="4&gt;.执行"></a>4&gt;.执行</h5><p>executeQuery</p>
-<p>executeUpdate</p>
-<h5 id="5-gt-释放连接"><a href="#5-gt-释放连接" class="headerlink" title="5&gt;.释放连接"></a>5&gt;.释放连接</h5><p>释放连接要从小到大，必须放到 finnaly</p>
-<h3 id="9-简述你对jdbc的理解"><a href="#9-简述你对jdbc的理解" class="headerlink" title="9.简述你对jdbc的理解"></a>9.简述你对jdbc的理解</h3><p> Java database connection Java数据库连接。而数据库管理系统（mysql、oracle等）有很多，每个数据库管理系统支持的命令是不一样的。</p>
-<p> Java 只定义接口，让数据库厂商自己实现接口，对于我们开发者而言，只需要导入对应厂商开发的实现即可，然后以接口方式进行调用。（mysql + mysql驱动（实现） + jdbc ） ！</p>
-<h3 id="10-写一个简单的jdbc程序"><a href="#10-写一个简单的jdbc程序" class="headerlink" title="10.写一个简单的jdbc程序"></a>10.写一个简单的jdbc程序</h3><h5 id="加载驱动程序："><a href="#加载驱动程序：" class="headerlink" title="加载驱动程序："></a>加载驱动程序：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JiazaiQUDONG</span> </span>&#123;</span><br><span class="line">    <span class="comment">//定义mysql的数据库驱动程序</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DBDRIVER = <span class="string">"org.gjt.mm.mysql.Driver"</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">            Class.forName(DBDRIVER);                       <span class="comment">//加载驱动程序</span></span><br><span class="line">        &#125;<span class="keyword">catch</span> (ClassNotFoundException e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="连接数据库："><a href="#连接数据库：" class="headerlink" title="连接数据库："></a>连接数据库：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.sql.Connection;</span><br><span class="line"><span class="keyword">import</span> java.sql.DriverManager;</span><br><span class="line"><span class="keyword">import</span> java.sql.SQLException;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LianjieKu</span> </span>&#123;</span><br><span class="line">    <span class="comment">//定义MySQL的数据库的驱动程序</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DBDRIVER = <span class="string">"com.mysql.jdbc.Driver"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//定义MySQL数据库的连接地址</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DBURL = <span class="string">"jdbc:mysql://localhost:3306/firsttest"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//MySQL数据库的连接用户名</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DBUSER = <span class="string">"root"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//MySQL数据库的连接密码</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String DBPASS = <span class="string">"root"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        Connection conn = <span class="keyword">null</span>;                         <span class="comment">//数据库连接</span></span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">            Class.forName(DBDRIVER);                    <span class="comment">//加载驱动程序</span></span><br><span class="line">        &#125;<span class="keyword">catch</span> (ClassNotFoundException e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">            <span class="comment">//连接MySQL数据库时，要写上连接的用户名和密码</span></span><br><span class="line">            conn = DriverManager.getConnection(<span class="string">"jdbc:mysql://localhost:3306/firsttest"</span>,<span class="string">"root"</span>,<span class="string">"root"</span>);</span><br><span class="line">        &#125;<span class="keyword">catch</span> (SQLException e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(conn);</span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">            conn.close();                           <span class="comment">//数据库关闭</span></span><br><span class="line">        &#125;<span class="keyword">catch</span> (SQLException e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="1-有没有使用过线程并发库？"><a href="#1-有没有使用过线程并发库？" class="headerlink" title="1.有没有使用过线程并发库？"></a>1.有没有使用过线程并发库？</h3><p>Java通过Executors提供四种线程池，分别是：</p>
+<h6 id="newCachedThreadPool"><a href="#newCachedThreadPool" class="headerlink" title="newCachedThreadPool:"></a>newCachedThreadPool:</h6><p>创建一个可缓存线程池，如果线程池长度超过处理需要，可灵活回收空闲线程；若无可回收，则新建线程。</p>
+<h6 id="newFixedThreadPool"><a href="#newFixedThreadPool" class="headerlink" title="newFixedThreadPool:"></a>newFixedThreadPool:</h6><p>创建一个定长线程池，可控制线程最大并发数，超出的线程会在队列中等待。</p>
+<h6 id="newScheduledThreadPool"><a href="#newScheduledThreadPool" class="headerlink" title="newScheduledThreadPool:"></a>newScheduledThreadPool:</h6><p>创建一个定长线程池，支持定时及周期性任务执行。</p>
+<h6 id="newSingleThreadExecutor"><a href="#newSingleThreadExecutor" class="headerlink" title="newSingleThreadExecutor:"></a>newSingleThreadExecutor:</h6><p>创建一个单线程化的线程池，它只会用唯一的工作线程来执行任务，保证所有任务按照指定顺序（FIFO,UFO,优先级）执行。</p>
+<h5 id="线程池的作用："><a href="#线程池的作用：" class="headerlink" title="线程池的作用："></a>线程池的作用：</h5><p>1&gt;.限定线程的个数，不会由于县线程过多导致系统运行缓慢或崩溃；</p>
+<p>2&gt;.线程池不需要每次都去创建或销毁，节约了资源；</p>
+<p>3&gt;.线程池不需要每次都创建，响应时间更快</p>
+<h3 id="2-讲一下什么是设计模式？"><a href="#2-讲一下什么是设计模式？" class="headerlink" title="2.讲一下什么是设计模式？"></a>2.讲一下什么是设计模式？</h3><p>经过开发人员无数次实践总结，设计过程中可以反复使用、可以解决特定问题的设计方法。</p>
+<h5 id="常用的设计模式有哪些？"><a href="#常用的设计模式有哪些？" class="headerlink" title="常用的设计模式有哪些？"></a>常用的设计模式有哪些？</h5><h6 id="单例模式（饱汉模式、饥汉模式）："><a href="#单例模式（饱汉模式、饥汉模式）：" class="headerlink" title="单例模式（饱汉模式、饥汉模式）："></a>单例模式（饱汉模式、饥汉模式）：</h6><p>1&gt;.构造方法私有化，让除了自己类中能创建外其他地方都不能创建</p>
+<p>2&gt;.在自己的类中创建一个单实例（饱汉模式是一出来就创建单实例，而饥汉模式是需要的时候才创建）</p>
+<p>3&gt;.提供一个方法获取该实例对象（创建时需要进行方法同步）</p>
+<h6 id="工厂模式："><a href="#工厂模式：" class="headerlink" title="工厂模式："></a>工厂模式：</h6><p>对象的创建交给一个工厂来做。如Spring IOC就使用了工厂模式。</p>
+<h6 id="代理模式："><a href="#代理模式：" class="headerlink" title="代理模式："></a>代理模式：</h6><p>Spring AOP就使用了动态代理。</p>
+<h3 id="3-讲一下http-get-和-post请求的区别？"><a href="#3-讲一下http-get-和-post请求的区别？" class="headerlink" title="3.讲一下http get 和 post请求的区别？"></a>3.讲一下http get 和 post请求的区别？</h3><h6 id="GET和POST请求都是http的请求方式，用户通过不同的http请求方式完成对资源（url）的操作。GET-POST-PUT-DELETE分别对应着资源的查，改，增，删四个操作，具体来讲GET一般用于获取-查询资源信息，而POST一般用于更新资源信息。"><a href="#GET和POST请求都是http的请求方式，用户通过不同的http请求方式完成对资源（url）的操作。GET-POST-PUT-DELETE分别对应着资源的查，改，增，删四个操作，具体来讲GET一般用于获取-查询资源信息，而POST一般用于更新资源信息。" class="headerlink" title="GET和POST请求都是http的请求方式，用户通过不同的http请求方式完成对资源（url）的操作。GET,POST,PUT,DELETE分别对应着资源的查，改，增，删四个操作，具体来讲GET一般用于获取/查询资源信息，而POST一般用于更新资源信息。"></a>GET和POST请求都是http的请求方式，用户通过不同的http请求方式完成对资源（url）的操作。GET,POST,PUT,DELETE分别对应着资源的查，改，增，删四个操作，具体来讲GET一般用于获取/查询资源信息，而POST一般用于更新资源信息。</h6><h5 id="1-gt-Get请求提交的数据会在地址栏显示出来，而post请求不会在地址栏显示出来"><a href="#1-gt-Get请求提交的数据会在地址栏显示出来，而post请求不会在地址栏显示出来" class="headerlink" title="1&gt;.Get请求提交的数据会在地址栏显示出来，而post请求不会在地址栏显示出来"></a>1&gt;.Get请求提交的数据会在地址栏显示出来，而post请求不会在地址栏显示出来</h5><p>Get提交，请求的数据会附在URL之后（就是把数据放在HTTP协议头中）；POST请求，把提交的数据放在HTTP的包体中。</p>
+<h5 id="2-gt-传输数据的大小"><a href="#2-gt-传输数据的大小" class="headerlink" title="2&gt;.传输数据的大小"></a>2&gt;.传输数据的大小</h5><p>http Get请求由于浏览器对地址长度的限制而导致传输的数据有限制，Post则不会。</p>
+<h5 id="3-gt-安全性，Post的安全性要比Get的安全性高"><a href="#3-gt-安全性，Post的安全性要比Get的安全性高" class="headerlink" title="3&gt;.安全性，Post的安全性要比Get的安全性高"></a>3&gt;.安全性，Post的安全性要比Get的安全性高</h5><p>由于数据会是在地址中呈现，所以可以通过历史记录找到密码等关键信息。</p>
+<h3 id="4-什么是内部类？"><a href="#4-什么是内部类？" class="headerlink" title="4.什么是内部类？"></a>4.什么是内部类？</h3><h6 id="在Java中，可以将一个类的定义放在另外一个类的定义内部，这就是内部类-。内部类本身就是类的一个属性，与其他属性定义方式一致。"><a href="#在Java中，可以将一个类的定义放在另外一个类的定义内部，这就是内部类-。内部类本身就是类的一个属性，与其他属性定义方式一致。" class="headerlink" title="在Java中，可以将一个类的定义放在另外一个类的定义内部，这就是内部类 。内部类本身就是类的一个属性，与其他属性定义方式一致。"></a>在Java中，可以将一个类的定义放在另外一个类的定义内部，这就是内部类 。内部类本身就是类的一个属性，与其他属性定义方式一致。</h6><p>内部类可以分为：成员内部类、局部内部类、匿名内部类和静态内部类 。<br>静态内部类： 定义在类内部的静态类，就是静态内部类。可以访问外部类所有的静态变量，而不可访问外部类的非静态变量；</p>
+<p>成员内部类可以访问外部类所有的变量和方法，包括静态和非静态，私有和公有。成员内部类依赖于外部类的实例，它的创建方式 外部类实例.new 内部类() ，如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Outer outer = <span class="keyword">new</span> Outer();</span><br><span class="line">Outer.Inner inner = outer.<span class="keyword">new</span> Inner();</span><br><span class="line">inner.visit();</span><br></pre></td></tr></table></figure>
+<p>局部内部类： 定义在方法中的内部类，就是局部内部类。<br>定义在实例方法中的局部类可以访问外部类的所有变量和方法，定义在静态方法中的局部类只能访问外部类的静态变量和方法。</p>
+<p>匿名内部类<br>匿名内部类就是没有名字的内部类，日常开发中使用的比较多。</p>
+<ol>
+<li>除了没有名字，匿名内部类还有以下特点：</li>
+<li>匿名内部类必须继承一个抽象类或者实现一个接口。</li>
+<li>匿名内部类不能定义任何静态成员和静态方法。</li>
+<li>当所在的方法的形参需要被匿名内部类使用时，必须声明为 final。</li>
+<li>匿名内部类不能是抽象的，它必须要实现继承的类或者实现的接口的所有抽象方法。</li>
+</ol>
+<h5 id="内部类的优点"><a href="#内部类的优点" class="headerlink" title="内部类的优点"></a>内部类的优点</h5><p>一个内部类对象可以访问创建它的外部类对象的内容，包括私有数据！<br>内部类不为同一包的其他类所见，具有很好的封装性；<br>内部类有效实现了“多重继承”，优化 java 单继承的缺陷；<br>匿名内部类可以很方便的定义回调。</p>
+<h3 id="5-JDK-中常用的包有哪些"><a href="#5-JDK-中常用的包有哪些" class="headerlink" title="5.JDK 中常用的包有哪些"></a>5.JDK 中常用的包有哪些</h3><p>java.lang：这个是系统的基础类；<br>java.io：这里面是所有输入输出有关的类，比如文件操作等；<br>java.nio：为了完善 io 包中的功能，提高 io 包中性能而写的一个新包；<br>java.net：这里面是与网络有关的类；<br>java.util：这个是系统辅助类，特别是集合类；<br>java.sql：这个是数据库操作的类。</p>
+<h3 id="6-java-中-IO-流分为几种"><a href="#6-java-中-IO-流分为几种" class="headerlink" title="6.java 中 IO 流分为几种?"></a>6.java 中 IO 流分为几种?</h3><p>按照流的流向分，可以分为输入流和输出流；<br>按照操作单元划分，可以划分为字节流和字符流；<br>按照流的角色划分为节点流和处理流。</p>
+<h3 id="7-Files的常用方法都有哪些？"><a href="#7-Files的常用方法都有哪些？" class="headerlink" title="7.Files的常用方法都有哪些？"></a>7.Files的常用方法都有哪些？</h3><p>Files. exists()：检测文件路径是否存在。<br>Files. createFile()：创建文件。<br>Files. createDirectory()：创建文件夹。<br>Files. delete()：删除一个文件或目录。<br>Files. copy()：复制文件。<br>Files. move()：移动文件。<br>Files. size()：查看文件个数。<br>Files. read()：读取文件。<br>Files. write()：写入文件。</p>
+<h3 id="8-什么是反射机制？"><a href="#8-什么是反射机制？" class="headerlink" title="8.什么是反射机制？"></a>8.什么是反射机制？</h3><h6 id="JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法和属性；这种动态获取的信息以及动态调用对象的方法的功能称为java语言的反射机制。"><a href="#JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法和属性；这种动态获取的信息以及动态调用对象的方法的功能称为java语言的反射机制。" class="headerlink" title="JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法和属性；这种动态获取的信息以及动态调用对象的方法的功能称为java语言的反射机制。"></a>JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法和属性；这种动态获取的信息以及动态调用对象的方法的功能称为java语言的反射机制。</h6><h5 id="反射机制优缺点："><a href="#反射机制优缺点：" class="headerlink" title="反射机制优缺点："></a>反射机制优缺点：</h5><p>优点： 运行期类型的判断，动态加载类，提高代码灵活度。<br>缺点： 性能瓶颈：反射相当于一系列解释操作，通知 JVM 要做的事情，性能比直接的java代码要慢很多。</p>
+<h3 id="9-什么是字符串常量池？"><a href="#9-什么是字符串常量池？" class="headerlink" title="9.什么是字符串常量池？"></a>9.什么是字符串常量池？</h3><p>字符串常量池位于堆内存中，专门用来存储字符串常量，可以提高内存的使用率，避免开辟多块空间存储相同的字符串，在创建字符串时 JVM 会首先检查字符串常量池，如果该字符串已经存在池中，则返回它的引用，如果不存在，则实例化一个字符串放到池中，并返回其引用。</p>
+<h3 id="10-说一下对servlet的理解-或者servlet是什么？"><a href="#10-说一下对servlet的理解-或者servlet是什么？" class="headerlink" title="10.说一下对servlet的理解/或者servlet是什么？"></a>10.说一下对servlet的理解/或者servlet是什么？</h3><p>Servlet（Server Applet），全称Java Servlet，是用Java编写的服务器端程序。而这些Servlet都要实现Servlet这个接口。</p>
+<p>其主要功能在于交互式的浏览和修改数据，生成动态Web内容。Servlet运行于支持Java的应用服务器中。</p>
+<p>HttpServlet 重写doGet 和doPost方法 / 也可以重写service 方法完成对get 和 post 请求的响应。</p>
+<h3 id="11-简单说一下servlet的生命周期？"><a href="#11-简单说一下servlet的生命周期？" class="headerlink" title="11.简单说一下servlet的生命周期？"></a>11.简单说一下servlet的生命周期？</h3><p>servlet有良好的生存期的定义，包括加载和实例化、初始化、处理请求以及服务结束，这个生存期由Java Servlet接口的init、service和destroy方法表达。</p>
+<p>Servlet启动时，开始加载servlet，生命周期开始；Servlet被服务器实例化后，容器运行其init方法，请求到达时运行其service方法；service方法自动派遣运行与请求对应的 doXXX 方法（doGet、doPost）等；当服务器决定将实例销毁的时候（服务器关闭），调用其destory方法。</p>
+<p>加载Servlet的class—-&gt;实例化Servlet—–&gt;调用Servlet的init完成初始化—–&gt;响应请求（Servlet的service方法）——&gt;Servlet容器关闭时（Servlet的destory方法）</p>
+<h3 id="12-Servlet-API-中-forward-与-redirect-的区别？"><a href="#12-Servlet-API-中-forward-与-redirect-的区别？" class="headerlink" title="12.Servlet API 中 forward() 与 redirect() 的区别？"></a>12.Servlet API 中 forward() 与 redirect() 的区别？</h3><p>1&gt;. forward是服务器端的转向，而redirect是客户端的跳转；</p>
+<p>2&gt;.使用forward浏览器的地址不会发生改变，而redirect会发生改变；</p>
+<p>3&gt;.forward是一次请求中完成，而redirect是重新发起请求；</p>
+<p>4&gt;.forward是在服务器端完成，而不用客户端重新发起请求，效率较高。</p>
+<h3 id="13-说一下-session-和-cookie-的区别？"><a href="#13-说一下-session-和-cookie-的区别？" class="headerlink" title="13.说一下 session 和 cookie 的区别？"></a>13.说一下 session 和 cookie 的区别？</h3><h5 id="联系："><a href="#联系：" class="headerlink" title="联系："></a>联系：</h5><p>Session 和 cookie 都是会话（Session）跟踪技术。Cookie通过在客户端记录信息确定用户身份，Session通过在服务器端记录信息确定用户身份。但是Session的实现依赖于Cookie，sessionId（session的唯一标识需要存放在客户端）。</p>
+<h5 id="区别："><a href="#区别：" class="headerlink" title="区别："></a>区别：</h5><p>1&gt;.cookie 数据存放在客户的浏览器上，session 数据存放在服务器上；</p>
+<p>2&gt;.cookie 不是很安全，别人可以分析存放在本地的 COOKIE 并进行 COOKIE 欺骗，考虑到安全应当使用 session。</p>
+<p>3&gt;.session 会在一定时间内保存在服务器上，当访问增多，会比较占用服务器的性能，考虑到减轻服务器性能方面，应当使用COOKIE；</p>
+<p>4&gt;.单个 cookie 保存的数据不能超过4k，很多浏览器都限制一个站点最多保存20个cookie。</p>
+<h5 id="个人建议："><a href="#个人建议：" class="headerlink" title="个人建议："></a>个人建议：</h5><p>将登录信息等重要信息存放为 SESSION;</p>
+<p>其他信息如果需要保留，可以放在 COOKIE 中，如购物车。</p>
+<p>注：购物车最好使用 cookie ，但是 cookie 是可以在客户端禁用的，这时需要使用cookie + 数据库的方式实现，当从 cookie 中不能取出数据时，就从数据库获取。</p>
+<h3 id="14-简述MVC思想"><a href="#14-简述MVC思想" class="headerlink" title="14.简述MVC思想"></a>14.简述MVC思想</h3><p>MVC(Model View Controller)是一种软件设计的框架模式，它采用模型(Model)-视图(View)-控制器(controller)的方法把业务逻辑、数据与界面显示分离用通俗的话来讲，MVC的理念就是把数据处理、数据展示(界面)和程序/用户的交互三者分离开的一种编程模式。</p>
+<img src="/images/mvcsixiang.png">
 
-<h3 id="11-JDBC中的PreparedStatement相比Statement的好处"><a href="#11-JDBC中的PreparedStatement相比Statement的好处" class="headerlink" title="11.JDBC中的PreparedStatement相比Statement的好处"></a>11.JDBC中的PreparedStatement相比Statement的好处</h3><h6 id="大多数我们都使用PreparedStatement代替Statement。"><a href="#大多数我们都使用PreparedStatement代替Statement。" class="headerlink" title="大多数我们都使用PreparedStatement代替Statement。"></a>大多数我们都使用PreparedStatement代替Statement。</h6><p>1&gt;.PreparedStatement是预编译的，比Statement速度快。</p>
-<p>2&gt;.代码的可读性和可维护性强。</p>
-<p>3&gt;.安全性。PreparedStatement可以放置SQL注入攻击，而Statement却不能。</p>
-<h3 id="12-数据库连接池的作用"><a href="#12-数据库连接池的作用" class="headerlink" title="12.数据库连接池的作用"></a>12.数据库连接池的作用</h3><p>1&gt;.限定数据库的个数，不会导致由于数据库连接过多而使系统运行缓慢或崩溃。</p>
-<p>2&gt;.数据库连接不需要每次都去创建或销毁，节约了资源。</p>
-<p>3&gt;.数据库连接不需要每次都去创建，响应时间更快。</p>
+<h5 id="Model-模型："><a href="#Model-模型：" class="headerlink" title="Model-模型："></a>Model-模型：</h5><p>表示企业数据和业务规则（可以说就是后端接口，用于业务处理）。在MVC的三个部件中，模型拥有最多的处理任务。被模型返回的数据是中立的，就是说模型与数据格式无关，这样一个模型能为多个视图提供数据。由于应用于模型的代码只需写一次就可以被多个视图重用，所以减少了代码的重复性。 </p>
+<h5 id="View-视图："><a href="#View-视图：" class="headerlink" title="View-视图："></a>View-视图：</h5><p>是用户看到并与之交互的界面（它可以包括一些可以显示数据信息的页面，或者展示形式。例如jsp，html，asp，php）。</p>
+<h5 id="Controller-控制器："><a href="#Controller-控制器：" class="headerlink" title="Controller-控制器："></a>Controller-控制器：</h5><p>接受用户的输入并调用模型和视图去完成用户的需求（接受客户发送的请求，根据请求调用所对应的接口，然后模型业务处理后返回的数据，由控制器决定调用那个View展示）。所以当单击Web页面中的超链接和发送HTML表单时，控制器本身不输出任何东西和做任何处理。它只是接收请求并决定调用哪个模型构件去处理请求，然后用确定用哪个视图来显示模型处理返回的数据。</p>
+<h6 id="最简单、最经典的就是-Jsp-view-Servlet-controller-JavaBean-model"><a href="#最简单、最经典的就是-Jsp-view-Servlet-controller-JavaBean-model" class="headerlink" title="最简单、最经典的就是 Jsp(view) + Servlet(controller) + JavaBean(model)"></a>最简单、最经典的就是 Jsp(view) + Servlet(controller) + JavaBean(model)</h6><img src="/images/mvcsixiang2.png">
+
+<p>1&gt;.当控制器收到来自用户的请求</p>
+<p>2&gt;.控制器调用 JavaBean 完成业务</p>
+<p>3&gt;.完成业务后通过控制器跳转 JSP 页面的方式给用户反馈信息</p>
+<h3 id="15-简述HTTP协议"><a href="#15-简述HTTP协议" class="headerlink" title="15.简述HTTP协议"></a>15.简述HTTP协议</h3><p>HTTP协议是超文本传输协议的缩写,是用于从万维网（WWW:World Wide Web ）服务器传输超文本到本地浏览器的传送协议。它基于TCP/IP通信协议来传递数据（如HTML 文件, 图片文件, 查询结果等）。</p>
+<p>HTTP是一个属于应用层的面向对象的协议，由于其简捷、快速的方式，适用于分布式超媒体信息系统。</p>
+<h5 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h5><ol>
+<li>简单快速：<br>客户向服务器请求服务时，只需传送请求方法和路径。请求方法常用的有GET、HEAD、POST。每种方法规定了客户与服务器联系的类型不同。由于HTTP协议简单，使得HTTP服务器的程序规模小，因而通信速度很快。</li>
+<li>灵活：<br>HTTP允许传输任意类型的数据对象。正在传输的类型由Content-Type加以标记。</li>
+<li>无连接：<br>无连接的含义是限制每次连接只处理一个请求。服务器处理完客户的请求，并收到客户的应答后，即断开连接。采用这种方式可以节省传输时间。</li>
+<li>无状态：<br>HTTP协议是无状态协议。无状态是指协议对于事务处理没有记忆能力。缺少状态意味着如果后续处理需要前面的信息，则它必须重传，这样可能导致每次连接传送的数据量增大。另一方面，在服务器不需要先前信息时它的应答就较快。</li>
+<li>支持B/S及C/S模式。<h5 id="工作原理-响应步骤："><a href="#工作原理-响应步骤：" class="headerlink" title="工作原理/响应步骤："></a>工作原理/响应步骤：</h5></li>
+<li>客户端连接到Web服务器<br>一个HTTP客户端，通常是浏览器，与Web服务器的HTTP端口（默认为80）建立一个TCP套接字连接。</li>
+<li>发送HTTP请求<br>通过TCP套接字，客户端向Web服务器发送一个文本的请求报文，一个请求报文由请求行、请求头部、空行和请求数据4部分组成。</li>
+<li>服务器接受请求并返回HTTP响应<br>Web服务器解析请求，定位请求资源。服务器将资源复本写到TCP套接字，由客户端读取。一个响应由状态行、响应头部、空行和响应数据4部分组成。</li>
+<li>释放连接TCP连接<br>若connection 模式为close，则服务器主动关闭TCP连接，客户端被动关闭连接，释放TCP连接;若connection 模式为keepalive，则该连接会保持一段时间，在该时间内可以继续接收请求;</li>
+<li>客户端浏览器解析HTML内容<br>客户端浏览器首先解析状态行，查看表明请求是否成功的状态代码。然后解析每一个响应头，响应头告知以下为若干字节的HTML文档和文档的字符集。客户端浏览器读取响应数据HTML，根据HTML的语法对其进行格式化，并在浏览器窗口中显示。<h3 id="16-简述-Json-解析数据的过程"><a href="#16-简述-Json-解析数据的过程" class="headerlink" title="16.简述 Json 解析数据的过程"></a>16.简述 Json 解析数据的过程</h3><h5 id="JSON的全称叫-JavaScript-Object-Notaion-是一种轻量级的数据交换格式，具有良好的可读性和快速编写的特性，在文本方面采用的是兼容性很高的文本。"><a href="#JSON的全称叫-JavaScript-Object-Notaion-是一种轻量级的数据交换格式，具有良好的可读性和快速编写的特性，在文本方面采用的是兼容性很高的文本。" class="headerlink" title="JSON的全称叫 JavaScript Object Notaion 是一种轻量级的数据交换格式，具有良好的可读性和快速编写的特性，在文本方面采用的是兼容性很高的文本。"></a>JSON的全称叫 JavaScript Object Notaion 是一种轻量级的数据交换格式，具有良好的可读性和快速编写的特性，在文本方面采用的是兼容性很高的文本。</h5>JSON里面的数据是以一种键值对的方式存在，（”key”:”value”）中值的类型可以是下面数据类型中的任意一种：</li>
+<li>数字（整数或浮点数）</li>
+<li>逻辑值（true 或 false）</li>
+<li>字符串（在双引号中）</li>
+<li>数组（在方括号中）</li>
+<li>函数</li>
+<li>对象（在大括号中）</li>
+<li>null<h3 id="17-有没有使用过Linux？都用来做什么？"><a href="#17-有没有使用过Linux？都用来做什么？" class="headerlink" title="17.有没有使用过Linux？都用来做什么？"></a>17.有没有使用过Linux？都用来做什么？</h3>Linux是一个长时间运行比较稳定的操作系统，所以一般会用来作为服务器（web、db、app等）；<br>Linux本身具有 C 的编译环境，我们的一些软件是没有软件包（redis、nginx）的，需要在 Linux 的 C 编译环境编译得到软件包。<h3 id="18-说一下-Linux-的常用命令"><a href="#18-说一下-Linux-的常用命令" class="headerlink" title="18.说一下 Linux 的常用命令"></a>18.说一下 Linux 的常用命令</h3><h5 id="常用系统命令："><a href="#常用系统命令：" class="headerlink" title="常用系统命令："></a>常用系统命令：</h5>pwd 获取当前路径</li>
+</ol>
+<p>cd 跳转到目录</p>
+<p>su-u 切换到管理员</p>
+<p>Ls ls 列举目录</p>
+<h5 id="文件操作："><a href="#文件操作：" class="headerlink" title="文件操作："></a>文件操作：</h5><p>tail 查看文件</p>
+<p>Rm-rf 删除文件</p>
+<p>mkdir 创建文件夹</p>
+<p>rm-r 删除文件夹</p>
+<h3 id="19-你是使用什么来连接远程的Linux服务器的？"><a href="#19-你是使用什么来连接远程的Linux服务器的？" class="headerlink" title="19.你是使用什么来连接远程的Linux服务器的？"></a>19.你是使用什么来连接远程的Linux服务器的？</h3><p>需要依赖于Linux服务器安装 ssh 服务器，一般这个端口是22</p>
+<p>需要依赖于Linux服务器安装 sftp 服务器，一般这个端口是25</p>
+<p>使用 xshell、putty等ssh 客户端连接Linux服务器，有点儿像 windows下面的远程连接，但是 Linux通过ssh连接上以后没有图形界面，全是命令行。使用xftp、winscp等sftp客户端来上传和下载文件（修改配置文件）。</p>
 
       
 
@@ -276,7 +329,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">面试</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
         		</li>
       		
 		</ul>
@@ -332,7 +385,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/09/08/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%863/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/09/07/%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B22/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -346,18 +399,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/09/09/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%864/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/09/08/%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B23/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Java面试题集4
+          复习提纲3
         
       </div>
     </a>
   
   
-    <a href="/2020/09/07/Java%E9%9D%A2%E8%AF%95%E9%A2%98%E9%9B%862/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Java面试题集2</div>
+    <a href="/2020/09/04/%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B21/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">复习提纲1</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -500,6 +553,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">前端</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">总结</a>
               </li>
             
             <div class="clearfix"></div>
