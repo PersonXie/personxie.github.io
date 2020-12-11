@@ -16,7 +16,7 @@
 <meta property="og:description" content="常用方法集锦">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-11-03T01:35:34.000Z">
-<meta property="article:modified_time" content="2020-11-03T01:53:31.055Z">
+<meta property="article:modified_time" content="2020-12-11T01:46:22.703Z">
 <meta property="article:author" content="StT">
 <meta property="article:tag" content="随笔">
 <meta name="twitter:card" content="summary">
@@ -187,10 +187,60 @@
       
         <h1 id="常用方法集锦"><a href="#常用方法集锦" class="headerlink" title="常用方法集锦"></a>常用方法集锦</h1><a id="more"></a>
 
-<h3 id="Arrays-copyOf-arr-arr-length"><a href="#Arrays-copyOf-arr-arr-length" class="headerlink" title="Arrays.copyOf(arr,arr.length)"></a>Arrays.copyOf(arr,arr.length)</h3><p>Arrays的copyOf()方法传回的数组是新的数组对象，改变传回数组中的元素值，不会影响原来的数组。</p>
-<p>copyOf()的第二个自变量指定要建立的新数组长度，如果新数组的长度超过原数组的长度，则保留数组默认值</p>
-<h5 id="例如："><a href="#例如：" class="headerlink" title="例如："></a>例如：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ArrayDemo</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    	<span class="keyword">int</span>[] arr1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;; </span><br><span class="line">    	<span class="keyword">int</span>[] arr2 = Arrays.copyOf(arr1, <span class="number">5</span>);</span><br><span class="line">    	<span class="keyword">int</span>[] arr3 = Arrays.copyOf(arr1, <span class="number">10</span>);</span><br><span class="line">    	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr2.length; i++) </span><br><span class="line">        	System.out.print(arr2[i] + <span class="string">" "</span>); </span><br><span class="line">    		System.out.println();</span><br><span class="line">    	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr3.length; i++) </span><br><span class="line">        	System.out.print(arr3[i] + <span class="string">" "</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="提取字符串：stringObject-substring-start-stop"><a href="#提取字符串：stringObject-substring-start-stop" class="headerlink" title="提取字符串：stringObject.substring(start,stop)"></a>提取字符串：stringObject.substring(start,stop)</h3><p>substring() 方法用于提取字符串中介于两个指定下标之间的字符。</p>
+<h5 id="start-为必需："><a href="#start-为必需：" class="headerlink" title="start 为必需："></a>start 为必需：</h5><p>一个非负的整数，规定要提取的子串的第一个字符在 stringObject 中的位置。</p>
+<h5 id="stop-为可选："><a href="#stop-为可选：" class="headerlink" title="stop 为可选："></a>stop 为可选：</h5><p>一个非负的整数，比要提取的子串的最后一个字符在 stringObject 中的位置多 1。</p>
+<p>如果省略该参数，那么返回的子串会一直到字符串的结尾。</p>
+<hr>
+<h3 id="数组拷贝：Arrays-copyOf-arr-arr-length"><a href="#数组拷贝：Arrays-copyOf-arr-arr-length" class="headerlink" title="数组拷贝：Arrays.copyOf(arr,arr.length)"></a>数组拷贝：Arrays.copyOf(arr,arr.length)</h3><h5 id="Arrays的copyOf-方法传回的数组是新的数组对象，改变传回数组中的元素值，不会影响原来的数组。"><a href="#Arrays的copyOf-方法传回的数组是新的数组对象，改变传回数组中的元素值，不会影响原来的数组。" class="headerlink" title="Arrays的copyOf()方法传回的数组是新的数组对象，改变传回数组中的元素值，不会影响原来的数组。"></a>Arrays的copyOf()方法传回的数组是新的数组对象，改变传回数组中的元素值，不会影响原来的数组。</h5><h5 id="copyOf-的第二个自变量指定要建立的新数组长度，如果新数组的长度超过原数组的长度，则保留数组默认值。"><a href="#copyOf-的第二个自变量指定要建立的新数组长度，如果新数组的长度超过原数组的长度，则保留数组默认值。" class="headerlink" title="copyOf()的第二个自变量指定要建立的新数组长度，如果新数组的长度超过原数组的长度，则保留数组默认值。"></a>copyOf()的第二个自变量指定要建立的新数组长度，如果新数组的长度超过原数组的长度，则保留数组默认值。</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ArrayDemo</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    	<span class="keyword">int</span>[] arr1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;; </span><br><span class="line">    	<span class="keyword">int</span>[] arr2 = Arrays.copyOf(arr1, <span class="number">5</span>);</span><br><span class="line">    	<span class="keyword">int</span>[] arr3 = Arrays.copyOf(arr1, <span class="number">10</span>);</span><br><span class="line">    	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr2.length; i++) </span><br><span class="line">        	System.out.print(arr2[i] + <span class="string">" "</span>); </span><br><span class="line">    		System.out.println();</span><br><span class="line">    	<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr3.length; i++) </span><br><span class="line">        	System.out.print(arr3[i] + <span class="string">" "</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h5 id="运行结果："><a href="#运行结果：" class="headerlink" title="运行结果："></a>运行结果：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> </span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="分页信息：JPA中的Page与Pageable"><a href="#分页信息：JPA中的Page与Pageable" class="headerlink" title="分页信息：JPA中的Page与Pageable"></a>分页信息：JPA中的Page与Pageable</h3><h5 id="Page："><a href="#Page：" class="headerlink" title="Page："></a>Page：</h5><p>Spring Data提供的一个接口，该接口表示一部分数据的集合以及其相关的下一部分数据、数据总数等相关信息，通过该接口，可以得到数据的总体信息（数据总数、总页数…）以及当前数据的信息（当前数据的集合、当前页数等）</p>
+<h5 id="Pageable-："><a href="#Pageable-：" class="headerlink" title="Pageable ："></a>Pageable ：</h5><p>Spring Data库中定义的一个接口，该接口是所有分页相关信息的一个抽象，通过该接口，我们可以得到和分页相关所有信息（例如pageNumber、pageSize等），这样，Jpa就能够通过pageable参数来得到一个带分页信息的Sql语句。</p>
+<h5 id="Pageable定义了很多方法，核心的只有两个："><a href="#Pageable定义了很多方法，核心的只有两个：" class="headerlink" title="Pageable定义了很多方法，核心的只有两个："></a>Pageable定义了很多方法，核心的只有两个：</h5><ol>
+<li>分页的信息（page、size）</li>
+<li>排序的信息。Spring Data Jpa提供了PageRequest的具体实现</li>
+</ol>
+<hr>
+<h3 id="DAO层开发：JdbcTemplate"><a href="#DAO层开发：JdbcTemplate" class="headerlink" title="DAO层开发：JdbcTemplate"></a>DAO层开发：JdbcTemplate</h3><p>主要提供以下五类方法：</p>
+<h5 id="execute方法："><a href="#execute方法：" class="headerlink" title="execute方法："></a>execute方法：</h5><p>可以用于执行任何SQL语句，一般用于执行DDL语句；</p>
+<h5 id="update方法及batchUpdate方法："><a href="#update方法及batchUpdate方法：" class="headerlink" title="update方法及batchUpdate方法："></a>update方法及batchUpdate方法：</h5><p>update方法用于执行新增、修改、删除等语句；</p>
+<h5 id="batchUpdate方法："><a href="#batchUpdate方法：" class="headerlink" title="batchUpdate方法："></a>batchUpdate方法：</h5><p>用于执行批处理相关语句；</p>
+<h5 id="query方法及queryForXXX方法："><a href="#query方法及queryForXXX方法：" class="headerlink" title="query方法及queryForXXX方法："></a>query方法及queryForXXX方法：</h5><p>用于执行查询相关语句；</p>
+<h5 id="call方法："><a href="#call方法：" class="headerlink" title="call方法："></a>call方法：</h5><p>用于执行存储过程、函数相关语句。</p>
+<hr>
+<h3 id="判断一个元素内是否包含另一个元素：-contains"><a href="#判断一个元素内是否包含另一个元素：-contains" class="headerlink" title="判断一个元素内是否包含另一个元素： .contains()"></a>判断一个元素内是否包含另一个元素： .contains()</h3><h5 id="java-lang-String-contains-方法返回true，当且仅当此字符串包含指定的char值序列"><a href="#java-lang-String-contains-方法返回true，当且仅当此字符串包含指定的char值序列" class="headerlink" title="java.lang.String.contains()方法返回true，当且仅当此字符串包含指定的char值序列"></a>java.lang.String.contains()方法返回true，当且仅当此字符串包含指定的char值序列</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> parent = <span class="built_in">document</span>.getElementById(<span class="string">'parent'</span>)</span><br><span class="line"><span class="keyword">let</span> children = <span class="built_in">document</span>.getElementById(<span class="string">'children'</span>)</span><br><span class="line"><span class="keyword">if</span> (parent.contains(children)) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="literal">true</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span> (children.contains(parent)) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="literal">false</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="结果返回true"><a href="#结果返回true" class="headerlink" title="结果返回true"></a>结果返回true</h5><hr>
+<hr>
+<hr>
+<h2 id="js-："><a href="#js-：" class="headerlink" title="js ："></a>js ：</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"> getNotice()&#123;</span><br><span class="line">	 	<span class="keyword">let</span> that =<span class="keyword">this</span>;</span><br><span class="line">		axios.get(<span class="string">"/cctp/api/notice/new"</span>).then(<span class="function"><span class="keyword">function</span> (<span class="params">res</span>) </span>&#123;</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">"home"</span>+<span class="built_in">JSON</span>.stringify(res.data.data))</span><br><span class="line">			<span class="keyword">if</span> (res.data.data != <span class="literal">null</span>)&#123;</span><br><span class="line">				that.notice = res.data.data;</span><br><span class="line">				that.marqueeShow =<span class="literal">true</span>;</span><br><span class="line">			&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">				that.marqueeShow=<span class="literal">false</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;)</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="axios"><a href="#axios" class="headerlink" title="axios :"></a>axios :</h3><h5 id="一个基于Promise-用于浏览器和-nodejs-的-HTTP-客户端。简单理解就是ajax的封装-它本身具有以下特征："><a href="#一个基于Promise-用于浏览器和-nodejs-的-HTTP-客户端。简单理解就是ajax的封装-它本身具有以下特征：" class="headerlink" title="一个基于Promise 用于浏览器和 nodejs 的 HTTP 客户端。简单理解就是ajax的封装,它本身具有以下特征："></a>一个基于Promise 用于浏览器和 nodejs 的 HTTP 客户端。简单理解就是ajax的封装,它本身具有以下特征：</h5><ol>
+<li><p>从浏览器中创建 XMLHttpRequest</p>
+</li>
+<li><p>从 node.js 发出 http 请求</p>
+</li>
+<li><p>支持 Promise API</p>
+</li>
+<li><p>拦截请求和响应</p>
+</li>
+<li><p>转换请求和响应数据</p>
+</li>
+<li><p>取消请求</p>
+</li>
+<li><p>自动转换JSON数据</p>
+</li>
+<li><p>客户端支持防止 CSRF/XSRF</p>
+</li>
+</ol>
+<h3 id="console-log-“Hello-Runoob-”"><a href="#console-log-“Hello-Runoob-”" class="headerlink" title="console.log(“Hello Runoob!”)"></a>console.log(“Hello Runoob!”)</h3><p>在控制台上输出信息：Hello Runoob!</p>
+<h3 id="JSON-stringify-："><a href="#JSON-stringify-：" class="headerlink" title="JSON.stringify() ："></a>JSON.stringify() ：</h3><p>方法用于将 JavaScript 值转换为 JSON 字符串。</p>
+<h3 id="then-异步执行。"><a href="#then-异步执行。" class="headerlink" title=".then() : 异步执行。"></a>.then() : 异步执行。</h3><p>当 .then() 前的方法执行完后再执行 then() 内部的程序，这样就避免了，数据没获取到等的问题。</p>
+<h5 id="语法：promise-then-onCompleted-onRejected"><a href="#语法：promise-then-onCompleted-onRejected" class="headerlink" title="语法：promise.then(onCompleted, onRejected);"></a>语法：promise.then(onCompleted, onRejected);</h5><p>promise<br>必需。<br>Promise 对象。</p>
+<p>onCompleted<br>必需。<br>承诺成功完成时要运行的履行处理程序函数。</p>
+<p>onRejected<br>可选。<br>承诺被拒绝时要运行的错误处理程序函数。</p>
+
       
 
       
@@ -303,6 +353,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/12/11/SpringBoot%E9%A1%B9%E7%9B%AE%E5%88%9D%E8%A7%A3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          SpringBoot初解
+        
+      </div>
+    </a>
   
   
     <a href="/2020/11/03/%E6%8E%92%E4%B8%AA%E5%BA%8F/" id="article-nav-older" class="article-nav-link-wrap">
