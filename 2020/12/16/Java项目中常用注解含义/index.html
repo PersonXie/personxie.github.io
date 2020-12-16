@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020 | Hexo</title>
+  <title>Java项目中常用注解含义 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2020/index.html">
+  <meta name="description" content="Java项目中常用注解含义">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java项目中常用注解含义">
+<meta property="og:url" content="http://yoursite.com/2020/12/16/Java%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3%E5%90%AB%E4%B9%89/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Java项目中常用注解含义">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-12-16T07:46:15.000Z">
+<meta property="article:modified_time" content="2020-12-16T07:48:51.895Z">
 <meta property="article:author" content="StT">
+<meta property="article:tag" content="框架">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -160,36 +165,137 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Java项目中常用注解含义" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Java项目中常用注解含义
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/16/Java%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3%E5%90%AB%E4%B9%89/" class="archive-article-date">
+
+        
+        <a href="/2020/12/16/Java%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3%E5%90%AB%E4%B9%89/" class="archive-article-date">
   	<time datetime="2020-12-16T07:46:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-16</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/16/Java%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3%E5%90%AB%E4%B9%89/">Java项目中常用注解含义</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Java项目中常用注解含义"><a href="#Java项目中常用注解含义" class="headerlink" title="Java项目中常用注解含义"></a>Java项目中常用注解含义</h1><a id="more"></a>
 
-        <div class="article-info info-on-right">
-          
+<h2 id="Data注解-与-lombok-常用注解分析："><a href="#Data注解-与-lombok-常用注解分析：" class="headerlink" title="@Data注解 与 lombok 常用注解分析："></a>@Data注解 与 lombok 常用注解分析：</h2><p>在项目开发过程中难免会加字段，如果加完还要补充get()、set()方法，重写toString()就太麻烦。lombok 是一个工具类库，可以用简单的注解形式来简化代码，提高开发效率。</p>
+<h3 id="要使用-Data-注解要先引入lombok"><a href="#要使用-Data-注解要先引入lombok" class="headerlink" title="要使用 @Data 注解要先引入lombok"></a>要使用 @Data 注解要先引入lombok</h3><h4 id="Setter"><a href="#Setter" class="headerlink" title="@Setter"></a>@Setter</h4><p>注在属性上，提供 set 方法</p>
+<h4 id="Getter"><a href="#Getter" class="headerlink" title="@Getter"></a>@Getter</h4><p>注在属性上，提供 get 方法</p>
+<h4 id="ToString"><a href="#ToString" class="headerlink" title="@ToString"></a>@ToString</h4><p>用于为描述的类添加toString方法。</p>
+<h4 id="EqualsAndHashCode"><a href="#EqualsAndHashCode" class="headerlink" title="@EqualsAndHashCode"></a>@EqualsAndHashCode</h4><p>注在类上，提供对应的 equals 和 hashCode 方法</p>
+<h4 id="NoArgsConstructor"><a href="#NoArgsConstructor" class="headerlink" title="@NoArgsConstructor"></a>@NoArgsConstructor</h4><p>注在类上，提供类的无参构造</p>
+<h4 id="AllArgsConstructor"><a href="#AllArgsConstructor" class="headerlink" title="@AllArgsConstructor"></a>@AllArgsConstructor</h4><p>注在类上，提供类的全参构造</p>
+<h4 id="Data"><a href="#Data" class="headerlink" title="@Data"></a>@Data</h4><p>注在类上，提供类的get、set、equals、hashCode、canEqual、toString方法</p>
+<h4 id="Slf4J"><a href="#Slf4J" class="headerlink" title="@Slf4J"></a>@Slf4J</h4><p>用于为描述的类添加一个日志属性对象</p>
+<p>声明:如果不想每次都写<code>private final Logger logger = LoggerFactory.getLogger(当前类名.class);</code>可以用注解 <strong>@Slf4j</strong> ;</p>
+<hr>
+<h3 id="Bean和-Configuration"><a href="#Bean和-Configuration" class="headerlink" title="@Bean和@Configuration"></a>@Bean和@Configuration</h3><p><strong>@Bean</strong> 注解将会告诉 Spring 其修饰的方法将会返回一个对象，该方法要注册为 Spring 应用上下文的 bean。</p>
+<p><strong>@Configuration</strong> 注解表明这个类是一个配置类。可以启动组件扫描，用来将带有 <strong>@Bean</strong> 的实体进行实例化bean等</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Slf</span>4j   <span class="comment">//lombok日志</span></span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProductController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span>    <span class="comment">//bean的自动注入</span></span><br><span class="line">    <span class="keyword">private</span> ProductService productService;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> MinioService minioService;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="meta">@LogInfomation</span>     <span class="comment">//日志</span></span><br><span class="line">    <span class="meta">@PreAuthorize</span>(AuthorityCode.PRODUCT_LIST)    <span class="comment">//加访问权限</span></span><br><span class="line">    <span class="meta">@GetMapping</span>(ServiceApiNams.DISPATCHLIST_PRODUCT_LIST)    <span class="comment">//url地址</span></span><br><span class="line">    <span class="keyword">public</span> ResponseData&lt;List&lt;ProductListVO&gt;&gt; listProduct(<span class="meta">@RequestParam</span>(<span class="string">"siteId"</span>) String siteId) &#123;</span><br><span class="line">        List&lt;ProductListVO&gt; responseData = productService.findSiteAllProduct(siteId);</span><br><span class="line">        <span class="keyword">return</span> ResponseData.ok(responseData);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>@Column</strong> 注解：<br>用来标识实体类中属性与数据表中字段的对应关系</p>
+<p><strong>@transient</strong> ： 就是给某个javabean上需要添加个属性，但是这个属性又不希望给存到数据库中去，仅仅是做个临时变量用一下。不修改已经存在数据库的数据的数据结构。<br>那么这个注解就可以一用。</p>
+<hr>
+<h3 id="RequestParam："><a href="#RequestParam：" class="headerlink" title="@RequestParam："></a>@RequestParam：</h3><p>将请求参数绑定到控制器的方法参数上（是springmvc中接收普通参数的注解）</p>
+<h5 id="语法："><a href="#语法：" class="headerlink" title="语法："></a>语法：</h5><p><code>@RequestParam(value=”参数名”,required=”true/false”,defaultValue=””)</code></p>
+<h5 id="value："><a href="#value：" class="headerlink" title="value："></a>value：</h5><p>参数名</p>
+<h5 id="required："><a href="#required：" class="headerlink" title="required："></a>required：</h5><p>是否包含该参数，默认为true，表示该请求路径中必须包含该参数，如果不包含就报错。</p>
+<h5 id="defaultValue："><a href="#defaultValue：" class="headerlink" title="defaultValue："></a>defaultValue：</h5><p>默认参数值，如果设置了该值，<code>required=true</code>将失效，自动为<code>false</code>,如果没有传该参数，就使用默认值。</p>
+<hr>
+<h3 id="Component"><a href="#Component" class="headerlink" title="@Component()"></a>@Component()</h3><h4 id="Repository、-Service、-Controller-和-Component-将类标识为Bean"><a href="#Repository、-Service、-Controller-和-Component-将类标识为Bean" class="headerlink" title="@Repository、@Service、@Controller 和 @Component 将类标识为Bean"></a>@Repository、@Service、@Controller 和 @Component 将类标识为Bean</h4><p>Spring 2.5 中除了提供 <strong>@Component</strong>注解外，还定义了几个拥有特殊语义的注解：<br> <strong>@Repository、@Service 和 @Controller</strong>。<br>在目前的 Spring 版本中，这 3 个注解和  <strong>@Component</strong>是等效的，但是从注释类的命名上看，这3个注释分别和持久层、业务层和控制层（Web 层）相对应。</p>
+<p>如果Web应用程序采用了经典的三层分层结构，最好在持久层、业务层和控制层分别采用上述注解对分层中的类进行注释。</p>
+<h4 id="Service"><a href="#Service" class="headerlink" title="@Service :"></a>@Service :</h4><p>用于标注业务层组件</p>
+<h4 id="Repository"><a href="#Repository" class="headerlink" title="@Repository :"></a>@Repository :</h4><p>用于标注数据访问组件，即DAO组件</p>
+<h4 id="Component-1"><a href="#Component-1" class="headerlink" title="@Component :"></a>@Component :</h4><p>泛指组件，当组件不好归类的时候，我们可以使用这个注解进行标注。</p>
+<hr>
+<h3 id="RestController和-Controller的区别："><a href="#RestController和-Controller的区别：" class="headerlink" title="@RestController和@Controller的区别："></a>@RestController和@Controller的区别：</h3><p><strong>@RestController</strong> 从Spring4.0以后产生的，用来将json/xml数据发送到前台页面，而不是返回视图页面。</p>
+<p><strong>@RestController</strong> 注解等价于 <strong>@ResponseBody ＋ @Controller</strong></p>
+<h5 id="RestController和-Controller的共同点"><a href="#RestController和-Controller的共同点" class="headerlink" title="@RestController和@Controller的共同点 :"></a>@RestController和@Controller的共同点 :</h5><p>都用来表示Spring某个类是否可以接收HTTP请求。</p>
+<h5 id="二者区别："><a href="#二者区别：" class="headerlink" title="二者区别："></a>二者区别：</h5><p><strong>@RestController</strong> 无法返回指定页面， 而 <strong>@Controller</strong> 可以；<br>前者可以直接返回数据，后者需要 <strong>@ResponseBody</strong> 辅助。</p>
+<hr>
+<h3 id="Resource和-Autowired"><a href="#Resource和-Autowired" class="headerlink" title="@Resource和@Autowired"></a>@Resource和@Autowired</h3><p><strong>@Resource</strong>的作用相当于 <strong>@Autowired</strong>，只不过 <strong>@Autowired</strong> 按  <strong>byType</strong>自动注入，而 <strong>@Resource</strong>默认按 <strong>byName</strong>自动注入罢了。</p>
+<h5 id="Resource-："><a href="#Resource-：" class="headerlink" title="@Resource ："></a>@Resource ：</h5><p>有两个属性是比较重要的，分别是name和type，Spring将@Resource注解的name属性解析为bean的名字，而type属性则解析为bean的类型。所以如果使用name属性，则使用byName的自动注入策略，而使用type属性时则使用byType自动注入策略。</p>
+<p>如果既不指定name也不指定type属性，这时将通过反射机制使用byName自动注入策略。</p>
+<h5 id="Resource装配顺序-："><a href="#Resource装配顺序-：" class="headerlink" title="@Resource装配顺序 ："></a>@Resource装配顺序 ：</h5><p>如果同时指定了name和type，则从Spring上下文中找到唯一匹配的bean进行装配，找不到则抛出异常。如果指定了name，则从上下文中查找名称（id）匹配的bean进行装配，找不到则抛出异常；如果指定了type，则从上下文中找到类型匹配的唯一bean进行装配，找不到或者找到多个，都会抛出异常。如果既没有指定name，又没有指定type，则自动按照byName方式进行装配；如果没有匹配，则回退为一个原始类型进行匹配，如果匹配则自动装配；</p>
+<hr>
+<h3 id="MapperScan和-Mapper"><a href="#MapperScan和-Mapper" class="headerlink" title="@MapperScan和@Mapper"></a>@MapperScan和@Mapper</h3><p>通过使用 <strong>@MapperScan</strong> 可以指定要扫描的 <strong>Mapper</strong> 类的包的路径。</p>
+<h4 id="MapperScan-注解："><a href="#MapperScan-注解：" class="headerlink" title="@MapperScan 注解："></a>@MapperScan 注解：</h4><p>添加@MapperScan(“com.it.dao”)注解以后，com.it.dao包下面的接口类，在编译之后都会生成相应的实现类。</p>
+<h5 id="添加位置："><a href="#添加位置：" class="headerlink" title="添加位置："></a>添加位置：</h5><p>是在Springboot启动类上面添加，</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="meta">@MapperScan</span>(<span class="string">"com.it.dao"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SpringbootDemoApplication</span> </span>&#123;</span><br><span class="line">       <span class="comment">//代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Mapper注解："><a href="#Mapper注解：" class="headerlink" title="@Mapper注解："></a>@Mapper注解：</h4><p>在接口类上添加了@Mapper，在编译之后会生成相应的接口实现类</p>
+<h5 id="添加位置：接口类上面"><a href="#添加位置：接口类上面" class="headerlink" title="添加位置：接口类上面"></a>添加位置：接口类上面</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Mapper</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">UserDAO</span> </span>&#123;</span><br><span class="line">   <span class="comment">//代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="CrossOrigin"><a href="#CrossOrigin" class="headerlink" title="@CrossOrigin"></a>@CrossOrigin</h3><p><strong>@CrossOrigin</strong> 是用来处理跨域请求的注解</p>
+<hr>
+<h3 id="EnableScheduling"><a href="#EnableScheduling" class="headerlink" title="@EnableScheduling"></a>@EnableScheduling</h3><p>springboot使用 <strong>@EnableScheduling</strong> 注解进行定时任务</p>
+<p>添加 <strong>@EnableScheduling</strong> 注解到入口类声明上面，将@Scheduled添加到不带参数的方法上。<br>其中@Scheduled注解后面括号里面可以指定各种参数，如 <code>fixedRate = 6000</code>意思是下面的任务每 隔6000 毫秒，即每隔6秒执行一次。</p>
+<hr>
+<h3 id="PreAuthorize和-PostAuthorize-进行访问控制"><a href="#PreAuthorize和-PostAuthorize-进行访问控制" class="headerlink" title="@PreAuthorize和@PostAuthorize: 进行访问控制"></a>@PreAuthorize和@PostAuthorize: 进行访问控制</h3><p>使用 <strong>@PreAuthorize</strong> 可以用来控制一个方法是否能够被调用。</p>
+<h3 id="PreFilter和-PostFilter"><a href="#PreFilter和-PostFilter" class="headerlink" title="@PreFilter和@PostFilter"></a>@PreFilter和@PostFilter</h3><p>可以对集合类型的参数或返回值进行过滤。使用 <strong>@PreFilter</strong> 和 <strong>@PostFilter</strong> 时，Spring Security将移除使对应表达式的结果为false的元素。</p>
+<hr>
+<h3 id="FeignClient"><a href="#FeignClient" class="headerlink" title="@FeignClient"></a>@FeignClient</h3><p>FeignClient注解被 <strong>@Target(ElementType.TYPE)</strong> 修饰，表示FeignClient注解的作用目标在接口上。声明接口之后，在代码中通过@Resource注入之后即可使用。</p>
+<p><strong>@FeignClient</strong> 标签的常用属性如下：</p>
+<h5 id="name："><a href="#name：" class="headerlink" title="name："></a>name：</h5><p>指定FeignClient的名称，如果项目使用了Ribbon，name属性会作为微服务的名称，用于服务发现</p>
+<h5 id="url"><a href="#url" class="headerlink" title="url:"></a>url:</h5><p>url一般用于调试，可以手动指定@FeignClient调用的地址</p>
+<h5 id="decode404"><a href="#decode404" class="headerlink" title="decode404:"></a>decode404:</h5><p>当发生http 404错误时，如果该字段位true，会调用decoder进行解码，否则抛出FeignException</p>
+<h5 id="configuration"><a href="#configuration" class="headerlink" title="configuration:"></a>configuration:</h5><p>Feign配置类，可以自定义Feign的Encoder、Decoder、LogLevel、Contract</p>
+<h5 id="fallback"><a href="#fallback" class="headerlink" title="fallback:"></a>fallback:</h5><p>定义容错的处理类，当调用远程接口失败或超时时，会调用对应接口的容错逻辑，fallback指定的类必须实现@FeignClient标记的接口</p>
+<h5 id="fallbackFactory"><a href="#fallbackFactory" class="headerlink" title="fallbackFactory:"></a>fallbackFactory:</h5><p>工厂类，用于生成fallback类示例，通过这个属性我们可以实现每个接口通用的容错逻辑，减少重复的代码</p>
+<h5 id="path"><a href="#path" class="headerlink" title="path:"></a>path:</h5><p>定义当前FeignClient的统一前缀</p>
+<h5 id="关于调用目前有两种："><a href="#关于调用目前有两种：" class="headerlink" title="关于调用目前有两种："></a>关于调用目前有两种：</h5><ol>
+<li><p>接口提供方在注册中心。如果服务提供方已经注册到注册中心了，那么name或者value的值为：服务提供方的服务名称。必须为所有客户端指定一个name或者value<br><code>@FeignClient(value=&quot;run-product&quot;,fallback = ProductClientServiceFallBack.class)</code></p>
+</li>
+<li><p>单独的一个http接口，接口提供方没有注册到注册中心。<br>@FeignClient(name=”runClient11111”,url=”localhost:8001”)<br>此处name的值为:调用客户端的名称。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FeignClient</span>(value=<span class="string">"$&#123;services.cctp-server-name&#125;"</span>, configuration= &#123;FeignClientConfig<span class="class">.<span class="keyword">class</span>&#125;,<span class="title">contextId</span> </span>= <span class="string">"news"</span>,path = <span class="string">"/server"</span>)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">NewsService</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">	<span class="meta">@GetMapping</span>(ServiceApiNams.GET_TOP_NEWS)</span><br><span class="line">	<span class="keyword">public</span> ResponseData&lt;List&lt;CctpNewsVO&gt;&gt; getNewsList();</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zhifubao.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -201,364 +307,105 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/12/16/Java%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3%E5%90%AB%E4%B9%89/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/12/11/SpringBoot%E9%A1%B9%E7%9B%AE%E5%88%9D%E8%A7%A3/" class="archive-article-date">
-  	<time datetime="2020-12-11T01:42:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-12-11</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/12/11/SpringBoot%E9%A1%B9%E7%9B%AE%E5%88%9D%E8%A7%A3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SpringBoot初解</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/12/11/SpringBoot%E9%A1%B9%E7%9B%AE%E5%88%9D%E8%A7%A3/">SpringBoot初解</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">框架</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/11/03/%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E9%9B%86%E9%94%A6/" class="archive-article-date">
-  	<time datetime="2020-11-03T01:35:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/11/03/%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E9%9B%86%E9%94%A6/">常用方法</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/11/03/%E6%8E%92%E4%B8%AA%E5%BA%8F/" class="archive-article-date">
-  	<time datetime="2020-11-03T01:34:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-11-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/11/03/%E6%8E%92%E4%B8%AA%E5%BA%8F/">排个序</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/10/12/IDEA-%E6%8A%A5SQL%E8%AF%AD%E5%8F%A5%E6%8B%BC%E5%86%99%E9%94%99%E8%AF%AF/" class="archive-article-date">
-  	<time datetime="2020-10-12T09:57:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-12</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/10/12/IDEA-%E6%8A%A5SQL%E8%AF%AD%E5%8F%A5%E6%8B%BC%E5%86%99%E9%94%99%E8%AF%AF/">IDEA 报SQL语句拼写错误</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/30/IDEA-mabatis%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2020-09-30T04:37:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-30</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/30/IDEA-mabatis%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/">IDEA-mabatis逆向工程</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/27/Html/" class="archive-article-date">
-  	<time datetime="2020-09-27T15:56:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/27/Html/">Html</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/11/%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B25/" class="archive-article-date">
-  	<time datetime="2020-09-11T01:52:54.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-11</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/11/%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B25/">复习提纲5</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/09/%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B24/" class="archive-article-date">
-  	<time datetime="2020-09-09T03:24:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/09/%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B24/">复习提纲4</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/09/08/%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B23/" class="archive-article-date">
-  	<time datetime="2020-09-08T04:04:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/09/08/%E5%A4%8D%E4%B9%A0%E6%8F%90%E7%BA%B23/">复习提纲3</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">总结</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2020/page/2/">2</a><a class="page-number" href="/archives/2020/page/3/">3</a><a class="page-number" href="/archives/2020/page/4/">4</a><a class="extend next" rel="next" href="/archives/2020/page/2/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -582,8 +429,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
