@@ -16,7 +16,7 @@
 <meta property="og:description" content="Java项目中常用注解含义">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-12-16T07:46:15.000Z">
-<meta property="article:modified_time" content="2020-12-23T09:06:23.308Z">
+<meta property="article:modified_time" content="2020-12-30T08:03:49.996Z">
 <meta property="article:author" content="StT">
 <meta property="article:tag" content="框架">
 <meta name="twitter:card" content="summary">
@@ -266,6 +266,16 @@
 <h3 id="NotNull-和-Nullable"><a href="#NotNull-和-Nullable" class="headerlink" title="@NotNull 和 @Nullable"></a>@NotNull 和 @Nullable</h3><p>通过使用像@NotNull和@Nullable之类的annotation来声明一个方法是否是空指针安全的。</p>
 <p>如果可以传入NULL值，则标记为@Nullable，如果不可以，则标注为@Nonnull。那么在我们做一些不安全严谨操作的编码操作时，这些注释会给我们一些警告。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">FileSystemXmlApplicationContext</span><span class="params">(String[] configLocations, <span class="keyword">boolean</span> refresh, @Nullable ApplicationContext parent)</span> <span class="keyword">throws</span> BeansException </span>&#123;</span><br><span class="line">    <span class="keyword">super</span>(parent);</span><br><span class="line">    <span class="keyword">this</span>.setConfigLocations(configLocations);</span><br><span class="line">    <span class="keyword">if</span> (refresh) &#123;</span><br><span class="line">        <span class="keyword">this</span>.refresh();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="alibaba-EasyExcel-属性注解："><a href="#alibaba-EasyExcel-属性注解：" class="headerlink" title="alibaba EasyExcel 属性注解："></a>alibaba EasyExcel 属性注解：</h3><h4 id="ContentRowHeight-int"><a href="#ContentRowHeight-int" class="headerlink" title="@ContentRowHeight(int):"></a>@ContentRowHeight(int):</h4><p>设置 row 高度，不包含表头<br>标记在 类上</p>
+<h4 id="HeadRowHeight-int-："><a href="#HeadRowHeight-int-：" class="headerlink" title="@HeadRowHeight(int)："></a>@HeadRowHeight(int)：</h4><p>设置 表头 高度（与 @ContentRowHeight 相反）<br>标记在 类上</p>
+<h4 id="ColumnWidth-int-："><a href="#ColumnWidth-int-：" class="headerlink" title="@ColumnWidth(int)："></a>@ColumnWidth(int)：</h4><p>设置列宽<br>标记在属性上</p>
+<h4 id="ExcelProperty-value-String-index-int"><a href="#ExcelProperty-value-String-index-int" class="headerlink" title="@ExcelProperty(value = String[], index = int):"></a>@ExcelProperty(value = String[], index = int):</h4><p>设置表头信息</p>
+<p>value: 表名称</p>
+<p>index: 列号</p>
+<h4 id="ExcelIgnore"><a href="#ExcelIgnore" class="headerlink" title="@ExcelIgnore"></a>@ExcelIgnore</h4><p>忽略项</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@ContentRowHeight</span>(<span class="number">50</span>) <span class="comment">// 设置 Cell 高度 为50</span></span><br><span class="line"><span class="meta">@HeadRowHeight</span>(<span class="number">40</span>)    <span class="comment">//  设置表头 高度 为 40</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CaseTempMode</span> </span>&#123;</span><br><span class="line">    <span class="meta">@ColumnWidth</span>(<span class="number">13</span>) <span class="comment">// 设置 Cell 宽度</span></span><br><span class="line">    <span class="meta">@ExcelProperty</span>(value = &#123; <span class="string">"模块一"</span> &#125;, index = <span class="number">0</span>) <span class="comment">// 设置 表头 信息</span></span><br><span class="line">    <span class="keyword">private</span> String model1 ;</span><br><span class="line">    <span class="meta">@ColumnWidth</span>(<span class="number">13</span>)</span><br><span class="line">    <span class="meta">@ExcelProperty</span>(value = &#123; <span class="string">"模块二"</span> &#125;, index = <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">private</span> String model2;</span><br><span class="line">    <span class="meta">@ColumnWidth</span>(<span class="number">13</span>)</span><br><span class="line">    <span class="meta">@ExcelProperty</span>(value = &#123; <span class="string">"模块三"</span>&#125;, index = <span class="number">2</span>)</span><br><span class="line">    <span class="keyword">private</span> String model3;</span><br><span class="line">    <span class="meta">@ColumnWidth</span>(<span class="number">13</span>)</span><br><span class="line">    <span class="meta">@ExcelProperty</span>(value = &#123; <span class="string">"模块四"</span>&#125;, index = <span class="number">3</span>)</span><br><span class="line">    <span class="keyword">private</span> String model4;</span><br></pre></td></tr></table></figure>
 
       
 
@@ -534,6 +544,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">总结</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">业务实现</a>
               </li>
             
             <div class="clearfix"></div>
