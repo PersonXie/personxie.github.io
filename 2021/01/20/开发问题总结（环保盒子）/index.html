@@ -6,24 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>IDEA 报SQL语句拼写错误 | Hexo</title>
+  <title>问题总结 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="org.springframework.jdbc.BadSqlGrammarException:">
+  <meta name="description" content="开发问题总结（环保盒子）：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="IDEA 报SQL语句拼写错误">
-<meta property="og:url" content="http://yoursite.com/2020/10/12/IDEA-%E6%8A%A5SQL%E8%AF%AD%E5%8F%A5%E6%8B%BC%E5%86%99%E9%94%99%E8%AF%AF/index.html">
+<meta property="og:title" content="问题总结">
+<meta property="og:url" content="http://yoursite.com/2021/01/20/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%EF%BC%88%E7%8E%AF%E4%BF%9D%E7%9B%92%E5%AD%90%EF%BC%89/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="org.springframework.jdbc.BadSqlGrammarException:">
+<meta property="og:description" content="开发问题总结（环保盒子）：">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/images/Error1.png">
-<meta property="og:image" content="http://yoursite.com/images/Error2.png">
-<meta property="og:image" content="http://yoursite.com/images/Error3.png">
-<meta property="article:published_time" content="2020-10-12T09:57:51.000Z">
-<meta property="article:modified_time" content="2020-10-12T10:17:26.076Z">
+<meta property="article:published_time" content="2021-01-20T12:22:03.000Z">
+<meta property="article:modified_time" content="2021-01-20T12:28:06.817Z">
 <meta property="article:author" content="StT">
-<meta property="article:tag" content="随笔">
+<meta property="article:tag" content="业务实现">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/images/Error1.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -169,33 +165,87 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-IDEA-报SQL语句拼写错误" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-开发问题总结（环保盒子）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      IDEA 报SQL语句拼写错误
+      问题总结
     </h1>
   
 
         
-        <a href="/2020/10/12/IDEA-%E6%8A%A5SQL%E8%AF%AD%E5%8F%A5%E6%8B%BC%E5%86%99%E9%94%99%E8%AF%AF/" class="archive-article-date">
-  	<time datetime="2020-10-12T09:57:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-10-12</time>
+        <a href="/2021/01/20/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%EF%BC%88%E7%8E%AF%E4%BF%9D%E7%9B%92%E5%AD%90%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2021-01-20T12:22:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-20</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="org-springframework-jdbc-BadSqlGrammarException"><a href="#org-springframework-jdbc-BadSqlGrammarException" class="headerlink" title="org.springframework.jdbc.BadSqlGrammarException:"></a>org.springframework.jdbc.BadSqlGrammarException:</h1><a id="more"></a>
+        <h2 id="开发问题总结（环保盒子）："><a href="#开发问题总结（环保盒子）：" class="headerlink" title="开发问题总结（环保盒子）："></a>开发问题总结（环保盒子）：</h2><a id="more"></a>
 
-<h3 id="如下："><a href="#如下：" class="headerlink" title="如下："></a>如下：</h3><img src="/images/Error1.png">
-
-<img src="/images/Error2.png">
-
-<h3 id="注意，这个不是单引号-‘-，是在1左边的-号。细节误我！"><a href="#注意，这个不是单引号-‘-，是在1左边的-号。细节误我！" class="headerlink" title="注意，这个不是单引号 ‘ ，是在1左边的 ` 号。细节误我！"></a>注意，这个不是单引号 ‘ ，是在1左边的 ` 号。细节误我！</h3><img src="/images/Error3.png">
+<ol>
+<li>Git命令管理分支无效    </li>
+</ol>
+<p>打开Git的项目文件夹不正确，需要在项目文件夹的具体项目中打开</p>
+<hr>
+<ol start="2">
+<li>项目启动类启动成功，浏览器报404</li>
+</ol>
+<p>输入的访问地址有问题。  localhost:8088/项目名/home</p>
+<hr>
+<ol start="3">
+<li>Postman测试接口，报404</li>
+</ol>
+<p>先查看token的配置，获得 Bearer 配置</p>
+<hr>
+<ol start="4">
+<li>接口完成、页面完成，从JS调接口调不通，需仔细检查调用路径，参考 <strong>问题6</strong>。</li>
+</ol>
+<hr>
+<ol start="5">
+<li><p>项目启动后页面的大菜单通过 admin（超级管理员）账号 的菜单管理进行创建；</p>
+<p>不同角色下出现不同的菜单功能是通过角色管理的编辑权限进行相关菜单的添加、删除。</p>
+</li>
+</ol>
+<hr>
+<ol start="6">
+<li>站点列表里嵌套着站点添加的独立页面，用 <code>@click=&quot;goToPage(&#39;site/add&#39;)&quot;</code>进行页面跳转。JS文件的 AJAX 请求只负责针对接口的调用。在跳转路径前面加 / 是硬性指定路径，不加 / 会自动装配项目名。<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">"primary"</span> @<span class="attr">click</span>=<span class="string">"goToPage('site/add')"</span> <span class="attr">icon</span>=<span class="string">"el-icon-plus"</span> &gt;</span>添加&#123;&#123;menuName&#125;&#125;<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<hr>
+<p>7.写在站点类的持久层里，但查的不是站点表，无法用<Syssite>接收，需要改写成Object<br> <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">   <span class="comment">//查询所有企业</span></span><br><span class="line"><span class="meta">@Query</span>(value = <span class="string">"SELECT id as enterprise_id, name as enterprisename FROM sys_enterprise WHERE archived = 0"</span>, nativeQuery = <span class="keyword">true</span>)</span><br><span class="line">List&lt;Map&lt;String,Object&gt;&gt; getEnterprisenames();</span><br></pre></td></tr></table></figure></p>
+<hr>
+<ol start="8">
+<li>Controller类中的Service无法注入，Server服务启动报错</li>
+</ol>
+<p>实现类需要加注解 @Service ，表明将其交给Spring管理</p>
+<hr>
+<ol start="9">
+<li>用VO做泛型的好处，多表查询时可以写进不同表的查询字段，方便维护扩展。尽量避免用实体类做泛型接收，因为不兼容异表字段。</li>
+</ol>
+<hr>
+<ol start="10">
+<li>库里查出另有含义的字段数值，处理对应的寓意在html文件(站点类型sitetype：0 代表常规六气， 1 代表 VOC)：<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">"siteType"</span> <span class="attr">label</span>=<span class="string">"站点类型"</span> <span class="attr">width</span>=<span class="string">"200"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">template</span> <span class="attr">slot-scope</span>=<span class="string">"scope"</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">span</span> <span class="attr">v-if</span>=<span class="string">"scope.row.siteType == 0 "</span>&gt;</span>常规六气<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">span</span> <span class="attr">v-else</span>&gt;</span>VOC<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<hr>
+<ol start="11">
+<li>Server 服务始终启动不成功，控制台不报错，也不打印日志</li>
+</ol>
+<p>没记得啥时候给类文件打了断点，导致不能正常发现类文件，Debug启动不了，Run as 启动就可以。</p>
+<p>断点不能加给类文件。</p>
+<hr>
+<ol start="12">
+<li>Postman 测试UI接口需要加 项目名 ，再加 接口名</li>
+</ol>
+<p>eg： <a href="http://localhost:8088/dashboard/api/data/list" target="_blank" rel="noopener">http://localhost:8088/dashboard/api/data/list</a></p>
+<p>测试Server接口要加 server</p>
+<p>eg： <a href="http://localhost:8084/server/api/data/list" target="_blank" rel="noopener">http://localhost:8084/server/api/data/list</a></p>
+<p>测试要点：（1）仔细检查url，再确定token不失效（2）报404就是没调通，先保证能调通接口，在确定问题。</p>
 
       
 
@@ -240,7 +290,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">业务实现</a>
         		</li>
       		
 		</ul>
@@ -296,7 +346,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/10/12/IDEA-%E6%8A%A5SQL%E8%AF%AD%E5%8F%A5%E6%8B%BC%E5%86%99%E9%94%99%E8%AF%AF/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2021/01/20/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%EF%BC%88%E7%8E%AF%E4%BF%9D%E7%9B%92%E5%AD%90%EF%BC%89/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -310,18 +360,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/11/03/%E6%8E%92%E4%B8%AA%E5%BA%8F/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          排个序
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/09/30/IDEA-mabatis%E9%80%86%E5%90%91%E5%B7%A5%E7%A8%8B/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">IDEA-mabatis逆向工程</div>
+    <a href="/2021/01/20/git%E5%91%BD%E4%BB%A4-%E5%88%86%E6%94%AF%E6%93%8D%E4%BD%9C/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">git命令--分支操作</div>
       <i class="icon-circle-right"></i>
     </a>
   
