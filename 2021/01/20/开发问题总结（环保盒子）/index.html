@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>问题总结 | Hexo</title>
+  <title>问题总结（环保盒子） | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="开发问题总结（环保盒子）：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="问题总结">
+<meta property="og:title" content="问题总结（环保盒子）">
 <meta property="og:url" content="http://yoursite.com/2021/01/20/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%EF%BC%88%E7%8E%AF%E4%BF%9D%E7%9B%92%E5%AD%90%EF%BC%89/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="开发问题总结（环保盒子）：">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-01-20T12:22:03.000Z">
-<meta property="article:modified_time" content="2021-01-20T12:28:06.817Z">
+<meta property="article:modified_time" content="2021-02-20T12:09:25.291Z">
 <meta property="article:author" content="StT">
 <meta property="article:tag" content="业务实现">
 <meta name="twitter:card" content="summary">
@@ -172,7 +172,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      问题总结
+      问题总结（环保盒子）
     </h1>
   
 
@@ -187,65 +187,39 @@
       
         <h2 id="开发问题总结（环保盒子）："><a href="#开发问题总结（环保盒子）：" class="headerlink" title="开发问题总结（环保盒子）："></a>开发问题总结（环保盒子）：</h2><a id="more"></a>
 
-<ol>
-<li>Git命令管理分支无效    </li>
-</ol>
-<p>打开Git的项目文件夹不正确，需要在项目文件夹的具体项目中打开</p>
-<hr>
-<ol start="2">
-<li>项目启动类启动成功，浏览器报404</li>
-</ol>
-<p>输入的访问地址有问题。  localhost:8088/项目名/home</p>
-<hr>
-<ol start="3">
-<li>Postman测试接口，报404</li>
-</ol>
-<p>先查看token的配置，获得 Bearer 配置</p>
-<hr>
-<ol start="4">
-<li>接口完成、页面完成，从JS调接口调不通，需仔细检查调用路径，参考 <strong>问题6</strong>。</li>
-</ol>
-<hr>
-<ol start="5">
-<li><p>项目启动后页面的大菜单通过 admin（超级管理员）账号 的菜单管理进行创建；</p>
-<p>不同角色下出现不同的菜单功能是通过角色管理的编辑权限进行相关菜单的添加、删除。</p>
-</li>
-</ol>
-<hr>
-<ol start="6">
-<li>站点列表里嵌套着站点添加的独立页面，用 <code>@click=&quot;goToPage(&#39;site/add&#39;)&quot;</code>进行页面跳转。JS文件的 AJAX 请求只负责针对接口的调用。在跳转路径前面加 / 是硬性指定路径，不加 / 会自动装配项目名。<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">"primary"</span> @<span class="attr">click</span>=<span class="string">"goToPage('site/add')"</span> <span class="attr">icon</span>=<span class="string">"el-icon-plus"</span> &gt;</span>添加&#123;&#123;menuName&#125;&#125;<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<hr>
-<p>7.写在站点类的持久层里，但查的不是站点表，无法用<Syssite>接收，需要改写成Object<br> <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">   <span class="comment">//查询所有企业</span></span><br><span class="line"><span class="meta">@Query</span>(value = <span class="string">"SELECT id as enterprise_id, name as enterprisename FROM sys_enterprise WHERE archived = 0"</span>, nativeQuery = <span class="keyword">true</span>)</span><br><span class="line">List&lt;Map&lt;String,Object&gt;&gt; getEnterprisenames();</span><br></pre></td></tr></table></figure></p>
-<hr>
-<ol start="8">
-<li>Controller类中的Service无法注入，Server服务启动报错</li>
-</ol>
-<p>实现类需要加注解 @Service ，表明将其交给Spring管理</p>
-<hr>
-<ol start="9">
-<li>用VO做泛型的好处，多表查询时可以写进不同表的查询字段，方便维护扩展。尽量避免用实体类做泛型接收，因为不兼容异表字段。</li>
-</ol>
-<hr>
-<ol start="10">
-<li>库里查出另有含义的字段数值，处理对应的寓意在html文件(站点类型sitetype：0 代表常规六气， 1 代表 VOC)：<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">"siteType"</span> <span class="attr">label</span>=<span class="string">"站点类型"</span> <span class="attr">width</span>=<span class="string">"200"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">template</span> <span class="attr">slot-scope</span>=<span class="string">"scope"</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">span</span> <span class="attr">v-if</span>=<span class="string">"scope.row.siteType == 0 "</span>&gt;</span>常规六气<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">span</span> <span class="attr">v-else</span>&gt;</span>VOC<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<hr>
-<ol start="11">
-<li>Server 服务始终启动不成功，控制台不报错，也不打印日志</li>
-</ol>
-<p>没记得啥时候给类文件打了断点，导致不能正常发现类文件，Debug启动不了，Run as 启动就可以。</p>
+<h4 id="1-Git命令管理分支无效"><a href="#1-Git命令管理分支无效" class="headerlink" title="1.Git命令管理分支无效"></a>1.Git命令管理分支无效</h4><p>打开Git的项目文件夹不正确，需要在项目文件夹的具体项目中打开</p>
+<h4 id="2-项目启动类启动成功，浏览器报404"><a href="#2-项目启动类启动成功，浏览器报404" class="headerlink" title="2. 项目启动类启动成功，浏览器报404"></a>2. 项目启动类启动成功，浏览器报404</h4><p>输入的访问地址有问题。  localhost:8088/项目名/home</p>
+<h4 id="3-Postman测试接口，报404"><a href="#3-Postman测试接口，报404" class="headerlink" title="3. Postman测试接口，报404"></a>3. Postman测试接口，报404</h4><p>先查看token的配置，获得 Bearer 配置</p>
+<h4 id="4-接口调用"><a href="#4-接口调用" class="headerlink" title="4. 接口调用"></a>4. 接口调用</h4><p>接口完成、页面完成，从JS调接口调不通，需仔细检查调用路径，参考 <strong>问题6</strong>。</p>
+<h4 id="5-不同登陆用户的菜单展示"><a href="#5-不同登陆用户的菜单展示" class="headerlink" title="5. 不同登陆用户的菜单展示"></a>5. 不同登陆用户的菜单展示</h4><p>项目启动后页面的大菜单通过 admin（超级管理员）账号 的菜单管理进行创建；</p>
+<p> 不同角色下出现不同的菜单功能是通过角色管理的编辑权限进行相关菜单的添加、删除。</p>
+<h4 id="6-页面的嵌套与跳转"><a href="#6-页面的嵌套与跳转" class="headerlink" title="6. 页面的嵌套与跳转"></a>6. 页面的嵌套与跳转</h4><p>站点列表里嵌套着站点添加的独立页面，用 <code>@click=&quot;goToPage(&#39;site/add&#39;)&quot;</code>进行页面跳转。JS文件的 AJAX 请求只负责针对接口的调用。在跳转路径前面加 / 是硬性指定路径，不加 / 会自动装配项目名。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">"primary"</span> @<span class="attr">click</span>=<span class="string">"goToPage('site/add')"</span> <span class="attr">icon</span>=<span class="string">"el-icon-plus"</span> &gt;</span>添加&#123;&#123;menuName&#125;&#125;<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="7-持久层的类是继承实现的，不方便写异表方法"><a href="#7-持久层的类是继承实现的，不方便写异表方法" class="headerlink" title="7.持久层的类是继承实现的，不方便写异表方法"></a>7.持久层的类是继承实现的，不方便写异表方法</h4><p>写在站点类的持久层里，但查的不是站点表，无法用<Syssite>接收，需要改写成Object<br> <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">   <span class="comment">//查询所有企业</span></span><br><span class="line"><span class="meta">@Query</span>(value = <span class="string">"SELECT id as enterprise_id, name as enterprisename FROM sys_enterprise WHERE archived = 0"</span>, nativeQuery = <span class="keyword">true</span>)</span><br><span class="line">List&lt;Map&lt;String,Object&gt;&gt; getEnterprisenames();</span><br></pre></td></tr></table></figure></p>
+<h4 id="8-Controller类中的Service无法注入，Server服务启动报错"><a href="#8-Controller类中的Service无法注入，Server服务启动报错" class="headerlink" title="8. Controller类中的Service无法注入，Server服务启动报错"></a>8. Controller类中的Service无法注入，Server服务启动报错</h4><p>实现类需要加注解 @Service ，表明将其交给Spring管理</p>
+<h4 id="9-用VO类做传参对象"><a href="#9-用VO类做传参对象" class="headerlink" title="9. 用VO类做传参对象"></a>9. 用VO类做传参对象</h4><p>用VO做泛型的好处，多表查询时可以写进不同表的查询字段，方便维护扩展。尽量避免用实体类做泛型接收，因为不兼容异表字段。</p>
+<h4 id="10-根据字段不同值显示不同含义"><a href="#10-根据字段不同值显示不同含义" class="headerlink" title="10. 根据字段不同值显示不同含义"></a>10. 根据字段不同值显示不同含义</h4><p>库里查出另有含义的字段数值，处理对应的寓意在html文件(站点类型sitetype：0 代表常规六气， 1 代表 VOC)：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">prop</span>=<span class="string">"siteType"</span> <span class="attr">label</span>=<span class="string">"站点类型"</span> <span class="attr">width</span>=<span class="string">"200"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">template</span> <span class="attr">slot-scope</span>=<span class="string">"scope"</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">span</span> <span class="attr">v-if</span>=<span class="string">"scope.row.siteType == 0 "</span>&gt;</span>常规六气<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">span</span> <span class="attr">v-else</span>&gt;</span>VOC<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="11-Server-服务始终启动不成功，控制台不报错，也不打印日志"><a href="#11-Server-服务始终启动不成功，控制台不报错，也不打印日志" class="headerlink" title="11. Server 服务始终启动不成功，控制台不报错，也不打印日志"></a>11. Server 服务始终启动不成功，控制台不报错，也不打印日志</h4><p>没记得啥时候给类文件打了断点，导致不能正常发现类文件，Debug启动不了，Run as 启动就可以。</p>
 <p>断点不能加给类文件。</p>
-<hr>
-<ol start="12">
-<li>Postman 测试UI接口需要加 项目名 ，再加 接口名</li>
-</ol>
-<p>eg： <a href="http://localhost:8088/dashboard/api/data/list" target="_blank" rel="noopener">http://localhost:8088/dashboard/api/data/list</a></p>
+<h4 id="12-Postman-测试UI接口需要加-项目名-，再加-接口名"><a href="#12-Postman-测试UI接口需要加-项目名-，再加-接口名" class="headerlink" title="12. Postman 测试UI接口需要加 项目名 ，再加 接口名"></a>12. Postman 测试UI接口需要加 项目名 ，再加 接口名</h4><p>eg： <a href="http://localhost:8088/dashboard/api/data/list" target="_blank" rel="noopener">http://localhost:8088/dashboard/api/data/list</a></p>
 <p>测试Server接口要加 server</p>
 <p>eg： <a href="http://localhost:8084/server/api/data/list" target="_blank" rel="noopener">http://localhost:8084/server/api/data/list</a></p>
-<p>测试要点：（1）仔细检查url，再确定token不失效（2）报404就是没调通，先保证能调通接口，在确定问题。</p>
+<p>测试要点：（1）仔细检查url，再确定token不失效（2）报404就是没调通，先保证能调通接口，在确定问题</p>
+<h4 id="13-根据字段不同值显示不同操作按钮"><a href="#13-根据字段不同值显示不同操作按钮" class="headerlink" title="13. 根据字段不同值显示不同操作按钮"></a>13. 根据字段不同值显示不同操作按钮</h4><p>根据不同的查询条件显示对应的操作按钮(已处理列表显示查看，未处理列表显示添加)：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-table-column</span> <span class="attr">width</span>=<span class="string">"100"</span> <span class="attr">label</span>=<span class="string">"操作"</span> &gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">template</span> <span class="attr">slot-scope</span>=<span class="string">"scope"</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">v-if</span>=<span class="string">"scope.row.status == 0 "</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">size</span>=<span class="string">"small"</span> @<span class="attr">click</span> = <span class="string">"add(scope.row)"</span> <span class="attr">style</span> = <span class="string">"padding-top: 0px;padding-bottom: 0px;"</span>&gt;</span>添加描述<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">v-else</span>  <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">size</span>=<span class="string">"small"</span> @<span class="attr">click</span> = <span class="string">"search(scope.row)"</span>  <span class="attr">style</span> =<span class="string">"padding-top: 0px;padding-bottom: 0px; "</span> &gt;</span>查看描述<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="14-下拉框选择企业及其对应ID"><a href="#14-下拉框选择企业及其对应ID" class="headerlink" title="14. 下拉框选择企业及其对应ID"></a>14. 下拉框选择企业及其对应ID</h4><p>做站点添加时需要下拉框显示所有企业。下拉框内容需要单独的实现接口在企业表查询所有企业及其对应的企业ID。无需前台传参，无需获得登录用户的身份信息。</p>
+<p>要求：下拉框显示所有企业名称，用户选择后保存时实则保存对应企业的ID。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-form-item</span> <span class="attr">label</span>=<span class="string">"所属企业："</span> <span class="attr">prop</span>=<span class="string">"enterpriseId"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">el-select</span> <span class="attr">v-model.trim</span>=<span class="string">"editData.enterpriseId"</span> <span class="attr">placeholder</span>=<span class="string">"请选择"</span> <span class="attr">class</span>=<span class="string">"el-cascader-w"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">el-option</span></span></span><br><span class="line"><span class="tag">          <span class="attr">v-for</span>=<span class="string">"item in enterpriseList"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">:key</span>=<span class="string">"item.enterprise_id"</span></span></span><br><span class="line"><span class="tag">          <span class="attr">:label</span>=<span class="string">"item.enterprisename"</span></span></span><br><span class="line"><span class="tag">          <span class="attr">:value</span>=<span class="string">"item.enterprise_id"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">el-option</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">el-select</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-form-item</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h4 id="15-Server启动报错，params-多一个或者少一个"><a href="#15-Server启动报错，params-多一个或者少一个" class="headerlink" title="15.Server启动报错，params ? 多一个或者少一个"></a>15.Server启动报错，params ? 多一个或者少一个</h4><p>意为params的参数与SQL中的 占位符 ? 的个数不匹配</p>
+<h4 id="16-泛型与VO类"><a href="#16-泛型与VO类" class="headerlink" title="16.泛型与VO类"></a>16.泛型与VO类</h4><p>泛型用来接收SQL查询的结果，故需要对应SQL中查询的字段。若用VO类做接收泛型，需要注明相应字段，不同表的相同字段可用别名标识；</p>
+<p>传入参数的地方写VO类是用来接收传入参数的，如查询VO；</p>
+<h4 id="17-实体类继承写法"><a href="#17-实体类继承写法" class="headerlink" title="17.实体类继承写法"></a>17.实体类继承写法</h4><p>一个表的实体类如果通过继承父类实现，那父类已声明的属性不能再次添加，不然会报错：<code>Could not commit JPA</code></p>
+<h4 id="18-动态获取数据有两种方式"><a href="#18-动态获取数据有两种方式" class="headerlink" title="18.动态获取数据有两种方式"></a>18.动态获取数据有两种方式</h4><p>同步：通过主线程从库中加载</p>
+<p>异步：可能出现弹出框，但是数据没加载出来的情况；也可能数组已经初始化，数据后期出现，可能造成数据越界的问题</p>
+<h4 id="19-持久层限制与JPA原生的方法"><a href="#19-持久层限制与JPA原生的方法" class="headerlink" title="19.持久层限制与JPA原生的方法"></a>19.持久层限制与JPA原生的方法</h4><p>持久层类之所以用JPA的封装方法，是因为类定义时继承了JPARepository，可以直接用类相关的实体进行接收；</p>
+<p>如果是不同表的查询方法，想要用表对应的实体接收，就要在其相关的表里。或者接收对象为Object。</p>
+<h4 id="20-异常追踪"><a href="#20-异常追踪" class="headerlink" title="20.异常追踪"></a>20.异常追踪</h4><p>不管是用Postom还是启动项目测试，出现异常一定先返回控制台查看问题，先看后台控制台，再看浏览器控制台。</p>
 
       
 
@@ -360,9 +334,18 @@
   
 <nav id="article-nav">
   
+    <a href="/2021/02/20/SpringBoot%E5%89%8D%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE%E4%BA%A4%E4%BA%92-%E6%9B%B4%E6%94%B9%E7%BB%B4%E6%8A%A4%E7%8A%B6%E6%80%81/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          SpringBoot前后端数据交互-更改维护状态
+        
+      </div>
+    </a>
   
-    <a href="/2021/01/20/%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">问题总结</div>
+  
+    <a href="/2021/01/20/git%E5%91%BD%E4%BB%A4-%E5%88%86%E6%94%AF%E6%93%8D%E4%BD%9C/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">git命令--分支操作</div>
       <i class="icon-circle-right"></i>
     </a>
   
