@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>git命令--分支操作 | Hexo</title>
+  <title>增改同框、同接口实现 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="git命令——分支操作">
+  <meta name="description" content="增改同框、同接口实现，绑定不止一种身份信息">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git命令--分支操作">
-<meta property="og:url" content="http://yoursite.com/2021/01/20/git%E5%91%BD%E4%BB%A4-%E5%88%86%E6%94%AF%E6%93%8D%E4%BD%9C/index.html">
+<meta property="og:title" content="增改同框、同接口实现">
+<meta property="og:url" content="http://yoursite.com/2021/03/11/%E5%A2%9E%E6%94%B9%E5%90%8C%E6%A1%86%E3%80%81%E5%90%8C%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="git命令——分支操作">
+<meta property="og:description" content="增改同框、同接口实现，绑定不止一种身份信息">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-01-20T12:19:18.000Z">
-<meta property="article:modified_time" content="2021-03-11T02:54:16.110Z">
+<meta property="article:published_time" content="2021-03-11T02:54:03.000Z">
+<meta property="article:modified_time" content="2021-03-11T02:56:04.913Z">
 <meta property="article:author" content="StT">
 <meta property="article:tag" content="业务实现">
 <meta name="twitter:card" content="summary">
@@ -165,51 +165,32 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-git命令-分支操作" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-增改同框、同接口实现" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      git命令--分支操作
+      增改同框、同接口实现
     </h1>
   
 
         
-        <a href="/2021/01/20/git%E5%91%BD%E4%BB%A4-%E5%88%86%E6%94%AF%E6%93%8D%E4%BD%9C/" class="archive-article-date">
-  	<time datetime="2021-01-20T12:19:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-20</time>
+        <a href="/2021/03/11/%E5%A2%9E%E6%94%B9%E5%90%8C%E6%A1%86%E3%80%81%E5%90%8C%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0/" class="archive-article-date">
+  	<time datetime="2021-03-11T02:54:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="git命令——分支操作"><a href="#git命令——分支操作" class="headerlink" title="git命令——分支操作"></a>git命令——分支操作</h1><a id="more"></a>
+        <h3 id="增改同框、同接口实现，绑定不止一种身份信息"><a href="#增改同框、同接口实现，绑定不止一种身份信息" class="headerlink" title="增改同框、同接口实现，绑定不止一种身份信息"></a>增改同框、同接口实现，绑定不止一种身份信息</h3><a id="more"></a>
 
-<h4 id="新建空项目文件夹，打开Git"><a href="#新建空项目文件夹，打开Git" class="headerlink" title="新建空项目文件夹，打开Git"></a>新建空项目文件夹，打开Git</h4><p>空文件夹初始化 ：  <strong>git init</strong></p>
-<p>克隆项目（默认为项目的master主分支） ： <strong>git clone URL(项目地址)</strong></p>
-<h5 id="需求：拉取远程的非master分支"><a href="#需求：拉取远程的非master分支" class="headerlink" title="需求：拉取远程的非master分支"></a>需求：拉取远程的非master分支</h5><p><strong>git fetch –all</strong></p>
-<p><strong>git branch</strong></p>
-<p>查看远程的所有分支 ： <strong>git branch -r</strong></p>
-<p>拉取远程所有分支 ： <strong>git pull –all</strong></p>
-<p>切换至远程非master分支 ： <strong>git checkout master_new</strong></p>
-<p>拉取master_new 代码 ： <strong>git pull origin master_new</strong></p>
-<p>检出新的本地分支（m_newXyp） ： <strong>git checkout -b m_newXyp</strong></p>
-<p>打开开发工具会自动切换至自己的本地分支</p>
-<h4 id="代码提交流程："><a href="#代码提交流程：" class="headerlink" title="代码提交流程："></a>代码提交流程：</h4><p>查看当前项目中有哪些文件被修改过 ： <strong>git status</strong></p>
-<p>用于临时保存和回复修改（保证更新代码不冲突），可跨分支 ：  <strong>git stash</strong>            </p>
-<p>查看stash了哪些存储，即查看stash列表 ：  <strong>git stash list</strong> </p>
-<p>切换至 mastr_new 分支 ： <strong>git checkout master_new</strong>   </p>
-<p>拉取远程 master_new 分支代码 ： <strong>git pull origin master_new</strong>   </p>
-<p>切换至自己分支 ： <strong>git checkout m_newXyp</strong>     </p>
-<p>请求合并自己分支和 master_new ： <strong>git merge master_new</strong>  </p>
-<p>若有合并冲突会直接在Eclipse中显示（修改代码进行了缓存，一般情况下不会有冲突）</p>
-<p>若没有冲突则释放融合已修改代码 ： <strong>git stash pop</strong> </p>
-<h5 id="打开Eclipse，先整体刷新编译，测试项目。再选中项目，右击打开Team的commit，将待提交代码放置到下方区域，在右侧添加代码描述信息，进行Commit"><a href="#打开Eclipse，先整体刷新编译，测试项目。再选中项目，右击打开Team的commit，将待提交代码放置到下方区域，在右侧添加代码描述信息，进行Commit" class="headerlink" title="打开Eclipse，先整体刷新编译，测试项目。再选中项目，右击打开Team的commit，将待提交代码放置到下方区域，在右侧添加代码描述信息，进行Commit"></a>打开Eclipse，先整体刷新编译，测试项目。再选中项目，右击打开Team的commit，将待提交代码放置到下方区域，在右侧添加代码描述信息，进行Commit</h5><h5 id="在web-的gitlab进行合并请求，务必注意提交分支的选择"><a href="#在web-的gitlab进行合并请求，务必注意提交分支的选择" class="headerlink" title="在web 的gitlab进行合并请求，务必注意提交分支的选择"></a>在web 的gitlab进行合并请求，务必注意提交分支的选择</h5><p>特殊情况下执行 git 命令：</p>
-<p> git stash clear  : 清空缓存区所有的内容</p>
-<p> git stash drop stash@{0}  删除第一个队列</p>
-
+<h5 id="下拉框写死传值："><a href="#下拉框写死传值：" class="headerlink" title="下拉框写死传值："></a>下拉框写死传值：</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-form-item</span> <span class="attr">class</span>=<span class="string">"is-required"</span> <span class="attr">label</span>=<span class="string">"用户角色:"</span> <span class="attr">prop</span>=<span class="string">"userRole"</span> &gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;<span class="name">el-select</span>  <span class="attr">v-model.trim</span>=<span class="string">"addUserForm.userRole"</span> <span class="attr">placeholder</span>=<span class="string">"请选择"</span> <span class="attr">style</span>=<span class="string">"width:100%"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">el-option</span> <span class="attr">key</span>=<span class="string">3</span> <span class="attr">label</span> =<span class="string">"管理员"</span> <span class="attr">:value</span> = <span class="string">3</span>&gt;</span><span class="tag">&lt;/<span class="name">el-option</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">el-option</span> <span class="attr">key</span>=<span class="string">5</span> <span class="attr">label</span> =<span class="string">"审查员"</span> <span class="attr">:value</span> = <span class="string">5</span>&gt;</span><span class="tag">&lt;/<span class="name">el-option</span>&gt;</span></span><br><span class="line">          <span class="tag">&lt;/<span class="name">el-select</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">el-form-item</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">"primary"</span> <span class="attr">size</span>=<span class="string">"small"</span> @<span class="attr">click</span>=<span class="string">"openAddDialog('add')"</span>&gt;</span>新增用户<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">el-button</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">size</span>=<span class="string">"small"</span> @<span class="attr">click</span> = <span class="string">"openDialog(scope.row,'edit')"</span>  <span class="attr">style</span> = <span class="string">"padding-top: 0px;padding-bottom: 0px;"</span>&gt;</span>修改用户<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"> <span class="tag">&lt;<span class="name">el-button</span> <span class="attr">size</span>=<span class="string">"small"</span> <span class="attr">type</span>=<span class="string">"primary"</span> @<span class="attr">click</span>=<span class="string">"submitForm('addUserForm')"</span>&gt;</span>提 交<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h5 id="增改同接口实现："><a href="#增改同接口实现：" class="headerlink" title="增改同接口实现："></a>增改同接口实现：</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">titleMap:&#123;<span class="attr">edit</span>:<span class="string">'修改用户'</span>,<span class="attr">add</span>:<span class="string">'新增用户'</span>&#125;,</span><br><span class="line"></span><br><span class="line">submitForm(formName)&#123;</span><br><span class="line">    <span class="keyword">let</span> that = <span class="keyword">this</span>;</span><br><span class="line">    <span class="keyword">this</span>.$refs[formName].validate(<span class="function">(<span class="params">valid</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (!valid) &#123;</span><br><span class="line">            <span class="keyword">return</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">let</span> params =&#123;</span><br><span class="line">            companyCode:that.addUserForm.depId.slice(<span class="number">-1</span>).pop(),  <span class="comment">//取最后一个值</span></span><br><span class="line">            username:that.addUserForm.username,</span><br><span class="line">            phone:that.addUserForm.phone,</span><br><span class="line">            id:that.addUserForm.id,</span><br><span class="line">            userRole:that.addUserForm.userRole,</span><br><span class="line">        &#125;;</span><br><span class="line">        vm.loadingShow();</span><br><span class="line">        axios.post(<span class="string">"org/user/"</span>+<span class="function">(<span class="params">that.addUserForm.id === <span class="string">''</span>?<span class="string">'add'</span>:<span class="string">'save'</span></span>),<span class="params">params</span>).<span class="params">then</span>(<span class="params">(res</span>)=&gt;</span>&#123;</span><br><span class="line">            <span class="keyword">if</span> (res.data.success)&#123;</span><br><span class="line">                that.$notify.success(&#123;<span class="attr">title</span>: <span class="string">'成功'</span>, <span class="attr">message</span>: <span class="string">'操作成功，请到列表查看！'</span>&#125;);</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                that.$notify.error(&#123;<span class="attr">title</span>: <span class="string">'失败'</span>, <span class="attr">message</span>: response.data.message&#125;);</span><br><span class="line">            &#125;</span><br><span class="line">            that.handleClose();</span><br><span class="line"></span><br><span class="line">            vm.loadingHide();</span><br><span class="line">        &#125;).catch(<span class="function">(<span class="params">error</span>)=&gt;</span>&#123;</span><br><span class="line">            vm.loadingHide();</span><br><span class="line">                <span class="built_in">console</span>.log(error.data);</span><br><span class="line">                <span class="keyword">let</span> err = error;</span><br><span class="line">                <span class="keyword">this</span>.$notify.warning(&#123;</span><br><span class="line">                    title: <span class="string">'警告'</span>,</span><br><span class="line">                    message: error.data.message</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125;</span><br><span class="line">        )</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<h5 id="Controller："><a href="#Controller：" class="headerlink" title="Controller："></a>Controller：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@LogInfomation</span></span><br><span class="line"><span class="meta">@PostMapping</span>(value = <span class="string">"org/user/save"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> ResponseData&lt;LoginUserVO&gt; <span class="title">saveOrgUser</span><span class="params">(@RequestBody PfLoginUserVO vo)</span></span>&#123;</span><br><span class="line">	Assert.notNull(vo.getId(),<span class="string">"id not null"</span>);</span><br><span class="line">	LoginUserVO loginUserVO = pfUserInfoService.updateUserNameOrPhone(vo);</span><br><span class="line">	<span class="keyword">return</span> ResponseData.ok(loginUserVO);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="ServiceImpl："><a href="#ServiceImpl：" class="headerlink" title="ServiceImpl："></a>ServiceImpl：</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//用户基础角色 普通用户 部门管理员 写死调用</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> List&lt;Long&gt; initRoleId = Arrays.asList(<span class="number">4L</span>,<span class="number">5L</span>);   <span class="comment">//审查员 1</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> List&lt;Long&gt; initRoleIdd = Arrays.asList(<span class="number">3L</span>,<span class="number">4L</span>);  <span class="comment">//管理员 0</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> LoginUserVO <span class="title">updateUserNameOrPhone</span><span class="params">(PfLoginUserVO vo)</span> </span>&#123;</span><br><span class="line">    LoginUser user = LoginUser.builder().build();</span><br><span class="line">    Optional&lt;LoginUser&gt; optional = loginUserRepository.findById(vo.getId());</span><br><span class="line">    LoginUser loginUser = optional.get();</span><br><span class="line">    verifyOneUser(vo);</span><br><span class="line">    loginUser.setPhone(vo.getPhone());</span><br><span class="line">    loginUser.setUsername(vo.getUsername());</span><br><span class="line">    loginUser.setCompanyCode(vo.getCompanyCode());</span><br><span class="line">    user = loginUserRepository.save(loginUser);</span><br><span class="line">       UserRole role = userRoleRepository.findByUserIdAndArchived(vo.getId(),<span class="number">0</span>).get(<span class="number">1</span>);  <span class="comment">//更正角色信息</span></span><br><span class="line">    <span class="keyword">if</span>(role.getRoleId() != <span class="number">4</span>) &#123;</span><br><span class="line">    	role.setRoleId((<span class="keyword">long</span>)vo.getUserRole());</span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">    	role = userRoleRepository.findByUserIdAndArchived(vo.getId(),<span class="number">0</span>).get(<span class="number">0</span>);</span><br><span class="line">    	role.setRoleId((<span class="keyword">long</span>)vo.getUserRole());</span><br><span class="line">    &#125;</span><br><span class="line">    role = userRoleRepository.save(role);</span><br><span class="line">    <span class="keyword">return</span> LoginUserVO.loadFrom(user, LoginUserVO<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -309,7 +290,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2021/01/20/git%E5%91%BD%E4%BB%A4-%E5%88%86%E6%94%AF%E6%93%8D%E4%BD%9C/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2021/03/11/%E5%A2%9E%E6%94%B9%E5%90%8C%E6%A1%86%E3%80%81%E5%90%8C%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -323,18 +304,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/01/20/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%EF%BC%88%E7%8E%AF%E4%BF%9D%E7%9B%92%E5%AD%90%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          问题总结（环保盒子）
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/12/30/SpringBoot%E6%9C%8D%E5%8A%A1%E6%B5%81%E7%A8%8B%E8%B0%83%E7%94%A8-CRUD-%E5%AF%BC%E5%85%A5%E5%AF%BC%E5%87%BA/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">SpringBoot服务流程调用-CRUD+导入导出</div>
+    <a href="/2021/02/20/SpringBoot%E6%B5%81%E7%A8%8B%E8%B0%83%E7%94%A8-%E5%86%B0%E6%9F%9C%E5%88%97%E8%A1%A8-%E6%8A%A5%E8%AD%A6%E5%8F%8D%E9%A6%88/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SpringBoot流程调用-冰柜列表+报警反馈</div>
       <i class="icon-circle-right"></i>
     </a>
   
