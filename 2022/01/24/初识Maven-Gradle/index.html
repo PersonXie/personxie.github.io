@@ -6,15 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>Maven+Gradle | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="简述 Maven+Gradle">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Maven+Gradle">
+<meta property="og:url" content="http://yoursite.com/2022/01/24/%E5%88%9D%E8%AF%86Maven-Gradle/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="简述 Maven+Gradle">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/images/mavengradle1.png">
+<meta property="og:image" content="http://yoursite.com/images/mavengradle2.png">
+<meta property="og:image" content="http://yoursite.com/images/mavengradle3.png">
+<meta property="og:image" content="http://yoursite.com/images/mavengradle4.png">
+<meta property="og:image" content="http://yoursite.com/images/mavengradle5.png">
+<meta property="article:published_time" content="2022-01-24T08:28:54.000Z">
+<meta property="article:modified_time" content="2022-01-24T09:35:25.407Z">
 <meta property="article:author" content="StT">
+<meta property="article:tag" content="必备技能">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/images/mavengradle1.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -160,16 +171,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-初识Maven-Gradle" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-初识Maven-Gradle" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/01/24/%E5%88%9D%E8%AF%86Maven-Gradle/">Maven+Gradle</a>
+    <h1 class="article-title" itemprop="name">
+      Maven+Gradle
     </h1>
   
 
@@ -182,12 +191,129 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="简述-Maven-Gradle"><a href="#简述-Maven-Gradle" class="headerlink" title="简述 Maven+Gradle"></a>简述 Maven+Gradle</h1>
-        
-          <a class="article-more-a" href="/2022/01/24/%E5%88%9D%E8%AF%86Maven-Gradle/#more">more >></a>
-        
+        <h1 id="简述-Maven-Gradle"><a href="#简述-Maven-Gradle" class="headerlink" title="简述 Maven+Gradle"></a>简述 Maven+Gradle</h1><a id="more"></a>
+
+<h2 id="Maven"><a href="#Maven" class="headerlink" title="Maven"></a>Maven</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义:"></a>定义:</h3><h5 id="项目对象模型-POM-，可简单理解为仓库，可通过一小段描述信息来管理项目的构建（通过描述信息自动导入jar包及所有依赖包）。Maven除了以程序构建能力为特色之外，还提供高级项目管理工具。"><a href="#项目对象模型-POM-，可简单理解为仓库，可通过一小段描述信息来管理项目的构建（通过描述信息自动导入jar包及所有依赖包）。Maven除了以程序构建能力为特色之外，还提供高级项目管理工具。" class="headerlink" title="项目对象模型(POM)，可简单理解为仓库，可通过一小段描述信息来管理项目的构建（通过描述信息自动导入jar包及所有依赖包）。Maven除了以程序构建能力为特色之外，还提供高级项目管理工具。"></a>项目对象模型(POM)，可简单理解为仓库，可通过一小段描述信息来管理项目的构建（通过描述信息自动导入jar包及所有依赖包）。Maven除了以程序构建能力为特色之外，还提供高级项目管理工具。</h5><h3 id="pom-xml-配置文件："><a href="#pom-xml-配置文件：" class="headerlink" title="pom.xml 配置文件："></a>pom.xml 配置文件：</h3><h5 id="放置所需框架、插件、文件、jar包对应版本的描述文件，保存后自动下载导入"><a href="#放置所需框架、插件、文件、jar包对应版本的描述文件，保存后自动下载导入" class="headerlink" title="放置所需框架、插件、文件、jar包对应版本的描述文件，保存后自动下载导入"></a>放置所需框架、插件、文件、jar包对应版本的描述文件，保存后自动下载导入</h5><h3 id="本地仓库："><a href="#本地仓库：" class="headerlink" title="本地仓库："></a>本地仓库：</h3><h5 id="即一本地文件夹，用于放置通过描述文件下载的所有jar包。可供多个项目引进使用，已下载jar包可直接使用，无需再次下载。"><a href="#即一本地文件夹，用于放置通过描述文件下载的所有jar包。可供多个项目引进使用，已下载jar包可直接使用，无需再次下载。" class="headerlink" title="即一本地文件夹，用于放置通过描述文件下载的所有jar包。可供多个项目引进使用，已下载jar包可直接使用，无需再次下载。"></a>即一本地文件夹，用于放置通过描述文件下载的所有jar包。可供多个项目引进使用，已下载jar包可直接使用，无需再次下载。</h5><h3 id="中央仓库："><a href="#中央仓库：" class="headerlink" title="中央仓库："></a>中央仓库：</h3><h5 id="网络上的jar包下载源，提供大多数jia包的下载服务。如不存在所需jar包，便跳至外网寻找。"><a href="#网络上的jar包下载源，提供大多数jia包的下载服务。如不存在所需jar包，便跳至外网寻找。" class="headerlink" title="网络上的jar包下载源，提供大多数jia包的下载服务。如不存在所需jar包，便跳至外网寻找。"></a>网络上的jar包下载源，提供大多数jia包的下载服务。如不存在所需jar包，便跳至外网寻找。</h5><h3 id="仓库地址配置："><a href="#仓库地址配置：" class="headerlink" title="仓库地址配置："></a>仓库地址配置：</h3><h5 id="1-找到maven安装文件夹，创建文件夹-m2-，用于作本地仓库"><a href="#1-找到maven安装文件夹，创建文件夹-m2-，用于作本地仓库" class="headerlink" title="1.找到maven安装文件夹，创建文件夹 .m2 ，用于作本地仓库"></a>1.找到maven安装文件夹，创建文件夹 .m2 ，用于作本地仓库</h5><img src="/images/mavengradle1.png">
+
+<h5 id="2-打开配置文件-settings-xml，按如下修改"><a href="#2-打开配置文件-settings-xml，按如下修改" class="headerlink" title="2.打开配置文件 settings.xml，按如下修改"></a>2.打开配置文件 settings.xml，按如下修改</h5><img src="/images/mavengradle2.png">
+
+<img src="/images/mavengradle3.png">
+
+<h4 id="配置本地仓库："><a href="#配置本地仓库：" class="headerlink" title="配置本地仓库："></a>配置本地仓库：</h4><img src="/images/mavengradle4.png">
+
+<h4 id="配置中央仓库："><a href="#配置中央仓库：" class="headerlink" title="配置中央仓库："></a>配置中央仓库：</h4><img src="/images/mavengradle5.png">
+
+<h2 id="Gradle"><a href="#Gradle" class="headerlink" title="Gradle"></a>Gradle</h2><h3 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h3><p>Gradle是一个基于Apache Ant和Apache Maven概念的项目自动化构建开源工具。其使用基于Groovy的特定领域语言(DSL)来声明项目设置，抛弃了基于XML的各种繁琐配置。</p>
+<p>面向Java应用为主。当前其支持语言C++、Java、Groovy、Kotlin、Scala和Swift，未来可能支持更多语言。</p>
+<p>Gradle是一个基于JVM的构建工具，是一款通用灵活的构建工具，支持maven，Ivy仓库，支持传递性依赖管理，而不需要远程仓库或者是pom.xml和ivy.xml配置文件，基于Groovy，build脚本使用Groovy编写。</p>
+<h4 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h4><p>Ø gradle对多工程的构建支持很出色，工程依赖是gradle的第一功能。  </p>
+<p>Ø gradle支持局部构建。</p>
+<p>Ø 支持多方式依赖管理：包括从maven远程仓库、nexus私服、ivy仓库以及本地文件系统的jars或者dirs</p>
+<p>Ø gradle是第一个构建集成工具，与ant、maven、ivy有良好的相容相关性。</p>
+<p>Ø 轻松迁移：gradle适用于任何结构的工程，你可以在同一个开发平台平行构建原工程和gradle工程。通常要求写相关测试，以保证开发的插件的相似性，这种迁移可以减少破坏性，尽可能的可靠。这也是重构的最佳实践。</p>
+<p>Ø gradle的整体设计是以作为一种语言为导向的，而非成为一个严格死板的框架。</p>
+<p>Ø 免费开源</p>
+<h4 id="gradle提供了什么？"><a href="#gradle提供了什么？" class="headerlink" title="gradle提供了什么？"></a>gradle提供了什么？</h4><ol>
+<li><p>一种可切换的，像maven一样的基于约定的构建框架，却又从不锁住你（约定优于配置）</p>
+</li>
+<li><p>强大的支持多工程的构建</p>
+</li>
+<li><p>强大的依赖管理（基于Apache Ivy），提供最大的便利去构建你的工程</p>
+</li>
+<li><p>全力支持已有的Maven或者Ivy仓库基础建设</p>
+</li>
+<li><p>支持传递性依赖管理，在不需要远程仓库和pom.xml和ivy配置文件的前提下</p>
+</li>
+<li><p>基于groovy脚本构建，其build脚本使用groovy语言编写</p>
+</li>
+<li><p>具有广泛的领域模型支持你的构建</p>
+</li>
+</ol>
+<h3 id="安装Gradle（6-3）"><a href="#安装Gradle（6-3）" class="headerlink" title="安装Gradle（6.3）"></a>安装Gradle（6.3）</h3><p>链接：<a href="https://pan.baidu.com/s/1QTXsF5Lo3U9EPHpr38pKfw" target="_blank" rel="noopener">https://pan.baidu.com/s/1QTXsF5Lo3U9EPHpr38pKfw</a><br>提取码：9ucq</p>
+<ol>
+<li><p>下载文件后放至指定文件夹解压缩，并配置环境变量</p>
+</li>
+<li><p>打开Eclipse导入项目，选择用gradle导入（前提是用gradle构建的项目）</p>
+</li>
+<li><p>导入过程中选择配置本地安装的gradle</p>
+</li>
+<li><p>用gradle命令对Eclipse和项目分别进行编译</p>
+</li>
+</ol>
+<p>编译：<code>gradle build</code></p>
+<p>安装gradle后：<code>gradle eclipse</code></p>
+<p>项目预先编译（项目文件夹cmd）：<code>gradle build -x test</code></p>
+<hr>
+<hr>
+<hr>
+<h3 id="通俗理解-Gradle？"><a href="#通俗理解-Gradle？" class="headerlink" title="通俗理解 Gradle？"></a>通俗理解 Gradle？</h3><p>作者：ghui<br>链接：<a href="https://www.zhihu.com/question/30432152/answer/48239946" target="_blank" rel="noopener">https://www.zhihu.com/question/30432152/answer/48239946</a><br>来源：知乎<br>著作权归作者所有。</p>
+<h6 id="Gradle是一个基于Apache-Ant和Apache-Maven概念的项目自动化建构工具。它使用一种基于Groovy的特定领域语言来声明项目设置，而不是传统的XML。当前其支持的语言限于Java、Groovy和Scala，计划未来将支持更多的语言。"><a href="#Gradle是一个基于Apache-Ant和Apache-Maven概念的项目自动化建构工具。它使用一种基于Groovy的特定领域语言来声明项目设置，而不是传统的XML。当前其支持的语言限于Java、Groovy和Scala，计划未来将支持更多的语言。" class="headerlink" title="Gradle是一个基于Apache Ant和Apache Maven概念的项目自动化建构工具。它使用一种基于Groovy的特定领域语言来声明项目设置，而不是传统的XML。当前其支持的语言限于Java、Groovy和Scala，计划未来将支持更多的语言。"></a>Gradle是一个基于Apache Ant和Apache Maven概念的项目自动化建构工具。它使用一种基于Groovy的特定领域语言来声明项目设置，而不是传统的XML。当前其支持的语言限于Java、Groovy和Scala，计划未来将支持更多的语言。</h6><p>上面是维基上对Gradle的解释,相信一个没有接触过构建的人是不大能看明白的,当初我也是.下面是我对Gradle通俗的理解:</p>
+<p>软件开发讲究代码复用,通过复用可以使工程更易维护,代码量更少…..</p>
+<p>开发者可以通过继承,组合,函数模块等实现不同程度上的代码复用.但不知你有没有想过,软件开发也是一种工程作业,绝不仅仅是写代码,还涉及到工程的各种管理(依赖,打包,部署,发布,各种渠道的差异管理…..),你每天都在build,clean,签名,打包,发布,有没有想过这种过程,也可以像代码一样被描述出来, 也可以被复用.</p>
+<h5 id="举个例子"><a href="#举个例子" class="headerlink" title="举个例子"></a>举个例子</h5><p>我是做Android开发的,你可知道国内有n个Android市场,n个手机品牌,n个手机尺寸……,一般公司都会针对不同的市场单独发包用来统计不同渠道的下载量等情况,可能需要针对不同(品牌,尺寸等各种硬件信息)的手机做一些特殊的处理,这个时候你可以针对不同的情况单独建一个工程,或者更好一点你可以通过一些变量来控制,像这样:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">if(isMoto)&#123;do something&#125;</span><br><span class="line">else if(isHuawei)&#123;do something&#125;...</span><br></pre></td></tr></table></figure>
+<h5 id="差异管理"><a href="#差异管理" class="headerlink" title="差异管理"></a>差异管理</h5><p>但这两种解决方法都有自己的缺点,特别是前一种有极大的代码重复.后一种稍微好一点,但这种方式的差异是运行时的,不是静态的,对于moto手机上的处理逻辑对华为手机来说一点作用也没有,但这一段针对moto手机的处理逻辑也被装到了华为手机上了,通过gradle的productFlavor与buildtype可以实现静态级的差异控制。</p>
+<p>说到前面的多渠道问题,不同的渠道一般会对应不同的渠道号,你当然可以通过修改一次打一个包这种纯手工的方式来生成你的多渠道包,但据听说国内某团购网站的Android App有100多个渠道.这里出现了什么?重复,反复的去打包。而且这些包之前的差异很小(只是渠道号不同),和写代码一样我们应该复用,通过Gradle可以实现一个命令打出所有的渠道包,一个命令打出指定的渠道包.再复杂一点,你可能需要不同的渠道对应不同的签名文件,不同的icon,不同的服务器地址…这些都可以通过Gradle来方便的实现.</p>
+<h5 id="依赖管理"><a href="#依赖管理" class="headerlink" title="依赖管理:"></a>依赖管理:</h5><p>做软件开发你可能需要依赖各种不同的jar,library.你当然可以通过将.jar/library工程下载到本地再copy到你的工程中,但不知你是否听说过国外有个叫中央仓库的东西,在这个仓库里你可以找到所有你能想到以及你从来没听说过的jar,aar…这里可以找到所有你需要的依赖,而你需要的只是指定一个坐标。</p>
+<p>剩下的依赖的寻找,下载,添加到classpath等你都不需要去关心,通过这种方式来维护依赖的好处有以下几点:</p>
+<ol>
+<li><p>依赖不会进入到你的版本控制仓库中(默认会缓存到~/.gradle/下)</p>
+</li>
+<li><p>方便卸载装载依赖(只是一条坐标依赖,不需要删除即可)</p>
+</li>
+<li><p>方便的版本管理,如上图中的2.3.3既是picasso的版本号,若改为+就表示从中央仓库中下载最新的版本</p>
+</li>
+<li><p>不同工程的相同依赖不会存在重复副本(只在~/.gradle下存在一份)</p>
+</li>
+</ol>
+<h5 id="项目部署"><a href="#项目部署" class="headerlink" title="项目部署"></a>项目部署</h5><p>这方面我没怎么接触过,但据我所知通过一些插件,可以实现自动将你的输出(.jar,.apk,.war…)上传到指定仓库,自动部署…</p>
+<h5 id="简单来说"><a href="#简单来说" class="headerlink" title="简单来说:"></a>简单来说:</h5><h6 id="Gradle是一种构建工具-它可以帮你管理项目中的差异-依赖-编译-打包-部署……-你可以定义满足自己需要的构建逻辑-写入到build-gradle中供日后复用"><a href="#Gradle是一种构建工具-它可以帮你管理项目中的差异-依赖-编译-打包-部署……-你可以定义满足自己需要的构建逻辑-写入到build-gradle中供日后复用" class="headerlink" title="Gradle是一种构建工具,它可以帮你管理项目中的差异,依赖,编译,打包,部署……,你可以定义满足自己需要的构建逻辑,写入到build.gradle中供日后复用."></a>Gradle是一种构建工具,它可以帮你管理项目中的差异,依赖,编译,打包,部署……,你可以定义满足自己需要的构建逻辑,写入到build.gradle中供日后复用.</h6><h6 id="Gradle不是一种编程语言-它不能帮你实现软件中的任何实际功能"><a href="#Gradle不是一种编程语言-它不能帮你实现软件中的任何实际功能" class="headerlink" title="Gradle不是一种编程语言,它不能帮你实现软件中的任何实际功能"></a>Gradle不是一种编程语言,它不能帮你实现软件中的任何实际功能</h6><hr>
+<hr>
+<hr>
+<h3 id="通俗的说-gradle是打包用的。"><a href="#通俗的说-gradle是打包用的。" class="headerlink" title="通俗的说: gradle是打包用的。"></a>通俗的说: gradle是打包用的。</h3><p>为什么要打包发布，打包发布有几种常见方法，为什么这些常见方法中要选gradle？<br>以在eclipse里面写java程序为例。</p>
+<h5 id="为什么需要打包？"><a href="#为什么需要打包？" class="headerlink" title="为什么需要打包？"></a>为什么需要打包？</h5><p>最初写完了，直接右键run就可以了。但是程序写完了毕竟是要发布到服务器上或者给别人用的,你第一不可能让所有要运行的人都装个eclipse,第二不可能把源代码公布给所有人。 所以你需要把你的代码发布成二进制形式，让其它环境方便运行,这就是打包。</p>
+<h5 id="为什么用ant-？"><a href="#为什么用ant-？" class="headerlink" title="为什么用ant ？"></a>为什么用ant ？</h5><p>打包的时候要做很多事，比如说配置文件中的用户名和密码,你本地开发和程序实际运行时的内容肯定不一致,所以需要有两个文件,开发的时候用一个,实际运行的时候用一个。这样每次打包的时候都要重复的做这些事,ant可以让你用xml的形式把这些事情写成脚本，然后自动运行。</p>
+<h5 id="为什么用maven？"><a href="#为什么用maven？" class="headerlink" title="为什么用maven？"></a>为什么用maven？</h5><p>你的项目要用很多jar包，比如你写日志要用log4j,连数据库要用connector。这年头写程序不用个spring都不好意思出门，下载下来的spring包打开一看,密密麻麻的好几十个jar,不知道用哪个不用哪个。而且，即便是你一狠心把这些jar包都放进来，很大可能性还是不能运行，因为还要依赖其它的jar包。哪天想升级个spring小版本,所有jar包都要重来一遍,你也不记得哪些是由于spring引进来的jar包了。</p>
+<p>所以有了maven,你只要配置一下说我要用spring3,所有jar包都给你下载好了,你直接运行就行了。赶明儿想升级版本，直接把3改成4,新的jar包也给你下载好了。</p>
+<h5 id="然后"><a href="#然后" class="headerlink" title="然后?"></a>然后?</h5><p>用了maven, jar包是方便了,但我打包的时候还是有好多事要做啊，然后你会发现maven实在是不知道怎么做这些事，于是开始怀念ant.</p>
+<p>gradle就是又能干maven的活，又能干ant的活，用groove语言写脚本，表达能力还更强。</p>
+<h5 id="简单的说就这样："><a href="#简单的说就这样：" class="headerlink" title="简单的说就这样："></a>简单的说就这样：</h5><p>ant可以自动化打包逻辑。</p>
+<p>maven也可以自动化打包，相比于ant,它多做的事是帮你下载jar包。</p>
+<p>但是maven的打包逻辑太死板，定制起来太麻烦，不如ant好用。gradle就是又能自动下jar包， 又能自己写脚本，并且脚本写起来还比ant好用的这么个东西。</p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zhifubao.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -207,16 +333,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/01/24/%E5%88%9D%E8%AF%86Maven-Gradle/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2022/01/24/%E5%88%9D%E8%AF%86Maven-Gradle/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2022/01/24/Docker%E6%89%93%E5%8C%85%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">项目部署</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -236,671 +421,14 @@
 
 
 
-
-  
-    <article id="post-Docker打包部署项目" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2022/01/24/Docker%E6%89%93%E5%8C%85%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE/">项目部署</a>
-    </h1>
-  
-
-        
-        <a href="/2022/01/24/Docker%E6%89%93%E5%8C%85%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE/" class="archive-article-date">
-  	<time datetime="2022-01-24T08:24:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-01-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Docker打包部署项目"><a href="#Docker打包部署项目" class="headerlink" title="Docker打包部署项目"></a>Docker打包部署项目</h1>
-        
-          <a class="article-more-a" href="/2022/01/24/Docker%E6%89%93%E5%8C%85%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">必备技能</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2022/01/24/Docker%E6%89%93%E5%8C%85%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-签名公章-增、改、查" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/10/03/%E7%AD%BE%E5%90%8D%E5%85%AC%E7%AB%A0-%E5%A2%9E%E3%80%81%E6%94%B9%E3%80%81%E6%9F%A5/">签名公章-增、改、查</a>
-    </h1>
-  
-
-        
-        <a href="/2021/10/03/%E7%AD%BE%E5%90%8D%E5%85%AC%E7%AB%A0-%E5%A2%9E%E3%80%81%E6%94%B9%E3%80%81%E6%9F%A5/" class="archive-article-date">
-  	<time datetime="2021-10-02T18:01:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-10-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="签名公章-增、改、查"><a href="#签名公章-增、改、查" class="headerlink" title="签名公章-增、改、查"></a>签名公章-增、改、查</h1>
-        
-          <a class="article-more-a" href="/2021/10/03/%E7%AD%BE%E5%90%8D%E5%85%AC%E7%AB%A0-%E5%A2%9E%E3%80%81%E6%94%B9%E3%80%81%E6%9F%A5/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">业务实现</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/10/03/%E7%AD%BE%E5%90%8D%E5%85%AC%E7%AB%A0-%E5%A2%9E%E3%80%81%E6%94%B9%E3%80%81%E6%9F%A5/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Junit测试案例-签名公章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/10/03/Junit%E6%B5%8B%E8%AF%95%E6%A1%88%E4%BE%8B-%E7%AD%BE%E5%90%8D%E5%85%AC%E7%AB%A0/">Junit测试案例-签名公章</a>
-    </h1>
-  
-
-        
-        <a href="/2021/10/03/Junit%E6%B5%8B%E8%AF%95%E6%A1%88%E4%BE%8B-%E7%AD%BE%E5%90%8D%E5%85%AC%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2021-10-02T17:46:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-10-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Junit测试用例编写"><a href="#Junit测试用例编写" class="headerlink" title="Junit测试用例编写"></a>Junit测试用例编写</h1>
-        
-          <a class="article-more-a" href="/2021/10/03/Junit%E6%B5%8B%E8%AF%95%E6%A1%88%E4%BE%8B-%E7%AD%BE%E5%90%8D%E5%85%AC%E7%AB%A0/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">业务实现</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/10/03/Junit%E6%B5%8B%E8%AF%95%E6%A1%88%E4%BE%8B-%E7%AD%BE%E5%90%8D%E5%85%AC%E7%AB%A0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java项目中常用注解含义-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/08/03/Java%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3%E5%90%AB%E4%B9%89-1/">Java项目中常用注解含义</a>
-    </h1>
-  
-
-        
-        <a href="/2021/08/03/Java%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3%E5%90%AB%E4%B9%89-1/" class="archive-article-date">
-  	<time datetime="2021-08-03T15:15:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/08/03/Java%E9%A1%B9%E7%9B%AE%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3%E5%90%AB%E4%B9%89-1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Eclipae常用快捷键" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/08/03/Eclipae%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/">Eclipase快捷键</a>
-    </h1>
-  
-
-        
-        <a href="/2021/08/03/Eclipae%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="archive-article-date">
-  	<time datetime="2021-08-03T13:07:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Eclipase常用快捷键"><a href="#Eclipase常用快捷键" class="headerlink" title="Eclipase常用快捷键"></a>Eclipase常用快捷键</h1>
-        
-          <a class="article-more-a" href="/2021/08/03/Eclipae%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/08/03/Eclipae%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-增改同框、同接口实现" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/03/11/%E5%A2%9E%E6%94%B9%E5%90%8C%E6%A1%86%E3%80%81%E5%90%8C%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0/">增改同框、同接口实现</a>
-    </h1>
-  
-
-        
-        <a href="/2021/03/11/%E5%A2%9E%E6%94%B9%E5%90%8C%E6%A1%86%E3%80%81%E5%90%8C%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0/" class="archive-article-date">
-  	<time datetime="2021-03-11T02:54:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-11</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="增改同框、同接口实现，绑定不止一种身份信息"><a href="#增改同框、同接口实现，绑定不止一种身份信息" class="headerlink" title="增改同框、同接口实现，绑定不止一种身份信息"></a>增改同框、同接口实现，绑定不止一种身份信息</h3>
-        
-          <a class="article-more-a" href="/2021/03/11/%E5%A2%9E%E6%94%B9%E5%90%8C%E6%A1%86%E3%80%81%E5%90%8C%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">业务实现</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/03/11/%E5%A2%9E%E6%94%B9%E5%90%8C%E6%A1%86%E3%80%81%E5%90%8C%E6%8E%A5%E5%8F%A3%E5%AE%9E%E7%8E%B0/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-SpringBoot流程调用-冰柜列表-报警反馈" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/20/SpringBoot%E6%B5%81%E7%A8%8B%E8%B0%83%E7%94%A8-%E5%86%B0%E6%9F%9C%E5%88%97%E8%A1%A8-%E6%8A%A5%E8%AD%A6%E5%8F%8D%E9%A6%88/">SpringBoot流程调用-冰柜列表+报警反馈</a>
-    </h1>
-  
-
-        
-        <a href="/2021/02/20/SpringBoot%E6%B5%81%E7%A8%8B%E8%B0%83%E7%94%A8-%E5%86%B0%E6%9F%9C%E5%88%97%E8%A1%A8-%E6%8A%A5%E8%AD%A6%E5%8F%8D%E9%A6%88/" class="archive-article-date">
-  	<time datetime="2021-02-20T12:06:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="完整流程开发：冰柜列表、条件查询、添加、编辑"><a href="#完整流程开发：冰柜列表、条件查询、添加、编辑" class="headerlink" title="完整流程开发：冰柜列表、条件查询、添加、编辑"></a>完整流程开发：冰柜列表、条件查询、添加、编辑</h3>
-        
-          <a class="article-more-a" href="/2021/02/20/SpringBoot%E6%B5%81%E7%A8%8B%E8%B0%83%E7%94%A8-%E5%86%B0%E6%9F%9C%E5%88%97%E8%A1%A8-%E6%8A%A5%E8%AD%A6%E5%8F%8D%E9%A6%88/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">业务实现</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/20/SpringBoot%E6%B5%81%E7%A8%8B%E8%B0%83%E7%94%A8-%E5%86%B0%E6%9F%9C%E5%88%97%E8%A1%A8-%E6%8A%A5%E8%AD%A6%E5%8F%8D%E9%A6%88/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-开发问题总结（疫苗监控）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/20/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%EF%BC%88%E7%96%AB%E8%8B%97%E7%9B%91%E6%8E%A7%EF%BC%89/">开发问题总结（疫苗监控）</a>
-    </h1>
-  
-
-        
-        <a href="/2021/02/20/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%EF%BC%88%E7%96%AB%E8%8B%97%E7%9B%91%E6%8E%A7%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2021-02-20T12:05:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="开发问题总结（疫苗监控）"><a href="#开发问题总结（疫苗监控）" class="headerlink" title="开发问题总结（疫苗监控）"></a>开发问题总结（疫苗监控）</h2>
-        
-          <a class="article-more-a" href="/2021/02/20/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%EF%BC%88%E7%96%AB%E8%8B%97%E7%9B%91%E6%8E%A7%EF%BC%89/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">业务实现</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/20/%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93%EF%BC%88%E7%96%AB%E8%8B%97%E7%9B%91%E6%8E%A7%EF%BC%89/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-SpringBoot前后端数据交互-更改维护状态" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/20/SpringBoot%E5%89%8D%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE%E4%BA%A4%E4%BA%92-%E6%9B%B4%E6%94%B9%E7%BB%B4%E6%8A%A4%E7%8A%B6%E6%80%81/">SpringBoot前后端数据交互-更改维护状态</a>
-    </h1>
-  
-
-        
-        <a href="/2021/02/20/SpringBoot%E5%89%8D%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE%E4%BA%A4%E4%BA%92-%E6%9B%B4%E6%94%B9%E7%BB%B4%E6%8A%A4%E7%8A%B6%E6%80%81/" class="archive-article-date">
-  	<time datetime="2021-02-20T12:04:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="设备状态维护（简约）"><a href="#设备状态维护（简约）" class="headerlink" title="设备状态维护（简约）"></a>设备状态维护（简约）</h3>
-        
-          <a class="article-more-a" href="/2021/02/20/SpringBoot%E5%89%8D%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE%E4%BA%A4%E4%BA%92-%E6%9B%B4%E6%94%B9%E7%BB%B4%E6%8A%A4%E7%8A%B6%E6%80%81/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">业务实现</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/20/SpringBoot%E5%89%8D%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE%E4%BA%A4%E4%BA%92-%E6%9B%B4%E6%94%B9%E7%BB%B4%E6%8A%A4%E7%8A%B6%E6%80%81/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -923,8 +451,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
