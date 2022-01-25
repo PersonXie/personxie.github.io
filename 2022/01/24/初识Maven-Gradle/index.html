@@ -21,7 +21,7 @@
 <meta property="og:image" content="http://yoursite.com/images/mavengradle4.png">
 <meta property="og:image" content="http://yoursite.com/images/mavengradle5.png">
 <meta property="article:published_time" content="2022-01-24T08:28:54.000Z">
-<meta property="article:modified_time" content="2022-01-24T09:35:25.407Z">
+<meta property="article:modified_time" content="2022-01-25T03:35:26.196Z">
 <meta property="article:author" content="StT">
 <meta property="article:tag" content="必备技能">
 <meta name="twitter:card" content="summary">
@@ -213,33 +213,16 @@
 <p>Ø 轻松迁移：gradle适用于任何结构的工程，你可以在同一个开发平台平行构建原工程和gradle工程。通常要求写相关测试，以保证开发的插件的相似性，这种迁移可以减少破坏性，尽可能的可靠。这也是重构的最佳实践。</p>
 <p>Ø gradle的整体设计是以作为一种语言为导向的，而非成为一个严格死板的框架。</p>
 <p>Ø 免费开源</p>
-<h4 id="gradle提供了什么？"><a href="#gradle提供了什么？" class="headerlink" title="gradle提供了什么？"></a>gradle提供了什么？</h4><ol>
-<li><p>一种可切换的，像maven一样的基于约定的构建框架，却又从不锁住你（约定优于配置）</p>
-</li>
-<li><p>强大的支持多工程的构建</p>
-</li>
-<li><p>强大的依赖管理（基于Apache Ivy），提供最大的便利去构建你的工程</p>
-</li>
-<li><p>全力支持已有的Maven或者Ivy仓库基础建设</p>
-</li>
-<li><p>支持传递性依赖管理，在不需要远程仓库和pom.xml和ivy配置文件的前提下</p>
-</li>
-<li><p>基于groovy脚本构建，其build脚本使用groovy语言编写</p>
-</li>
-<li><p>具有广泛的领域模型支持你的构建</p>
-</li>
-</ol>
+<h4 id="gradle提供了什么？"><a href="#gradle提供了什么？" class="headerlink" title="gradle提供了什么？"></a>gradle提供了什么？</h4><p> 1.一种可切换的，像maven一样的基于约定的构建框架，却又从不锁住你（约定优于配置）</p>
+<p> 2.强大的支持多工程的构建</p>
+<p> 3.强大的依赖管理（基于Apache Ivy），提供最大的便利去构建你的工程</p>
+<p> 4.全力支持已有的Maven或者Ivy仓库基础建设</p>
+<p> 5.支持传递性依赖管理，在不需要远程仓库和pom.xml和ivy配置文件的前提下</p>
+<p> 6.基于groovy脚本构建，其build脚本使用groovy语言编写</p>
+<p> 7.具有广泛的领域模型支持你的构建</p>
 <h3 id="安装Gradle（6-3）"><a href="#安装Gradle（6-3）" class="headerlink" title="安装Gradle（6.3）"></a>安装Gradle（6.3）</h3><p>链接：<a href="https://pan.baidu.com/s/1QTXsF5Lo3U9EPHpr38pKfw" target="_blank" rel="noopener">https://pan.baidu.com/s/1QTXsF5Lo3U9EPHpr38pKfw</a><br>提取码：9ucq</p>
-<ol>
-<li><p>下载文件后放至指定文件夹解压缩，并配置环境变量</p>
-</li>
-<li><p>打开Eclipse导入项目，选择用gradle导入（前提是用gradle构建的项目）</p>
-</li>
-<li><p>导入过程中选择配置本地安装的gradle</p>
-</li>
-<li><p>用gradle命令对Eclipse和项目分别进行编译</p>
-</li>
-</ol>
+<p> 1.下载文件后放至指定文件夹解压缩，并配置环境变量<br> 2.打开Eclipse导入项目，选择用gradle导入（前提是用gradle构建的项目）<br> 3.导入过程中选择配置本地安装的gradle</p>
+<p> 4.用gradle命令对Eclipse和项目分别进行编译</p>
 <p>编译：<code>gradle build</code></p>
 <p>安装gradle后：<code>gradle eclipse</code></p>
 <p>项目预先编译（项目文件夹cmd）：<code>gradle build -x test</code></p>
@@ -256,16 +239,10 @@
 <p>说到前面的多渠道问题,不同的渠道一般会对应不同的渠道号,你当然可以通过修改一次打一个包这种纯手工的方式来生成你的多渠道包,但据听说国内某团购网站的Android App有100多个渠道.这里出现了什么?重复,反复的去打包。而且这些包之前的差异很小(只是渠道号不同),和写代码一样我们应该复用,通过Gradle可以实现一个命令打出所有的渠道包,一个命令打出指定的渠道包.再复杂一点,你可能需要不同的渠道对应不同的签名文件,不同的icon,不同的服务器地址…这些都可以通过Gradle来方便的实现.</p>
 <h5 id="依赖管理"><a href="#依赖管理" class="headerlink" title="依赖管理:"></a>依赖管理:</h5><p>做软件开发你可能需要依赖各种不同的jar,library.你当然可以通过将.jar/library工程下载到本地再copy到你的工程中,但不知你是否听说过国外有个叫中央仓库的东西,在这个仓库里你可以找到所有你能想到以及你从来没听说过的jar,aar…这里可以找到所有你需要的依赖,而你需要的只是指定一个坐标。</p>
 <p>剩下的依赖的寻找,下载,添加到classpath等你都不需要去关心,通过这种方式来维护依赖的好处有以下几点:</p>
-<ol>
-<li><p>依赖不会进入到你的版本控制仓库中(默认会缓存到~/.gradle/下)</p>
-</li>
-<li><p>方便卸载装载依赖(只是一条坐标依赖,不需要删除即可)</p>
-</li>
-<li><p>方便的版本管理,如上图中的2.3.3既是picasso的版本号,若改为+就表示从中央仓库中下载最新的版本</p>
-</li>
-<li><p>不同工程的相同依赖不会存在重复副本(只在~/.gradle下存在一份)</p>
-</li>
-</ol>
+<p> 1.依赖不会进入到你的版本控制仓库中(默认会缓存到~/.gradle/下)</p>
+<p> 2.方便卸载装载依赖(只是一条坐标依赖,不需要删除即可)</p>
+<p> 3.方便的版本管理,如上图中的2.3.3既是picasso的版本号,若改为+就表示从中央仓库中下载最新的版本</p>
+<p> 4.不同工程的相同依赖不会存在重复副本(只在~/.gradle下存在一份)</p>
 <h5 id="项目部署"><a href="#项目部署" class="headerlink" title="项目部署"></a>项目部署</h5><p>这方面我没怎么接触过,但据我所知通过一些插件,可以实现自动将你的输出(.jar,.apk,.war…)上传到指定仓库,自动部署…</p>
 <h5 id="简单来说"><a href="#简单来说" class="headerlink" title="简单来说:"></a>简单来说:</h5><h6 id="Gradle是一种构建工具-它可以帮你管理项目中的差异-依赖-编译-打包-部署……-你可以定义满足自己需要的构建逻辑-写入到build-gradle中供日后复用"><a href="#Gradle是一种构建工具-它可以帮你管理项目中的差异-依赖-编译-打包-部署……-你可以定义满足自己需要的构建逻辑-写入到build-gradle中供日后复用" class="headerlink" title="Gradle是一种构建工具,它可以帮你管理项目中的差异,依赖,编译,打包,部署……,你可以定义满足自己需要的构建逻辑,写入到build.gradle中供日后复用."></a>Gradle是一种构建工具,它可以帮你管理项目中的差异,依赖,编译,打包,部署……,你可以定义满足自己需要的构建逻辑,写入到build.gradle中供日后复用.</h6><h6 id="Gradle不是一种编程语言-它不能帮你实现软件中的任何实际功能"><a href="#Gradle不是一种编程语言-它不能帮你实现软件中的任何实际功能" class="headerlink" title="Gradle不是一种编程语言,它不能帮你实现软件中的任何实际功能"></a>Gradle不是一种编程语言,它不能帮你实现软件中的任何实际功能</h6><hr>
 <hr>
@@ -393,6 +370,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2022/01/25/%E6%8B%BE%E4%BA%86%E4%B8%AA%E8%B4%9D/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          拾了个贝
+        
+      </div>
+    </a>
   
   
     <a href="/2022/01/24/Docker%E6%89%93%E5%8C%85%E9%83%A8%E7%BD%B2%E9%A1%B9%E7%9B%AE/" id="article-nav-older" class="article-nav-link-wrap">
