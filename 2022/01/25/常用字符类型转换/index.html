@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>常用字符类型转换 | Hexo</title>
+  <title>字符类型转换 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="String 转 JsonNode">
+  <meta name="description" content="常用字符类型转换">
 <meta property="og:type" content="article">
-<meta property="og:title" content="常用字符类型转换">
+<meta property="og:title" content="字符类型转换">
 <meta property="og:url" content="http://yoursite.com/2022/01/25/%E5%B8%B8%E7%94%A8%E5%AD%97%E7%AC%A6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="String 转 JsonNode">
+<meta property="og:description" content="常用字符类型转换">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-01-25T06:39:38.000Z">
-<meta property="article:modified_time" content="2022-01-25T06:41:05.870Z">
+<meta property="article:modified_time" content="2022-07-09T13:43:31.132Z">
 <meta property="article:author" content="StT">
-<meta property="article:tag" content="业务实现">
+<meta property="article:tag" content="基操">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -172,7 +172,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      常用字符类型转换
+      字符类型转换
     </h1>
   
 
@@ -185,12 +185,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="String-转-JsonNode"><a href="#String-转-JsonNode" class="headerlink" title="String 转 JsonNode"></a>String 转 JsonNode</h1><a id="more"></a>
+        <h1 id="常用字符类型转换"><a href="#常用字符类型转换" class="headerlink" title="常用字符类型转换"></a>常用字符类型转换</h1><a id="more"></a>
 
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="comment">// 1、将long型转化为int型，其中int、long是基础类型</span></span><br><span class="line">		<span class="keyword">long</span> a = <span class="number">10</span>;</span><br><span class="line">		<span class="keyword">int</span> b = (<span class="keyword">int</span>) a;</span><br><span class="line">	</span><br><span class="line"> </span><br><span class="line">		<span class="comment">// 2、将int型转化为long型，其中int、long都是基础类型</span></span><br><span class="line">		<span class="keyword">int</span> a1 = <span class="number">10</span>;</span><br><span class="line">		<span class="keyword">long</span> b1 = a1;</span><br><span class="line">	</span><br><span class="line"> </span><br><span class="line">		<span class="comment">// 3、将Long型转换为int型的，其中Long型是包装类型</span></span><br><span class="line">		Long a2 = <span class="number">10l</span>;</span><br><span class="line">		<span class="keyword">int</span> b2 = a2.intValue();</span><br><span class="line">	</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//4、将Integer型转化为long型，其中Integer型是包装类型,long型是基础类型</span></span><br><span class="line">		Integer a3=<span class="number">10</span>;</span><br><span class="line">		<span class="keyword">long</span> b3=a3.longValue();</span><br><span class="line">	</span><br><span class="line">		</span><br><span class="line">		<span class="comment">//5、将Integer型转化为Long型，其中Integer、Long型都是包装类型</span></span><br><span class="line">		Integer a4=<span class="number">10</span>;</span><br><span class="line">		Long b4=a4.longValue();</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	    <span class="comment">//6、Long类型转String类型</span></span><br><span class="line">          <span class="comment">//String类的valueOf()方法</span></span><br><span class="line">        String str = String.valueOf(Long val);</span><br><span class="line"></span><br><span class="line">          <span class="comment">//Long类的toString()方法</span></span><br><span class="line">        String str = Long.toString(Long val);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">//7、String类型转为Long类型</span></span><br><span class="line">        <span class="comment">//注意：字符串中只能是数字。</span></span><br><span class="line">          <span class="comment">//Long类的Long.parseLong()方法,转化后的值是Long包装类型</span></span><br><span class="line">        Long L = Long.parseLong(String str);</span><br><span class="line"></span><br><span class="line">         <span class="comment">//Long类的Long.ValueOf()方法,转化后的值是long基本类型</span></span><br><span class="line">        <span class="keyword">long</span> l = Long.ValueOf(String str);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
 
-<p>String 转 JsonNode</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">String jsonString = <span class="string">"&#123;\"k1\":\"v1\",\"k2\":\"v2\"&#125;"</span>;</span><br><span class="line">ObjectMapper mapper = <span class="keyword">new</span> ObjectMapper();</span><br><span class="line">JsonNode license = mapper.readTree(jsonString);    <span class="comment">//转JsonNode</span></span><br><span class="line">JsonNode dataJsonNode = jsonNode.get(<span class="string">"license"</span>);   <span class="comment">//解析Json</span></span><br><span class="line">vo.setSlrAppname(dataJsonNode.get(<span class="string">"appName"</span>).asText()); <span class="comment">//取值</span></span><br><span class="line">                                                  <span class="comment">//asText() 用于去除引号</span></span><br></pre></td></tr></table></figure>
+<h4 id="String-转-JsonNode"><a href="#String-转-JsonNode" class="headerlink" title="String 转 JsonNode"></a>String 转 JsonNode</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">String jsonString = <span class="string">"&#123;\"k1\":\"v1\",\"k2\":\"v2\"&#125;"</span>;</span><br><span class="line">ObjectMapper mapper = <span class="keyword">new</span> ObjectMapper();</span><br><span class="line">JsonNode license = mapper.readTree(jsonString);    <span class="comment">//转JsonNode</span></span><br><span class="line">JsonNode dataJsonNode = jsonNode.get(<span class="string">"license"</span>);   <span class="comment">//解析Json</span></span><br><span class="line">vo.setSlrAppname(dataJsonNode.get(<span class="string">"appName"</span>).asText()); <span class="comment">//取值</span></span><br><span class="line">                                                  <span class="comment">//asText() 用于去除引号</span></span><br></pre></td></tr></table></figure>
       
 
       
@@ -234,7 +233,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">业务实现</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">基操</a>
         		</li>
       		
 		</ul>
@@ -315,7 +314,7 @@
   
   
     <a href="/2022/01/25/%E5%B8%B8%E7%94%A8Linux%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">常用Linux命令使用</div>
+      <div class="article-nav-title">Linux命令</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -437,10 +436,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">数据库</a>
               </li>
              
@@ -453,19 +448,31 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">前端</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">总结</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">业务实现</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">必备技能</a>
+                <a href="javascript:void(0)" class="js-tag color1">总结/复盘</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">设计</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">基操</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">纠错</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">语言</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">算法</a>
               </li>
             
             <div class="clearfix"></div>
